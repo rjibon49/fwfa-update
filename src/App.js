@@ -18,10 +18,10 @@ import Business from './Pages/Collaborative/Partners/Business';
 import NonProfit from './Pages/Collaborative/Partners/NonProfit';
 import Employee from './Pages/Collaborative/Partners/Employee';
 import SchoolDetails from './Pages/Collaborative/Partners/Schools/SchoolDetails';
-import TeacherSignup from './Pages/Users/TeacherSignup';
-import StudentSignup from './Pages/Users/StudentSignup';
-import TeacherSignin from './Pages/Users/TeacherSignin';
-import StudentSignin from './Pages/Users/StudentSignin';
+// import TeacherSignup from './Pages/Users/TeacherSignup';
+// import StudentSignup from './Pages/Users/StudentSignup';
+// import TeacherSignin from './Pages/Users/TeacherSignin';
+// import StudentSignin from './Pages/Users/StudentSignin';
 import SuperAdmin from './Pages/Users/SuperAdmin';
 import DonationBank from './Pages/Donation/DonationBank';
 import Career from './Pages/Career/Career';
@@ -32,9 +32,11 @@ import Article3 from './Pages/Blog/Articles/Article3';
 import Article4 from './Pages/Blog/Articles/Article4';
 import Article5 from './Pages/Blog/Articles/Article5';
 import NotFound from './Pages/NotFound/NotFound';
-import AffiliateSignin from './Pages/Users/AffiliateSignin';
-import AffiliateSignup from './Pages/Users/AffiliateSignup';
+// import AffiliateSignin from './Pages/Users/AffiliateSignin';
+// import AffiliateSignup from './Pages/Users/AffiliateSignup';
 import AuthProvider from './Context/AuthProvider';
+import Register from './Pages/Users/Register';
+import Login from './Pages/Users/Login';
 
 function App() {
   return (
@@ -65,12 +67,14 @@ function App() {
               <Route path='/blog/:blogId' element={<BlogDetails />} />
               <Route path='/events' element={<Events />} />
               <Route path='/contacts' element={<Contacts />} />
-              <Route path='/signupTeacher' element={<TeacherSignup />} />
+              <Route path='/register' element={<Register />} />
+              <Route path='/login' element={<Login />} />
+              {/* <Route path='/signupTeacher' element={<TeacherSignup />} />
               <Route path='/signinTeacher' element={<TeacherSignin />} />
               <Route path='/signupStudent' element={<StudentSignup />} />
               <Route path='/signinStudent' element={<StudentSignin />} />
               <Route path='/signinAffiliate' element={<AffiliateSignin />} />
-              <Route path='/signupAffiliate' element={<AffiliateSignup />} />
+              <Route path='/signupAffiliate' element={<AffiliateSignup />} /> */}
               <Route path='/superAdmin' element={<SuperAdmin />} />
               <Route path='/career' element={<Career />} />
               <Route path='/apply-now' element={<ApplyNow />} />

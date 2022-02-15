@@ -12,12 +12,12 @@ const Different = () => {
 
     return (
         <>
-            <Container className='my-5'>
+            <Container className='my-5' style={{overflow:"hidden"}}>
                 <div className='text-center'>
                     <h2 className='section-title2'>What Makes Us Different</h2>
                     <p className='banner-details'>With these simplified proven success with our clients, we implement a 3-tier approach to Financial Wellness: Awareness, Literacy, and Coaching.</p>
                 </div>
-                <Row className='mt-5'>
+                <Row className='mt-5 '>
                     <Col xs={12} sm={12} md={6} lg={4} xl={4}>
                         <div className='card' >
                             <div className='card-space'>

@@ -21,7 +21,7 @@ const useFirebase = () => {
 
   const auth = getAuth();
 
-  const StudentSignup = (email, password, name, location, history) => {
+  const registerUser = (email, password, name, location, navigate) => {
     setIsLoding(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -34,7 +34,7 @@ const useFirebase = () => {
         // saveUser(email, name, 'POST');
 
         const destination = location?.state?.from || "/";
-        history.push(destination);
+        navigate(destination);
 
         updateProfile(auth.currentUser, {
           displayName: name,
@@ -48,12 +48,12 @@ const useFirebase = () => {
       .finally(() => setIsLoding(false));
   };
 
-  const loginUser = (email, password, location, history) => {
+  const loginUser = (email, password, location, navigate) => {
     setIsLoding(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const destination = location?.state?.from || "/";
-        history.push(destination);
+        navigate(destination);
         setAuthError('');
       })
       .catch((error) => {
@@ -102,11 +102,11 @@ const useFirebase = () => {
   return {
     user,
     // admin,
-    StudentSignup,
+    registerUser,
     loginUser,
     isLoding,
     authError,
-    logout,
+    logout
   };
 };
 

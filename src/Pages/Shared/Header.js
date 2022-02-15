@@ -10,8 +10,10 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import useAuth from '../../hooks/useAuth';
 
 const Header = () => {
+    const { user, logout } = useAuth();
 
     const hancleClickLinkedin = () => {
         window.open("https://www.linkedin.com/company/71980528/");
@@ -64,7 +66,22 @@ const Header = () => {
                             <Nav.Link as={Link} to="/events" className="">Events</Nav.Link>
                             <Nav.Link as={Link} to="/blog" className="">Blog</Nav.Link>
                             <Nav.Link as={Link} to="/contacts" className="">Contact Us</Nav.Link>
-                            <NavDropdown title="Login" id="basic-nav-dropdown" className=''>
+                            {
+                                user.email ? <NavDropdown title="Profile" id="basic-nav-dropdown" style={{color:"white"}}>
+                                    <Nav className="flex-column text-center">
+                                        <span><small>Welcome</small></span>
+                                        <span className="fw-bold">{user.displayName}</span>
+                                        {/* <NavDropdown.Divider /> */}
+                                        <NavDropdown.Item as={Link} to="/home" onClick={logout}>Logout</NavDropdown.Item>
+                                    </Nav>
+                                </NavDropdown> :
+                                <NavDropdown title="User" id="basic-nav-dropdown" className=''>
+                                    <NavDropdown.Item as={Link} to="/register">Register</NavDropdown.Item>
+                                    <NavDropdown.Item as={Link} to="/login">Login</NavDropdown.Item>
+                                </NavDropdown>
+                            }      
+
+                            {/* <NavDropdown title="Login" id="basic-nav-dropdown" className=''>
                                 <NavDropdown.Item as={Link} to="/signinTeacher">Teacher</NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to="/signinStudent">Student</NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to="/signinAffiliate">Affiliate</NavDropdown.Item>
@@ -73,7 +90,7 @@ const Header = () => {
                                 <NavDropdown.Item as={Link} to="/signupTeacher">Teacher</NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to="/signupStudent">Student</NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to="/signupAffiliate">Affiliate</NavDropdown.Item>
-                            </NavDropdown>
+                            </NavDropdown> */}
                         </Nav>
                     </Navbar.Collapse>
             </Container>
