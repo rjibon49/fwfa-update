@@ -4,8 +4,12 @@ import awareness from './../../images/banner/awareness.png'
 import coaching from './../../images/banner/coaching1.png'
 import literacy from './../../images/banner/literacy1.png'
 import leadeship from './../../images/banner/leadership.png'
+import useAos from '../../hooks/useAos';
 
 const Different = () => {
+
+   useAos ();
+
     return (
         <>
             <Container className='my-5'>
@@ -15,7 +19,7 @@ const Different = () => {
                 </div>
                 <Row className='mt-5'>
                     <Col xs={12} sm={12} md={6} lg={4} xl={4}>
-                        <div className='card'>
+                        <div className='card' >
                             <div className='card-space'>
                                 <Image src={awareness} className='card-image'/>
                                 <div>
@@ -26,8 +30,8 @@ const Different = () => {
                         </div>
                     </Col>
                     <Col xs={12} sm={12} md={6} lg={4} xl={4}>
-                        <div className='card'>
-                            <div className='card-space'>
+                        <div className='card' >
+                            <div className='card-space' >
                                 <Image src={literacy} className='card-image' />
                                 <div>
                                     <h3>Literacy</h3>
@@ -39,7 +43,7 @@ const Different = () => {
                     </Col>
                     
                     <Col xs={12} sm={12} md={6} lg={4} xl={4}>
-                        <div className='card'>
+                        <div className='card' >
                             <div className='card-space' >
                                 <Image src={coaching} className='card-image'/>
                                 <div>
@@ -58,7 +62,7 @@ const Different = () => {
                     </div>
                     <Row className='mt-5'>
                         <Col xs={12} sm={12} md={6} lg={4} xl={4}>
-                            <div className='l-card'>
+                            <div className='l-card' data-aos="slide-right">
                                 <div>
                                     <h3>Awareness</h3>
                                     <p>Financial Awareness is know where you are at with your personal finance. </p>
@@ -66,7 +70,7 @@ const Different = () => {
                             </div>
                         </Col>
                         <Col xs={12} sm={12} md={6} lg={4} xl={4}>
-                            <div className='l-card'>
+                            <div className='l-card' data-aos="zoom-in">
                                 <div>
                                     <h3>Literacy</h3>
                                     <p>Financial Literacy is to educate yourself and understanding your current situation.  Our Foundation for Financial Wellness Program gives this education piece in learning all of the major pieces.  It is thorough education that we get out of challenges to financial wellness.</p>
@@ -75,7 +79,7 @@ const Different = () => {
                         </Col>
                         
                         <Col xs={12} sm={12} md={6} lg={4} xl={4}>
-                            <div className='l-card'>
+                            <div className='l-card' data-aos="slide-left">
                                 <div>
                                     <h3>Coaching</h3>
                                     <p>Coaching is a one on one approach that we cater to each individual person.</p>

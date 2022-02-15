@@ -21,7 +21,7 @@ const useFirebase = () => {
 
   const auth = getAuth();
 
-  const registerUser = (email, password, name, location, history) => {
+  const StudentSignup = (email, password, name, location, history) => {
     setIsLoding(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -102,7 +102,7 @@ const useFirebase = () => {
   return {
     user,
     // admin,
-    registerUser,
+    StudentSignup,
     loginUser,
     isLoding,
     authError,
