@@ -375,6 +375,16 @@ a {
 /* ============================================================ */
 /* ============================================================ */
 
+/* ========================== DONATE STYLE  ======================*/
+/* ============================================================== */
+
+
+.donate-detail {
+    max-width: 70%;
+    margin: 0 auto;
+}
+/* ========================== ============= ======================*/
+/* ============================================================== */
 /* ========================== EVENTS STYLE  ======================*/
 /* ============================================================== */
 
@@ -709,7 +719,7 @@ hr{
 }
 
 .bank-img {
-    width: 60%;
+    width: 35%;
     height: auto;
 }
 .card-bd {
@@ -934,6 +944,10 @@ hr{
         border-radius: 5px;
         border: 0;
     }
+    .donate-detail {
+        max-width: 80%;
+        margin: 0 auto;
+    }
 
     
 }
@@ -1040,6 +1054,10 @@ hr{
     }
     .leader-image{
         width: 25%;
+    }
+    .donate-detail {
+        max-width: 90%;
+        margin: 0 auto;
     }
   
 }
@@ -1172,6 +1190,10 @@ hr{
     .leader-image{
         width: 50%;
     }
+    .donate-detail {
+        max-width: 100%;
+        margin: 0 auto;
+    }
 }
 
 
@@ -1211,6 +1233,22 @@ hr{
     }
     .leader-image{
         width: 50%;
+    }
+    .donate-detail {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .donate-top {
+        background-color: #d1ecd8;
+        padding: 15px 40px;
+        border-radius: 5px;
+        color: black;
+        font-size: 20px;
+        font-weight: 500;
+        display: inline;
+    }
+    .other {
+        width: 30% !important;
     }
 }
 

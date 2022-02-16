@@ -31,6 +31,7 @@ import Article2 from './Pages/Blog/Articles/Article2';
 import Article3 from './Pages/Blog/Articles/Article3';
 import Article4 from './Pages/Blog/Articles/Article4';
 import Article5 from './Pages/Blog/Articles/Article5';
+import Article6 from './Pages/Blog/Articles/Article6';
 import NotFound from './Pages/NotFound/NotFound';
 // import AffiliateSignin from './Pages/Users/AffiliateSignin';
 // import AffiliateSignup from './Pages/Users/AffiliateSignup';
@@ -64,6 +65,7 @@ function App() {
               <Route path='/article3' element={<Article3 />} />
               <Route path='/article4' element={<Article4 />} />
               <Route path='/article5' element={<Article5 />} />
+              <Route path='/article6' element={<Article6 />} />
               <Route path='/blog/:blogId' element={<BlogDetails />} />
               <Route path='/events' element={<Events />} />
               <Route path='/contacts' element={<Contacts />} />

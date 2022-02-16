@@ -169,6 +169,25 @@ const Blogs = () => {
                         <p className='post-details'>Leaving your job, working as a freelancer, or becoming self-employed for any reason does not mean you cannot get budget-friendly health insurance. Today, we will cover six tips that can help you find health insurance. This is so you and your family can get the coverage you need no matter what your employment situation and status are..<Link as={Link} to={`/article5`} className='e-link'> Continue Reading</Link></p>
                     </div>
                 </div>
+                <div className='pb-5 green-bg mb-5 pbshadow me-xl-5 me-md-1' data-aos="zoom-in">
+                    <div className=''>
+                        <ReactPlayer 
+                            width='100%'
+                            height='100%'
+                            controls
+                            url={sixTips}
+                            />
+                    </div>
+                    
+                    <div>
+                        <Link as={Link} to={`/article6`} className=''> <h5 className='post-title'>Retirement is different for everyone</h5></Link>
+                        <div className='pb-4 ps-4'>
+                                        <span className='pe-5' style={{fontSize:"10px"}}>Sunday, June-06</span>
+                                        <span className='ps-5' style={{fontSize:"10px"}}>11:30 - 3:00</span>
+                                    </div>
+                        <p className='post-details'>Retirement is not one-size-fits-all. Because Social Security is more than just retirement benefits, we want to provide you with the information you need to plan for retirement and to make informed decisions. This document will help..<Link as={Link} to={`/article6`} className='e-link'> Continue Reading</Link></p>
+                    </div>
+                </div>
                 </Col>
                 <Col xs={12} sm={12} md={5} lg={4} xl={4}>
                     <div className='green-bg text-center pbshadow py-4 mb-5 d-none d-md-block d-lg-block d-xl-block '>
