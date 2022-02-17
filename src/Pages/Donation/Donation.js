@@ -43,13 +43,13 @@ const Donation = () => {
                     <h3 className='fs-2 fw-bold'> Your Donation</h3>
                 </div>
                 <div className='d-flex justify-content-evenly mb-5'>
-                    <div class="form-check form-check-inline" style={radioButtonTop}>
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-                        <label class="form-check-label" for="inlineRadio1">One-Time</label>
+                    <div className="form-check form-check-inline" style={radioButtonTop}>
+                        <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                        <label className="form-check-label" for="inlineRadio1">One-Time</label>
                     </div>
-                    <div class="form-check form-check-inline" style={radioButtonTop}>
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
-                        <label class="form-check-label" for="inlineRadio2">Monthly</label>
+                    <div className="form-check form-check-inline" style={radioButtonTop}>
+                        <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                        <label className="form-check-label" for="inlineRadio2">Monthly</label>
                     </div>
                 </div>
                 <div className=''>
@@ -92,8 +92,8 @@ const Donation = () => {
                     <div className="form-check form-check-inline" style={switchbtn}>
                         <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Card</label>
                     </div>
-                    <div class="form-check form-switch">
-                            <input class="form-check-input sw-radio" type="checkbox" id="flexSwitchCheckDefault" onChange={toggleBank}/>
+                    <div className="form-check form-switch">
+                            <input className="form-check-input sw-radio" type="checkbox" id="flexSwitchCheckDefault" onChange={toggleBank}/>
                     </div>
                     <div className="form-check form-check-inline" style={switchbtn}>
                         <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Bank</label>

@@ -73,6 +73,19 @@ const Register = () => {
 
                                 />
                                     </Form.Group>
+                                    <Form.Group className="mb-3">
+                                        <TextField
+                                    id="demo-helper-text-aligned"
+                                    label="Enter Your Phone Number"
+                                    size="small"
+                                    className='s-comment-form'
+                                    fullWidth
+                                    name="number"
+                                    onChange={handleOnBlur}
+                                    required
+
+                                />
+                                    </Form.Group>
 
                                     <Form.Group className="mb-3">
                                         <TextField
