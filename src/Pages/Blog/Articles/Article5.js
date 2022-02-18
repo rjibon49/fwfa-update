@@ -3,7 +3,7 @@ import React from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import blogi from './../../../images/blog/blog.png'
-import article5 from './../../../images/collaborative/employee1.png'
+// import article5 from './../../../images/collaborative/employee1.png'
 import UseBlogs from '../../../hooks/UseBlogs';
 import BlogCommentData from '../BlogCommentData';
 import GoToTop from '../../../GotoTop';
@@ -63,8 +63,8 @@ const Article5 = () => {
                     <Input placeholder="Search here..." inputProps={ariaLabel} className="w-75 search"/>
                 </div>
                     <div className='p-xl-5 p-lg-4 p-md-3 p-sm-1 green-bg mb-5 rounded pbshadow'>
-                        <Image src={article5} className='images'/>
-                        {/* <div className='text-center'>
+                        {/*<Image src={article5} className='images'/>
+                         <div className='text-center'>
                             <div className='py-2'>
                                 <i className="fas fa-user-circle mx-2 fs-5 green"></i>{category}
                                 <i className=" mx-2 fs-4 green">|</i>

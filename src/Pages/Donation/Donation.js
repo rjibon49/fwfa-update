@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Container, Image } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import card from './../../images/card.png';
-import bank from './../../images/bank.png';
+import { Container } from 'react-bootstrap';
 import GoToTop from '../../GotoTop';
 
 const Donation = () => {

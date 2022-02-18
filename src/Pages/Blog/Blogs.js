@@ -19,6 +19,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import Aos from 'aos';
 import { Typewriter } from 'react-simple-typewriter';
+import useAuth from '../../hooks/useAuth';
 
 const ariaLabel = { 'aria-label': 'description' };
 
@@ -38,6 +39,8 @@ const Blogs = () => {
     const hancleClickLinkedin = () => {
         window.open("https://www.linkedin.com/company/71980528/");
     };
+
+    const {user} = useAuth();
 
     return (
         <>
@@ -150,7 +153,7 @@ const Blogs = () => {
                         <p className='post-details'>When you are still in your 20’s, being carefree and unconcerned about the future is easy and simple. But financially, this can be a mistake. Getting into a good financial state while you are still young is worth it and planning long-term goals is essential..<Link as={Link} to={`/article4`} className='e-link'> Continue Reading</Link></p>
                     </div>
                 </div>
-                <div className='pb-5 green-bg mb-5 pbshadow me-xl-5 me-md-1' data-aos="zoom-in">
+                <div className='py-5 green-bg mb-5 pbshadow me-xl-5 me-md-1' data-aos="zoom-in">
                     <div className=''>
                         <ReactPlayer 
                             width='100%'

@@ -42,13 +42,13 @@ const Contacts = () => {
         <>
         <section className='green-bg mb-5 pbshadow'>
             <Container className='py-5'>
-                <Row className>
+                <Row className='banner-horizontal'>
                     <Col xs={12} sm={12} md={6} lg={6} xl={6}>
                         <Image src={contact} className='images'/>
                     </Col>
                     <Col xs={12} sm={12} md={6} lg={6} xl={6}>
                         <div className='text-center horizontal'>
-                            <h2 className='contact-title'>
+                            <h2 className='contact-title mb-4'>
                             Get In Touch
                             </h2>
                             <p>
@@ -78,11 +78,11 @@ const Contacts = () => {
                                     <Form.Control type="email" className='b-comment-form' placeholder="Enter you E-mail" name="user_email" id="formGroupExampleInput" />
                                 </Form.Group>
                                 <Form.Group className="mb-3">
-                                    <Form.Label>Your Website URL (if) </Form.Label>
-                                    <Form.Control type="text" className='b-comment-form' placeholder="http//.www.url.com" name="user_website" id="formGroupExampleInput"/>
+                                    <Form.Label>Website URL (optional) </Form.Label>
+                                    <Form.Control type="text" className='b-comment-form' placeholder="https://www.url.com" name="user_website" id="formGroupExampleInput"/>
                                 </Form.Group>
                                 <Form.Group className="mb-3">
-                                    <Form.Label>What topic do you want to discuss?</Form.Label>
+                                    <Form.Label>Comment/Questions</Form.Label>
                                     <Form.Control as="textarea" className='b-comment-form' rows={5} placeholder='Type here...' name="message" id="formGroupExampleInput"/>
                                 </Form.Group>
 

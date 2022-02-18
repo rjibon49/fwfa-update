@@ -4,6 +4,7 @@ import './../Style/Style.css'
 import UseProgram from '../../hooks/UseProgram';
 import { Link } from 'react-router-dom';
 import Aos from 'aos';
+import parse from 'html-react-parser';
 
 const ProgramLists = () => {
     
@@ -32,7 +33,7 @@ const ProgramLists = () => {
                                         <Image src={pg.images} className='images'/>
                                     </div>
                                     <div className='py-4'>
-                                        <p className='program-details'><span className='fw-bold'>{pg.title}</span>{pg.details}</p>
+                                        <p className='program-details'><span className='fw-bold'>{pg.title}</span>{parse(pg.details)}</p>
                                     </div>
                                     <div className='text-center'>
                                         <Link to={`/signupStudent`}><Button className='bg-green px-5 py-3 border-0 align-self-end btn-block'><p className='fw-bold'>Join Now</p></Button></Link>
