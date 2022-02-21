@@ -18,10 +18,6 @@ import Business from './Pages/Collaborative/Partners/Business';
 import NonProfit from './Pages/Collaborative/Partners/NonProfit';
 import Employee from './Pages/Collaborative/Partners/Employee';
 import SchoolDetails from './Pages/Collaborative/Partners/Schools/SchoolDetails';
-// import TeacherSignup from './Pages/Users/TeacherSignup';
-// import StudentSignup from './Pages/Users/StudentSignup';
-// import TeacherSignin from './Pages/Users/TeacherSignin';
-// import StudentSignin from './Pages/Users/StudentSignin';
 import SuperAdmin from './Pages/Users/SuperAdmin';
 import DonationBank from './Pages/Donation/DonationBank';
 import Career from './Pages/Career/Career';
@@ -33,16 +29,20 @@ import Article4 from './Pages/Blog/Articles/Article4';
 import Article5 from './Pages/Blog/Articles/Article5';
 import Article6 from './Pages/Blog/Articles/Article6';
 import NotFound from './Pages/NotFound/NotFound';
-// import AffiliateSignin from './Pages/Users/AffiliateSignin';
-// import AffiliateSignup from './Pages/Users/AffiliateSignup';
 import AuthProvider from './Context/AuthProvider';
 import Register from './Pages/Users/Register';
 import Login from './Pages/Users/Login';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import DashboardHome from './Pages/Dashboard/DashboardHome/DashboardHome';
-import Careerdb from './Pages/Dashboard/Careerdb/Careerdb';
-import Programdb from './Pages/Dashboard/ProgramItem/Programdb';
-import BlogLists from './Pages/Dashboard/BlogsItem/BlogLists';
+import AddArticles from './Pages/Dashboard/Articles/AddArticles';
+import AddProgram from './Pages/Dashboard/ProgramItem/AddProgram';
+import AddCarrer from './Pages/Dashboard/Careerdb/AddCarrer';
+import AddEvents from './Pages/Dashboard/AddEvents/AddEvents';
+import ManageArticles from './Pages/Dashboard/Articles/ManageArticles';
+import ManageEvents from './Pages/Dashboard/AddEvents/ManageEvents';
+import ManageProgram from './Pages/Dashboard/ProgramItem/ManageProgram';
+import ManageCareer from './Pages/Dashboard/Careerdb/ManageCareer';
+import DonationList from './Pages/Dashboard/DonationList/DonationList';
 
 function App() {
   return (
@@ -76,12 +76,6 @@ function App() {
               <Route path='/contacts' element={<Contacts />} />
               <Route path='/register' element={<Register />} />
               <Route path='/login' element={<Login />} />
-              {/* <Route path='/signupTeacher' element={<TeacherSignup />} />
-              <Route path='/signinTeacher' element={<TeacherSignin />} />
-              <Route path='/signupStudent' element={<StudentSignup />} />
-              <Route path='/signinStudent' element={<StudentSignin />} />
-              <Route path='/signinAffiliate' element={<AffiliateSignin />} />
-              <Route path='/signupAffiliate' element={<AffiliateSignup />} /> */}
               <Route path='/superAdmin' element={<SuperAdmin />} />
               <Route path='/career' element={<Career />} />
               <Route path='/apply-now' element={<ApplyNow />} />
@@ -89,9 +83,15 @@ function App() {
               <Route path='/dashboard' element={<Dashboard />}>
 
                 <Route exact path="/dashboard" element={<DashboardHome />} />
-                <Route path={`/dashboard/addcarrer`} element={<Careerdb />} />
-                <Route path={`/dashboard/addprogram`} element={<Programdb />} />
-                <Route path={`/dashboard/addarticle`} element={<BlogLists />} />
+                <Route path={`/dashboard/addcarrer`} element={<AddCarrer />} />
+                <Route path={`/dashboard/addprogram`} element={<AddProgram />} />
+                <Route path={`/dashboard/addarticles`} element={<AddArticles />} />
+                <Route path={`/dashboard/addevents`} element={<AddEvents />} />
+                <Route path={`/dashboard/manageArticles`} element={<ManageArticles />} />
+                <Route path={`/dashboard/manageEvents`} element={<ManageEvents />} />
+                <Route path={`/dashboard/managePrograms`} element={<ManageProgram />} />
+                <Route path={`/dashboard/manageCarrer`} element={<ManageCareer />} />
+                <Route path={`/dashboard/donatonList`} element={<DonationList />} />
 
               </Route>
             </Routes>

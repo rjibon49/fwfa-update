@@ -9,11 +9,12 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import { ListGroup, Navbar } from "react-bootstrap";
 import { AppBar, CssBaseline, Toolbar } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
-import RateReviewIcon from '@mui/icons-material/RateReview';
+import ListAltIcon from '@mui/icons-material/ListAlt';
 import LogoutIcon from '@mui/icons-material/Logout';
 import {Link, Outlet} from "react-router-dom";
 import SegmentIcon from '@mui/icons-material/Segment';
 import useAuth from "../../hooks/useAuth";
+import logo from './../../images/logo/fwfa-logo.png'
 
 const drawerWidth = 220;
 
@@ -35,7 +36,7 @@ function Dashboard(props) {
     <div>
       <div className="text-center py-1 mb-1">
         <Navbar.Brand as={Link} to="/" className=" fw-bold fs-2">
-          WRISH
+          <img src={logo} alt="" className='logo'/>
         </Navbar.Brand>
       </div>
 
@@ -47,9 +48,17 @@ function Dashboard(props) {
       <Divider />
       <ListGroup className="mt-3">
         <Link to="/dashboard" style={sideMenu}><ListGroup.Item > < DashboardIcon/> Dashboard</ListGroup.Item> </Link>
-        <Link to={`/dashboard/addcarrer`} style={sideMenu}><ListGroup.Item> < RateReviewIcon/> Carrer DB</ListGroup.Item> </Link>
+        <Link to={`/dashboard/addarticles`} style={sideMenu}><ListGroup.Item> < AddIcon/> Add Article</ListGroup.Item> </Link>
+        <Link to={`/dashboard/addevents`} style={sideMenu}><ListGroup.Item> < AddIcon/> Add Events</ListGroup.Item> </Link>
         <Link to={`/dashboard/addprogram`} style={sideMenu}><ListGroup.Item> < AddIcon/> Add Program</ListGroup.Item> </Link>
-        <Link to={`/dashboard/addarticle`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Add Article</ListGroup.Item> </Link>
+        <Link to={`/dashboard/addcarrer`} style={sideMenu}><ListGroup.Item> < AddIcon/> Add  Carrer</ListGroup.Item> </Link>
+        <Link to={`/dashboard/manageArticles`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Articles</ListGroup.Item> </Link>
+        <Link to={`/dashboard/manageEvents`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Events</ListGroup.Item> </Link>
+        <Link to={`/dashboard/managePrograms`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Program</ListGroup.Item> </Link>
+        <Link to={`/dashboard/manageCarrer`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Carrer</ListGroup.Item> </Link>
+        <Link to={`/dashboard/donatonList`} style={sideMenu}><ListGroup.Item> < ListAltIcon/> Donation List</ListGroup.Item> </Link>
+        
+        
         
         <Link to={`/home`} style={sideMenu}><ListGroup.Item onClick={logout}> < LogoutIcon/> Logout</ListGroup.Item> </Link>
     </ListGroup>
