@@ -66,6 +66,7 @@ const Header = () => {
                             <Nav.Link as={Link} to="/events" className="">Events</Nav.Link>
                             <Nav.Link as={Link} to="/blog" className="">Blog</Nav.Link>
                             <Nav.Link as={Link} to="/contacts" className="">Contact Us</Nav.Link>
+                            <Nav.Link as={Link} to="/dashboard" className="">Dashboard</Nav.Link>
                             {
                                 user.email ? <NavDropdown title="Profile" id="basic-nav-dropdown" style={{color:"white"}}>
                                     <Nav className="flex-column text-center">

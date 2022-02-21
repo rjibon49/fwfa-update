@@ -38,6 +38,11 @@ import NotFound from './Pages/NotFound/NotFound';
 import AuthProvider from './Context/AuthProvider';
 import Register from './Pages/Users/Register';
 import Login from './Pages/Users/Login';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import DashboardHome from './Pages/Dashboard/DashboardHome/DashboardHome';
+import Careerdb from './Pages/Dashboard/Careerdb/Careerdb';
+import Programdb from './Pages/Dashboard/ProgramItem/Programdb';
+import BlogLists from './Pages/Dashboard/BlogsItem/BlogLists';
 
 function App() {
   return (
@@ -81,6 +86,14 @@ function App() {
               <Route path='/career' element={<Career />} />
               <Route path='/apply-now' element={<ApplyNow />} />
               <Route path='*' element={<NotFound />} />
+              <Route path='/dashboard' element={<Dashboard />}>
+
+                <Route exact path="/dashboard" element={<DashboardHome />} />
+                <Route path={`/dashboard/addcarrer`} element={<Careerdb />} />
+                <Route path={`/dashboard/addprogram`} element={<Programdb />} />
+                <Route path={`/dashboard/addarticle`} element={<BlogLists />} />
+
+              </Route>
             </Routes>
           <Footer />
         </BrowserRouter>
