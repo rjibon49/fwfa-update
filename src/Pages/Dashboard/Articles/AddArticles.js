@@ -7,11 +7,11 @@ import { Editor } from '@tinymce/tinymce-react';
 const AddArticles = () => {
 
     const editorRef = useRef(null);
-   const log = () => {
-     if (editorRef.current) {
-       console.log(editorRef.current.getContent());
-     }
-   };
+//    const log = () => {
+//      if (editorRef.current) {
+//        console.log(editorRef.current.getContent());
+//      }
+//    };
 
     const [addProduct, setAddProduct ] = useState();
 
@@ -20,7 +20,7 @@ const AddArticles = () => {
         const value = e.target.value;
         const newProduct = {...addProduct};
         console.log(newProduct);
-        newProduct[field] = value;
+        newProduct[field] = value || editorRef.current.getContent();
         setAddProduct(newProduct);
         console.log(e.target.value);
     }
@@ -29,7 +29,7 @@ const AddArticles = () => {
         const productAdd = {
             ...addProduct
         }
-        fetch('https://hidden-taiga-98154.herokuapp.com/tes', {
+        fetch('https://hidden-taiga-98154.herokuapp.com/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -116,9 +116,10 @@ const AddArticles = () => {
                     <textarea className="form-control" name="description" onBlur={handleOnBlur} rows="3" placeholder="Item Description"></textarea>
                 </Form.Group> */}
 
-                    <Editor name="ArticleDetails" onBlur={handleOnBlur}
+                    <Editor onBlur={handleOnBlur}
                         onInit={(evt, editor) => editorRef.current = editor}
                         // initialValue="<p>This is the initial content of the editor.</p>"
+                        name="ArticleDetails"
                         init={{
                         height: 500,
                         menubar: false,
@@ -135,7 +136,7 @@ const AddArticles = () => {
                         
                         }}
                     />
-                    <button onClick={log}>Log editor content</button>
+                    <button type="submit">Log editor content</button>
                 
 
                 <div className="text-center mt-5">

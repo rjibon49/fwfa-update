@@ -39,7 +39,7 @@ const Donation = () => {
                 <div className='p-5'>
                     <h3 className='fs-2 fw-bold'> Your Donation</h3>
                 </div>
-                <div className='d-flex justify-content-evenly mb-5'>
+                <div className='d-flex mb-5'>
                     <div className="form-check form-check-inline" style={radioButtonTop}>
                         <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
                         <label className="form-check-label" for="inlineRadio1">One-Time</label>
