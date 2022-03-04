@@ -5,13 +5,15 @@ const UseProgram = () =>{
     const [program, setProgram] = useState([]);
 
     useEffect(() => {
-        fetch ('./program.json')
+        fetch ('https://bby8e7ppz5.execute-api.us-west-1.amazonaws.com/programdata/programs')
         .then ( res => res.json())
-        .then ( data => setProgram(data));
+        .then ( data => setProgram(data.programs));
+        
     }, []);
-
+    console.log(program);
     // return profile item
     return [program] ;
+    
 }
 
 export default UseProgram;

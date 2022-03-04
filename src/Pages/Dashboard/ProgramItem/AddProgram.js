@@ -6,33 +6,33 @@ import { Editor } from '@tinymce/tinymce-react';
 
 const AddProgram = () => {
 
-    const [addProduct, setAddProduct ] = useState();
+    const [addProgram, setAddProgram ] = useState();
 
     const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
-        const newProduct = {...addProduct};
-        console.log(newProduct);
-        newProduct[field] = value;
-        setAddProduct(newProduct);
+        const newProgram = {...addProgram};
+        console.log(newProgram);
+        newProgram[field] = value;
+        setAddProgram(newProgram);
         console.log(e.target.value);
     }
 
     const handleProductSubmit = e => {
-        const productAdd = {
-            ...addProduct
+        const programAdd = {
+            ...addProgram
         }
-        fetch('https://hidden-taiga-98154.herokuapp.com/tes', {
+        fetch('https://bby8e7ppz5.execute-api.us-west-1.amazonaws.com/programdata/program', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(productAdd)
+            body: JSON.stringify(programAdd)
         })
         .then(res => res.json())
         .then(data => {
-            if(data.insertedId) {
-                toast.success('Product Added Successfully', {
+            if(data.programId) {
+                toast.success('Program Added Successfully', {
                     position: "top-right",
                     autoClose: 3000,
                     hideProgressBar: false,
@@ -47,12 +47,6 @@ const AddProgram = () => {
         e.preventDefault();
     };
     
-    
-    // const addedSuccessFully= () => {
-        
-    // }
-    
-
 
     return (
         <Container className="bg-dark px-4 py-5 mb-4 rounded">
@@ -61,11 +55,18 @@ const AddProgram = () => {
                     <Form.Group as={Col} >
                         <Form.Control type="text" name="programName" onBlur={handleOnBlur} placeholder="Program Title" required />
                     </Form.Group>
-
-                    <Form.Group as={Col}>
-                        <Form.Control type="text" name="image" onBlur={handleOnBlur} placeholder="Image" required />
+                    <Form.Group as={Col} >
+                        <Form.Control type="text" name="programId" onBlur={handleOnBlur} placeholder="Program ID" required />
                     </Form.Group>
+                    
+                    {/* <Form.Group as={Col}>
+                        <Form.Control type="file" name="upload" accept="image/*" onBlur={handleOnBlur} placeholder="Image" required />
+                    </Form.Group> */}
                 </Row>
+
+                <Form.Group as={Col} className="mb-3">
+                    <Form.Control type="text" name="image" onBlur={handleOnBlur} placeholder="Image" required />
+                </Form.Group>
 
 
                 <Form.Group as={Col}>

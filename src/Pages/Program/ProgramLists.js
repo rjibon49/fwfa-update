@@ -17,6 +17,7 @@ const ProgramLists = () => {
         
     },[])
     const [program] = UseProgram();
+    console.log(program);
 
     return (
         <section className='my-5'>
@@ -27,13 +28,13 @@ const ProgramLists = () => {
                 <Container className=''>
                     <Row>
                         {
-                            program.map (pg => <Col xs={12} sm={12} md={12} lg={6} xl={6} key={pg.id}>
+                            program.map (pg => <Col xs={12} sm={12} md={12} lg={6} xl={6} key={pg.programId}>
                                 <div className='program-card' data-aos="zoom-in">
                                     <div className=''>
-                                        <Image src={pg.images} className='images'/>
+                                        <Image src={pg.image} className='images'/>
                                     </div>
                                     <div className='py-4'>
-                                        <p className='program-details'><span className='fw-bold'>{pg.title}</span>{pg.details}</p>
+                                        <p className='program-details'><span className='fw-bold'>{pg.programName}</span>{pg.programDescription}</p>
                                     </div>
                                     <div className='text-center'>
                                         <Link to={`/signupStudent`}><Button className='bg-green px-5 py-3 border-0 align-self-end btn-block'><p className='fw-bold'>Join Now</p></Button></Link>

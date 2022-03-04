@@ -29,7 +29,7 @@ const AddArticles = () => {
         const productAdd = {
             ...addProduct
         }
-        fetch('https://hidden-taiga-98154.herokuapp.com/products', {
+        fetch('rt', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
