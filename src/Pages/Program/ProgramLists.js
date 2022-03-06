@@ -17,7 +17,6 @@ const ProgramLists = () => {
         
     },[])
     const [program] = UseProgram();
-    console.log(program);
 
     return (
         <section className='my-5'>

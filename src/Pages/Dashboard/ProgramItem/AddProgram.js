@@ -15,7 +15,6 @@ const AddProgram = () => {
         console.log(newProgram);
         newProgram[field] = value;
         setAddProgram(newProgram);
-        console.log(e.target.value);
     }
 
     const handleProductSubmit = e => {

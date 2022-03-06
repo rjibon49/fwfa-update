@@ -10,7 +10,7 @@ const UseProgram = () =>{
         .then ( data => setProgram(data.programs));
         
     }, []);
-    console.log(program);
+    
     // return profile item
     return [program] ;
     
