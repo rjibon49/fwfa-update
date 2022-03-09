@@ -21,7 +21,7 @@ const AddProgram = () => {
         const programAdd = {
             ...addProgram
         }
-        fetch('https://bby8e7ppz5.execute-api.us-west-1.amazonaws.com/programdata/program', {
+        fetch('http://localhost:5000/program', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

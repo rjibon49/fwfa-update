@@ -18,7 +18,9 @@ const ManageProgram = () => {
 }, []);
 
   const handleDelete = programId => {
-    const url = `https://bby8e7ppz5.execute-api.us-west-1.amazonaws.com/programdata/program?programId=${programId}`;
+    const proceed = window.confirm("Are you sure, You want to delete? ");
+    if(proceed) {
+      const url = `https://bby8e7ppz5.execute-api.us-west-1.amazonaws.com/programdata/program?programId=${programId}`;
     console.log(programId);
     fetch(url, {
         method: 'DELETE'
@@ -40,6 +42,7 @@ const ManageProgram = () => {
             setDataDelete(remaining);
         }
     })
+    }
 }
 
 console.log(dataDelete);
