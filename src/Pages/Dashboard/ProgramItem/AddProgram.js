@@ -30,7 +30,7 @@ const AddProgram = () => {
         })
         .then(res => res.json())
         .then(data => {
-            if(data.programId) {
+            if(data.insertedId) {
                 toast.success('Program Added Successfully', {
                     position: "top-right",
                     autoClose: 3000,
