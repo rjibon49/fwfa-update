@@ -36,13 +36,13 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import DashboardHome from './Pages/Dashboard/DashboardHome/DashboardHome';
 import AddArticles from './Pages/Dashboard/Articles/AddArticles';
 import AddProgram from './Pages/Dashboard/ProgramItem/AddProgram';
-import AddCarrer from './Pages/Dashboard/Careerdb/AddCarrer';
 import AddEvents from './Pages/Dashboard/AddEvents/AddEvents';
 import ManageArticles from './Pages/Dashboard/Articles/ManageArticles';
 import ManageEvents from './Pages/Dashboard/AddEvents/ManageEvents';
 import ManageProgram from './Pages/Dashboard/ProgramItem/ManageProgram';
 import ManageCareer from './Pages/Dashboard/Careerdb/ManageCareer';
 import DonationList from './Pages/Dashboard/DonationList/DonationList';
+import AddCareer from './Pages/Dashboard/Careerdb/career';
 
 function App() {
   return (
@@ -83,14 +83,14 @@ function App() {
               <Route path='/dashboard' element={<Dashboard />}>
 
                 <Route exact path="/dashboard" element={<DashboardHome />} />
-                <Route path={`/dashboard/addcarrer`} element={<AddCarrer />} />
+                <Route path={`/dashboard/addcareer`} element={<AddCareer />} />
                 <Route path={`/dashboard/addprogram`} element={<AddProgram />} />
                 <Route path={`/dashboard/addarticles`} element={<AddArticles />} />
                 <Route path={`/dashboard/addevents`} element={<AddEvents />} />
                 <Route path={`/dashboard/manageArticles`} element={<ManageArticles />} />
                 <Route path={`/dashboard/manageEvents`} element={<ManageEvents />} />
                 <Route path={`/dashboard/managePrograms`} element={<ManageProgram />} />
-                <Route path={`/dashboard/manageCarrer`} element={<ManageCareer />} />
+                <Route path={`/dashboard/manageCareer`} element={<ManageCareer />} />
                 <Route path={`/dashboard/donatonList`} element={<DonationList />} />
 
               </Route>

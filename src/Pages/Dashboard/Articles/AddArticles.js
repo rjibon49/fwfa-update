@@ -13,28 +13,28 @@ const AddArticles = () => {
 //      }
 //    };
 
-    const [addProduct, setAddProduct ] = useState();
+    const [addArticle, setAddArticle ] = useState();
 
     const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
-        const newProduct = {...addProduct};
-        console.log(newProduct);
-        newProduct[field] = value || editorRef.current.getContent();
-        setAddProduct(newProduct);
+        const newArticle = {...addArticle};
+        console.log(newArticle);
+        newArticle[field] = value || editorRef.current.getContent();
+        setAddArticle(newArticle);
         console.log(e.target.value);
     }
 
     const handleProductSubmit = e => {
-        const productAdd = {
-            ...addProduct
+        const articleAdd = {
+            ...addArticle
         }
-        fetch('rt', {
+        fetch('ab', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(productAdd)
+            body: JSON.stringify(articleAdd)
         })
         .then(res => res.json())
         .then(data => {
@@ -68,9 +68,20 @@ const AddArticles = () => {
                     <Form.Group as={Col} >
                         <Form.Control type="text" name="ArticleName" onBlur={handleOnBlur} placeholder="Article Title" required />
                     </Form.Group>
-
+                </Row>
+                <Row className="mb-3">
                     <Form.Group as={Col}>
                         <Form.Control type="text" name="image" onBlur={handleOnBlur} placeholder="Image" required />
+                    </Form.Group>
+                    <Form.Group as={Col} controlId="formGridState">
+                        <Form.Select aria-label="Default select example" name="category" value="category">
+                            <option>Select Category</option>
+                            <option name="School" value="School">School</option>
+                            <option name="University" value="University">University</option>
+                            <option name="Business" value="Business">Business</option>
+                            <option name="Non-Profit" value="Non-Profit">Non-Profit</option>
+                            <option name="Employee" value="Employee">Employee</option>
+                        </Form.Select>
                     </Form.Group>
                 </Row>
 

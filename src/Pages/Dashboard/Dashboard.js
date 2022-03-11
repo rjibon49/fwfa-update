@@ -51,11 +51,11 @@ function Dashboard(props) {
         <Link to={`/dashboard/addarticles`} style={sideMenu}><ListGroup.Item> < AddIcon/> Add Article</ListGroup.Item> </Link>
         <Link to={`/dashboard/addevents`} style={sideMenu}><ListGroup.Item> < AddIcon/> Add Events</ListGroup.Item> </Link>
         <Link to={`/dashboard/addprogram`} style={sideMenu}><ListGroup.Item> < AddIcon/> Add Program</ListGroup.Item> </Link>
-        <Link to={`/dashboard/addcarrer`} style={sideMenu}><ListGroup.Item> < AddIcon/> Add  Carrer</ListGroup.Item> </Link>
+        <Link to={`/dashboard/addcareer`} style={sideMenu}><ListGroup.Item> < AddIcon/> Add Career</ListGroup.Item> </Link>
         <Link to={`/dashboard/manageArticles`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Articles</ListGroup.Item> </Link>
         <Link to={`/dashboard/manageEvents`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Events</ListGroup.Item> </Link>
         <Link to={`/dashboard/managePrograms`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Program</ListGroup.Item> </Link>
-        <Link to={`/dashboard/manageCarrer`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Carrer</ListGroup.Item> </Link>
+        <Link to={`/dashboard/manageCareer`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Career</ListGroup.Item> </Link>
         <Link to={`/dashboard/donatonList`} style={sideMenu}><ListGroup.Item> < ListAltIcon/> Donation List</ListGroup.Item> </Link>
         
         

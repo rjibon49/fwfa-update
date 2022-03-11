@@ -4,24 +4,28 @@ import BorderColorIcon from '@mui/icons-material/BorderColor';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { toast } from 'react-toastify';
 import UseProgram from '../../../hooks/UseProgram';
+import EditProgram from './EditProgram';
 
 const ManageProgram = () => {
 
   const [dataDelete, setDataDelete] = useState([]);
-  const [program] = UseProgram();
-  const  {programId} = program;
+  const {editdatainfo} = UseProgram();
+
+  const [openOrder, setOpenOrder] = useState(false);
+  const handleOrderOpen = () => setOpenOrder(true);
+  const handleOrderClose = () => setOpenOrder(false);
 
   useEffect(() => {
-    fetch ('https://bby8e7ppz5.execute-api.us-west-1.amazonaws.com/programdata/programs')
+    fetch ('https://shrouded-retreat-25778.herokuapp.com/program')
     .then ( res => res.json())
-    .then ( data => setDataDelete(data.programs));
+    .then ( data => setDataDelete(data));
 }, []);
 
-  const handleDelete = programId => {
+  const handleDelete = id => {
     const proceed = window.confirm("Are you sure, You want to delete? ");
     if(proceed) {
-      const url = `https://bby8e7ppz5.execute-api.us-west-1.amazonaws.com/programdata/program?programId=${programId}`;
-    console.log(programId);
+      const url = `https://shrouded-retreat-25778.herokuapp.com/program/${id}`;
+    console.log(id);
     fetch(url, {
         method: 'DELETE'
     })
@@ -38,7 +42,7 @@ const ManageProgram = () => {
             draggable: false,
             progress: undefined,
             });
-            const remaining = dataDelete.filter(pl => pl.programId !== programId)
+            const remaining = dataDelete.filter(pl => pl._id !== id)
             setDataDelete(remaining);
         }
     })
@@ -64,13 +68,20 @@ console.log(dataDelete);
                     <td><Image src={pg.image}  className="dashboardImage"/></td>
                     <td>{pg.programDescription}</td>
                     <td className="text-center">
-                    <button className="btn btn-danger p-1 m-1" ><BorderColorIcon className="m-1"/></button>
-                    <button className="btn btn-danger p-1 m-1" onClick={ () => handleDelete(pg.programId)}><DeleteIcon className="m-1"/></button>
+                    <button className="btn btn-danger p-1 m-1" onClick={handleOrderOpen}><BorderColorIcon className="m-1"/></button>
+                    <button className="btn btn-danger p-1 m-1" onClick={ () => handleDelete(pg._id)}><DeleteIcon className="m-1"/></button>
                     </td>
                   </tr>)
               }
             </thead>
           </Table>
+
+          <EditProgram
+          key ={dataDelete._id}
+          handleOrderClose = {handleOrderClose}
+          openOrder = {openOrder}
+          dataDelete={dataDelete}
+        ></EditProgram>
       </div>
     );
 };

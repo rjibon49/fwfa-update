@@ -4,7 +4,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Editor } from '@tinymce/tinymce-react';
 
-const AddCarrer = () => {
+const AddCareer = () => {
 
     const editorRef = useRef(null);
    const log = () => {
@@ -167,4 +167,4 @@ const AddCarrer = () => {
     );
 };
 
-export default AddCarrer;
+export default AddCareer;

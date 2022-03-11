@@ -5,9 +5,9 @@ const UseProgram = () =>{
     const [program, setProgram] = useState([]);
 
     useEffect(() => {
-        fetch ('https://bby8e7ppz5.execute-api.us-west-1.amazonaws.com/programdata/programs')
+        fetch ('https://shrouded-retreat-25778.herokuapp.com/program')
         .then ( res => res.json())
-        .then ( data => setProgram(data.programs));
+        .then ( data => setProgram(data));
         
     }, []);
     

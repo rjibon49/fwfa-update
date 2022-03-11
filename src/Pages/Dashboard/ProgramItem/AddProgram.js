@@ -21,7 +21,7 @@ const AddProgram = () => {
         const programAdd = {
             ...addProgram
         }
-        fetch('http://localhost:5000/program', {
+        fetch('https://shrouded-retreat-25778.herokuapp.com/program', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
