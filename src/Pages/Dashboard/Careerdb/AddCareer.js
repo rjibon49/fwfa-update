@@ -7,11 +7,11 @@ import { Editor } from '@tinymce/tinymce-react';
 const AddCareer = () => {
 
     const editorRef = useRef(null);
-   const log = () => {
-     if (editorRef.current) {
-       console.log(editorRef.current.getContent());
-     }
-   };
+//    const log = () => {
+//      if (editorRef.current) {
+//        console.log(editorRef.current.getContent());
+//      }
+//    };
 
     const [addProduct, setAddProduct ] = useState();
 
@@ -20,7 +20,7 @@ const AddCareer = () => {
         const value = e.target.value;
         const newProduct = {...addProduct};
         console.log(newProduct);
-        newProduct[field] = value;
+        newProduct[field] = value || editorRef.current.getContent();
         setAddProduct(newProduct);
         console.log(e.target.value);
     }
@@ -142,7 +142,7 @@ const AddCareer = () => {
                         
                         }}
                     />
-                    <button onClick={log}>Log editor content</button>
+                    {/* <button onClick={log}>Log editor content</button> */}
                 
 
                 <div className="text-center mt-5">

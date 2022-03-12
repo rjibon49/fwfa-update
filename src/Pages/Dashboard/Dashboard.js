@@ -6,7 +6,7 @@ import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import { ListGroup, Navbar } from "react-bootstrap";
+import { ListGroup, Navbar, NavDropdown } from "react-bootstrap";
 import { AppBar, CssBaseline, Toolbar } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
 import ListAltIcon from '@mui/icons-material/ListAlt';
@@ -15,6 +15,12 @@ import {Link, Outlet} from "react-router-dom";
 import SegmentIcon from '@mui/icons-material/Segment';
 import useAuth from "../../hooks/useAuth";
 import logo from './../../images/logo/fwfa-logo.png'
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+
+
+  
 
 const drawerWidth = 220;
 
@@ -32,6 +38,17 @@ function Dashboard(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  
   const drawer = (
     <div>
       <div className="text-center py-1 mb-1">
@@ -57,6 +74,35 @@ function Dashboard(props) {
         <Link to={`/dashboard/managePrograms`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Program</ListGroup.Item> </Link>
         <Link to={`/dashboard/manageCareer`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Career</ListGroup.Item> </Link>
         <Link to={`/dashboard/donatonList`} style={sideMenu}><ListGroup.Item> < ListAltIcon/> Donation List</ListGroup.Item> </Link>
+
+
+        <NavDropdown title="User" id="basic-nav-dropdown" className=''>
+            <NavDropdown.Item as={Link} to="/register">Register</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/login">Login</NavDropdown.Item>
+        </NavDropdown>
+
+        <Button
+        id="basic-button"
+        aria-controls={open ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+      >
+        Dashboard
+      </Button>
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <NavDropdown.Item as={Link} to="/register">Register</NavDropdown.Item>
+        <NavDropdown.Item as={Link} to="/login">Login</NavDropdown.Item>
+      </Menu>
+       
         
         
         

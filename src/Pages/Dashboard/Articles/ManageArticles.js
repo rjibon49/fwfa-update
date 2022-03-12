@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Image, Table } from 'react-bootstrap';
 import { toast } from 'react-toastify';
-import UseProgram from '../../../hooks/UseProgram';
+import UseArticles from '../../../hooks/UseArticles';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditArticle from './EditArticle';
 
 const ManageArticles = () => {
   const [dataDelete, setDataDelete] = useState([]);
-  const {editdatainfo} = UseProgram();
+  const {editdatainfo} = UseArticles();
 
   const [openOrder, setOpenOrder] = useState(false);
   const handleOrderOpen = () => setOpenOrder(true);

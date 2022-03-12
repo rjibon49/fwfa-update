@@ -42,7 +42,7 @@ import ManageEvents from './Pages/Dashboard/AddEvents/ManageEvents';
 import ManageProgram from './Pages/Dashboard/ProgramItem/ManageProgram';
 import ManageCareer from './Pages/Dashboard/Careerdb/ManageCareer';
 import DonationList from './Pages/Dashboard/DonationList/DonationList';
-import AddCareer from './Pages/Dashboard/Careerdb/career';
+import AddCareer from './Pages/Dashboard/Careerdb/AddCareer';
 
 function App() {
   return (
