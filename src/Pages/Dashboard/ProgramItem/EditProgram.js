@@ -21,7 +21,7 @@ const style = {
   };
 
 const EditProgram = ({openOrder, handleOrderClose, dataDelete}) => {
-    const {id, programName, image, ProgramDescription} = dataDelete;
+    const { programName, image, ProgramDescription} = dataDelete;
 
 
         const initialInfo = {
