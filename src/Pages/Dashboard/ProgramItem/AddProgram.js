@@ -57,10 +57,6 @@ const AddProgram = () => {
                     <Form.Group as={Col} >
                         <Form.Control type="text" name="programId" onBlur={handleOnBlur} placeholder="Program ID" required />
                     </Form.Group>
-                    
-                    {/* <Form.Group as={Col}>
-                        <Form.Control type="file" name="upload" accept="image/*" onBlur={handleOnBlur} placeholder="Image" required />
-                    </Form.Group> */}
                 </Row>
 
                 <Form.Group as={Col} className="mb-3">

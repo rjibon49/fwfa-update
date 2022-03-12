@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { Image, Table } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 import { toast } from 'react-toastify';
-import UseArticles from '../../../hooks/UseArticles';
+import UseCareer from '../../../hooks/UseCareer';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditCareer from './EditCareer';
+import parse from 'html-react-parser';
 
 const ManageCareer = () => {
   const [dataDelete, setDataDelete] = useState([]);
-  const {editdatainfo} = UseArticles();
+  const {editdatainfo} = UseCareer();
 
   const [openOrder, setOpenOrder] = useState(false);
   const handleOrderOpen = () => setOpenOrder(true);
@@ -54,16 +55,20 @@ console.log(dataDelete);
           <Table striped bordered hover variant="dark" >
             <thead style={{verticalAlign:"middle"}}>
               <tr className="text-center">
-                <th>Title</th>
-                <th>Image</th>
+                <th>Career Title</th>
+                <th>Position</th>
+                <th>Vacancy</th>
+                <th>Last Date</th>
                 <th className='w-50'>Details</th>
                 <th>Action</th>
               </tr>
               {
-                dataDelete.map(pg => <tr key={pg.programId}>
-                    <td>{pg.ArticleName}</td>
-                    <td><Image src={pg.image}  className="dashboardImage"/></td>
-                    <td>{pg.undefined}</td>
+                dataDelete.map(pg => <tr key={pg._id}>
+                    <td>{pg.careerName}</td>
+                    <td>{pg.position}</td>
+                    <td className='text-center'>{pg.vacancy}</td>
+                    <td className='text-center'>{pg.date}</td>
+                    <td>{parse(`${pg.undefined}`)}</td>
                     <td className="text-center">
                     <button className="btn btn-danger p-1 m-1" onClick={handleOrderOpen}><BorderColorIcon className="m-1"/></button>
                     <button className="btn btn-danger p-1 m-1" onClick={ () => handleDelete(pg._id)}><DeleteIcon className="m-1"/></button>

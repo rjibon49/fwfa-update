@@ -5,6 +5,7 @@ import UseProgram from '../../../hooks/UseProgram';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditEvents from './EditEvents';
+import parse from 'html-react-parser';
 
 const ManageEvents = () => {
   const [dataDelete, setDataDelete] = useState([]);
@@ -15,7 +16,7 @@ const ManageEvents = () => {
   const handleOrderClose = () => setOpenOrder(false);
 
   useEffect(() => {
-    fetch ('https://shrouded-retreat-25778.herokuapp.com/article')
+    fetch ('https://shrouded-retreat-25778.herokuapp.com/event')
     .then ( res => res.json())
     .then ( data => setDataDelete(data));
 }, []);
@@ -23,7 +24,7 @@ const ManageEvents = () => {
   const handleDelete = id => {
     const proceed = window.confirm("Are you sure, You want to delete? ");
     if(proceed) {
-      const url = `https://shrouded-retreat-25778.herokuapp.com/article/${id}`;
+      const url = `https://shrouded-retreat-25778.herokuapp.com/event/${id}`;
     console.log(id);
     fetch(url, {
         method: 'DELETE'
@@ -32,7 +33,7 @@ const ManageEvents = () => {
     .then( data => {
         console.log(data);
         if(data.deletedCount) {
-          toast.success('Article Delete Successfully', {
+          toast.success('Event Delete Successfully', {
             position: "top-right",
             autoClose: 3000,
             hideProgressBar: false,
@@ -54,16 +55,18 @@ console.log(dataDelete);
           <Table striped bordered hover variant="dark" >
             <thead style={{verticalAlign:"middle"}}>
               <tr className="text-center">
-                <th>Title</th>
-                <th>Image</th>
+                <th>Event Title</th>
+                <th>Date</th>
+                <th>Event Image</th>
                 <th className='w-50'>Details</th>
                 <th>Action</th>
               </tr>
               {
-                dataDelete.map(pg => <tr key={pg.programId}>
-                    <td>{pg.ArticleName}</td>
-                    <td><Image src={pg.image}  className="dashboardImage"/></td>
-                    <td>{pg.undefined}</td>
+                dataDelete.map(pg => <tr key={pg._id}>
+                    <td>{pg.eventName}</td>
+                    <td className='text-center'>{pg.eventDate}</td>
+                    <td><Image src={pg.eventImage}  className="dashboardImage"/></td>
+                    <td>{parse(`${pg.undefined}`)}</td>
                     <td className="text-center">
                     <button className="btn btn-danger p-1 m-1" onClick={handleOrderOpen}><BorderColorIcon className="m-1"/></button>
                     <button className="btn btn-danger p-1 m-1" onClick={ () => handleDelete(pg._id)}><DeleteIcon className="m-1"/></button>

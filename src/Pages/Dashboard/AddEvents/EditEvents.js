@@ -26,41 +26,41 @@ const EditEvents = ({openOrder, handleOrderClose, dataDelete}) => {
     const editorRef = useRef(null);
 
 
-    const {id, programName, image, ProgramDescription} = dataDelete;
+    const { eventName, eventDate, eventImage } = dataDelete;
 
 
         const initialInfo = {
-            programName: programName,
-            image: image,
-            ProgramDescription: ProgramDescription
+            eventName: eventName,
+            eventDate: eventDate,
+            eventImage: eventImage
         };
       
-        const [editProgram, setEditProgram] = useState(initialInfo);
+        const [editEvent, setEventProgram] = useState(initialInfo);
     
         const handleOnBlur = e => {
             const field = e.target.name;
             const value = e.target.value;
-            const newProgram = {...editProgram};
-            console.log(newProgram);
-            newProgram[field] = value || editorRef.current.getContent();;
-            setEditProgram(newProgram);
+            const newEvent = {...editEvent};
+            console.log(newEvent);
+            newEvent[field] = value || editorRef.current.getContent();
+            setEventProgram(newEvent);
         }
     
         const handleProgramSubmit = e => {
-            const programAdd = {
-                ...editProgram
+            const eventAdd = {
+                ...editEvent
             }
             fetch('', {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
                 },
-                body: JSON.stringify(programAdd)
+                body: JSON.stringify(eventAdd)
             })
             .then(res => res.json())
             .then(data => {
                 if(data.insertedId) {
-                    toast.success('Article Update Successfully', {
+                    toast.success('Event Update Successfully', {
                         position: "top-right",
                         autoClose: 3000,
                         hideProgressBar: false,
@@ -91,27 +91,27 @@ const EditEvents = ({openOrder, handleOrderClose, dataDelete}) => {
         <Box sx={style}>
             <Form className="mb-3 mx-5" onSubmit={handleProgramSubmit}>
                 <div className='text-center mb-5 mt-3'>
-                    <h5 className=' fs-3 text-decoration-underline'>Update Article Details</h5>
+                    <h5 className=' fs-3 text-decoration-underline'>Update Event Details</h5>
                 </div>
                 <Row className="mb-3">
                     <Form.Group as={Col} >
-                        <Form.Control type="text" name="programName" defaultValue={programName} onBlur={handleOnBlur} placeholder="Program Name" required />
+                        <Form.Control type="text" name="programName" defaultValue={eventName} onBlur={handleOnBlur} placeholder="Event Name" required />
                     </Form.Group>
                 </Row>
                 <Row className="mb-3">
                     <Form.Group as={Col}>
-                        <Form.Control type="date" name="date" onBlur={handleOnBlur} placeholder="Last Date" required />
+                        <Form.Control type="text" name="eventImage" defaultValue={eventImage} onBlur={handleOnBlur} placeholder="Image Link" required />
                     </Form.Group>
 
                     <Form.Group as={Col}>
-                        <Form.Control type="text" name="image" defaultValue={image} onBlur={handleOnBlur} placeholder="Event Image" required />
+                        <Form.Control type="date" name="date" onBlur={handleOnBlur} placeholder="Last Date" required />
                     </Form.Group>
                 </Row>
 
                 <Editor onBlur={handleOnBlur}
                         onInit={(evt, editor) => editorRef.current = editor}
                         // initialValue="<p>This is the initial content of the editor.</p>" 
-                        name="ArticleDetails"
+                        name="eventDetails"
                         init={{
                         height: 400,
                         menubar: false,

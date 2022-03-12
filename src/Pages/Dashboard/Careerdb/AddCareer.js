@@ -13,33 +13,33 @@ const AddCareer = () => {
 //      }
 //    };
 
-    const [addProduct, setAddProduct ] = useState();
+    const [addCareer, setAddCareer ] = useState();
 
     const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
-        const newProduct = {...addProduct};
-        console.log(newProduct);
-        newProduct[field] = value || editorRef.current.getContent();
-        setAddProduct(newProduct);
+        const newCareer = {...addCareer};
+        console.log(newCareer);
+        newCareer[field] = value || editorRef.current.getContent();
+        setAddCareer(newCareer);
         console.log(e.target.value);
     }
 
     const handleProductSubmit = e => {
-        const productAdd = {
-            ...addProduct
+        const careerAdd = {
+            ...addCareer
         }
-        fetch('https://hidden-taiga-98154.herokuapp.com/tes', {
+        fetch('https://shrouded-retreat-25778.herokuapp.com/career', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(productAdd)
+            body: JSON.stringify(careerAdd)
         })
         .then(res => res.json())
         .then(data => {
             if(data.insertedId) {
-                toast.success('Product Added Successfully', {
+                toast.success('Career Added Successfully', {
                     position: "top-right",
                     autoClose: 3000,
                     hideProgressBar: false,
@@ -66,62 +66,22 @@ const AddCareer = () => {
             <Form className="mb-3 mx-5" onSubmit={handleProductSubmit}>
 
                 <Form.Group as={Col} className="mb-3">
-                    <Form.Control type="text" name="ArticleName" onBlur={handleOnBlur} placeholder="Carrer Title" required />
+                    <Form.Control type="text" name="careerName" onBlur={handleOnBlur} placeholder="Carrer Title" required />
                 </Form.Group>
 
                 <Row className="mb-3">
                     <Form.Group as={Col}>
-                        <Form.Control type="text" name="image" onBlur={handleOnBlur} placeholder="Position" required />
+                        <Form.Control type="text" name="position" onBlur={handleOnBlur} placeholder="Position" required />
                     </Form.Group>
                     <Form.Group as={Col}>
-                        <Form.Control type="number" name="image" onBlur={handleOnBlur} placeholder="Vacancy" required />
+                        <Form.Control type="number" name="vacancy" onBlur={handleOnBlur} placeholder="Vacancy" required />
                     </Form.Group>
                     <Form.Group as={Col}>
-                        <Form.Control type="date" name="image" onBlur={handleOnBlur} placeholder="Last Date" required />
+                        <Form.Control type="date" name="date" onBlur={handleOnBlur} placeholder="Last Date" required />
                     </Form.Group>
                 </Row>
 
-                {/* <Row className="mb-3">
-                    <Form.Group as={Col}>
-                        <Form.Control placeholder="Price"  name="price" onBlur={handleOnBlur} />
-                    </Form.Group>
-
-                    <Form.Group as={Col}>
-                        <Form.Control placeholder="categories" name="categories" onBlur={handleOnBlur} />
-                    </Form.Group>
-                </Row>
-
-                <Row className="mb-3">
-                    <Form.Group as={Col}>
-                        <Form.Control placeholder="Movement"  name="movement" onBlur={handleOnBlur} />
-                    </Form.Group>
-
-                    <Form.Group as={Col}>
-                        <Form.Control placeholder="Diameter" name="diameter" onBlur={handleOnBlur} />
-                    </Form.Group>
-
-                    <Form.Group as={Col}>
-                        <Form.Control placeholder="Dial Color" name="dialColor" onBlur={handleOnBlur} />
-                    </Form.Group>
-                </Row>
-
-                <Row className="mb-3">
-                    <Form.Group as={Col}>
-                        <Form.Control placeholder="Water Resistance"  name="waterResistance" onBlur={handleOnBlur} />
-                    </Form.Group>
-
-                    <Form.Group as={Col}>
-                        <Form.Control placeholder="Gender" name="gender" onBlur={handleOnBlur} />
-                    </Form.Group>
-
-                    <Form.Group as={Col}>
-                        <Form.Control placeholder="Strap" name="strap" onBlur={handleOnBlur} />
-                    </Form.Group>
-                </Row>
-
-                <Form.Group as={Col}>
-                    <textarea className="form-control" name="description" onBlur={handleOnBlur} rows="3" placeholder="Item Description"></textarea>
-                </Form.Group> */}
+               
 
                     <Editor name="ArticleDetails" onBlur={handleOnBlur}
                         onInit={(evt, editor) => editorRef.current = editor}
