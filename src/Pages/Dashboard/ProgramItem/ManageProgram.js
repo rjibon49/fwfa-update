@@ -33,7 +33,7 @@ const ManageProgram = () => {
     .then( data => {
         console.log(data);
         if(data.deletedCount) {
-          toast.success('Data Delete Successfully', {
+          toast.success('Program Delete Successfully', {
             position: "top-right",
             autoClose: 3000,
             hideProgressBar: false,

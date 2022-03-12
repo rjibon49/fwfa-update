@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Col, Form, Row, Button } from 'react-bootstrap';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -6,6 +6,7 @@ import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
+import { Editor } from '@tinymce/tinymce-react';
 
 const style = {
     position: "absolute",
@@ -20,7 +21,11 @@ const style = {
     borderRadius: "10px"
   };
 
-const EditProgram = ({openOrder, handleOrderClose, dataDelete}) => {
+const EditArticle = ({openOrder, handleOrderClose, dataDelete}) => {
+
+    const editorRef = useRef(null);
+
+
     const {id, programName, image, ProgramDescription} = dataDelete;
 
 
@@ -37,7 +42,7 @@ const EditProgram = ({openOrder, handleOrderClose, dataDelete}) => {
             const value = e.target.value;
             const newProgram = {...editProgram};
             console.log(newProgram);
-            newProgram[field] = value;
+            newProgram[field] = value || editorRef.current.getContent();;
             setEditProgram(newProgram);
         }
     
@@ -55,7 +60,7 @@ const EditProgram = ({openOrder, handleOrderClose, dataDelete}) => {
             .then(res => res.json())
             .then(data => {
                 if(data.insertedId) {
-                    toast.success('Program Update Successfully', {
+                    toast.success('Article Update Successfully', {
                         position: "top-right",
                         autoClose: 3000,
                         hideProgressBar: false,
@@ -86,7 +91,7 @@ const EditProgram = ({openOrder, handleOrderClose, dataDelete}) => {
         <Box sx={style}>
             <Form className="mb-3 mx-5" onSubmit={handleProgramSubmit}>
                 <div className='text-center mb-5 mt-3'>
-                    <h5 className=' fs-3 text-decoration-underline'>Update Program Details</h5>
+                    <h5 className=' fs-3 text-decoration-underline'>Update Article Details</h5>
                 </div>
                 <Row className="mb-3">
                     <Form.Group as={Col} >
@@ -98,9 +103,26 @@ const EditProgram = ({openOrder, handleOrderClose, dataDelete}) => {
                     </Form.Group>
                 </Row>
 
-                <Form.Group as={Col}>
-                    <textarea className="form-control" defaultValue={ProgramDescription} name="ProgramDescription" onBlur={handleOnBlur} rows="3" placeholder="Program Description"></textarea>
-                </Form.Group>
+                <Editor onBlur={handleOnBlur}
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        // initialValue="<p>This is the initial content of the editor.</p>"
+                        name="ArticleDetails"
+                        init={{
+                        height: 400,
+                        menubar: false,
+                        plugins: [
+                            'advlist autolink lists link image charmap print preview anchor',
+                            'searchreplace visualblocks code fullscreen',
+                            'insertdatetime media table paste code help wordcount'
+                        ],
+                        toolbar: 'undo redo | formatselect | ' +
+                        'bold italic backcolor | alignleft aligncenter ' +
+                        'alignright alignjustify | bullist numlist outdent indent | ' +
+                        'removeformat | help',
+                        content_style: 'body { font-family:Roboto,Arial,sans-serif; font-size:14px }'
+                        
+                        }}
+                    />
                 
 
                 <div className="text-center mt-5">
@@ -127,4 +149,4 @@ const EditProgram = ({openOrder, handleOrderClose, dataDelete}) => {
     );
 };
 
-export default EditProgram;
+export default EditArticle;

@@ -29,7 +29,7 @@ const AddArticles = () => {
         const articleAdd = {
             ...addArticle
         }
-        fetch('ab', {
+        fetch('https://shrouded-retreat-25778.herokuapp.com/article', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -147,7 +147,7 @@ const AddArticles = () => {
                         
                         }}
                     />
-                    <button type="submit">Log editor content</button>
+                    {/* <button type="submit">Log editor content</button> */}
                 
 
                 <div className="text-center mt-5">
