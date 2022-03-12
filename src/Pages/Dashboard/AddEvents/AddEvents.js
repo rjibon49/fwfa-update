@@ -55,7 +55,7 @@ const AddCarrer = () => {
     };
     
     
-    // const addedSuccessFully= () => {
+    // const addedSuccessFully= () => { 
         
     // }
     

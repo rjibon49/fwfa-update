@@ -21,7 +21,7 @@ const style = {
     borderRadius: "10px"
   };
 
-const EditArticle = ({openOrder, handleOrderClose, dataDelete}) => {
+const EditEvents = ({openOrder, handleOrderClose, dataDelete}) => {
 
     const editorRef = useRef(null);
 
@@ -97,9 +97,14 @@ const EditArticle = ({openOrder, handleOrderClose, dataDelete}) => {
                     <Form.Group as={Col} >
                         <Form.Control type="text" name="programName" defaultValue={programName} onBlur={handleOnBlur} placeholder="Program Name" required />
                     </Form.Group>
+                </Row>
+                <Row className="mb-3">
+                    <Form.Group as={Col}>
+                        <Form.Control type="date" name="date" onBlur={handleOnBlur} placeholder="Last Date" required />
+                    </Form.Group>
 
                     <Form.Group as={Col}>
-                        <Form.Control type="text" name="image" defaultValue={image} onBlur={handleOnBlur} placeholder="Program Image" required />
+                        <Form.Control type="text" name="image" defaultValue={image} onBlur={handleOnBlur} placeholder="Event Image" required />
                     </Form.Group>
                 </Row>
 
@@ -149,4 +154,4 @@ const EditArticle = ({openOrder, handleOrderClose, dataDelete}) => {
     );
 };
 
-export default EditArticle;
+export default EditEvents;

@@ -97,7 +97,7 @@ const AddArticles = () => {
 
                 <Row className="mb-3">
                     <Form.Group as={Col}>
-                        <Form.Control placeholder="Movement"  name="movement" onBlur={handleOnBlur} />
+                        <Form.Control placeholder="Movement"  name="movement" onBlur={handleOnBlur} /> 
                     </Form.Group>
 
                     <Form.Group as={Col}>
