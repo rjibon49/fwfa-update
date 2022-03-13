@@ -66,21 +66,24 @@ const Header = () => {
                             <Nav.Link as={Link} to="/events" className="">Events</Nav.Link>
                             <Nav.Link as={Link} to="/blog" className="">Blog</Nav.Link>
                             <Nav.Link as={Link} to="/contacts" className="">Contact Us</Nav.Link>
-                            <Nav.Link as={Link} to="/dashboard" className="">Dashboard</Nav.Link>
+                            {user?.email && <Nav.Link as={Link} to="/dashboard" className="">Dashboard</Nav.Link>}
                             {
-                                user.email ? <NavDropdown title="Profile" id="basic-nav-dropdown" style={{color:"white"}}>
-                                    <Nav className="flex-column text-center">
-                                        <span><small>Welcome</small></span>
-                                        <span className="fw-bold">{user.displayName}</span>
-                                        {/* <NavDropdown.Divider /> */}
-                                        <NavDropdown.Item as={Link} to="/home" onClick={logout}>Logout</NavDropdown.Item>
-                                    </Nav>
-                                </NavDropdown> :
+                                user?.email && 
+                                    <NavDropdown title="Profile" id="basic-nav-dropdown" style={{color:"white"}}>
+                                        <Nav className="flex-column text-center">
+                                            <span><small>Welcome</small></span>
+                                            <span className="fw-bold">{user.displayName}</span>
+                                            {/* <NavDropdown.Divider /> */}
+                                            <NavDropdown.Item as={Link} to="/home" onClick={logout}>Logout</NavDropdown.Item>
+                                        </Nav>
+                                    </NavDropdown>
+                            }  
+                                {/*  :
                                 <NavDropdown title="User" id="basic-nav-dropdown" className=''>
                                     <NavDropdown.Item as={Link} to="/register">Register</NavDropdown.Item>
-                                    <NavDropdown.Item as={Link} to="/login">Login</NavDropdown.Item>
-                                </NavDropdown>
-                            }      
+                                    <NavDropdown.Item as={Link} to="/superAdmin">Login</NavDropdown.Item>
+                                </NavDropdown> */}
+                                
 
                             {/* <NavDropdown title="Login" id="basic-nav-dropdown" className=''>
                                 <NavDropdown.Item as={Link} to="/signinTeacher">Teacher</NavDropdown.Item>

@@ -6,14 +6,13 @@ import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import { ListGroup, Navbar, NavDropdown } from "react-bootstrap";
+import { ListGroup, Navbar } from "react-bootstrap";
 import { AppBar, CssBaseline, Toolbar } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import LogoutIcon from '@mui/icons-material/Logout';
 import {Link, Outlet} from "react-router-dom";
 import SegmentIcon from '@mui/icons-material/Segment';
-import useAuth from "../../hooks/useAuth";
 import logo from './../../images/logo/fwfa-logo.png'
 
 import Accordion from '@mui/material/Accordion';
@@ -22,6 +21,8 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ImageIcon from '@mui/icons-material/Image';
 import VideoCameraBackIcon from '@mui/icons-material/VideoCameraBack';
+import useAuth from "../../hooks/useAuth";
+import AddModeratorIcon from '@mui/icons-material/AddModerator';
 
 
 
@@ -40,7 +41,7 @@ function Dashboard(props) {
   
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { user, logout } = useAuth();
+  const {admin, user, logout } = useAuth();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -60,22 +61,20 @@ function Dashboard(props) {
 
     
     <div>
-      <div className="text-center py-1 mb-1">
-        <Navbar.Brand as={Link} to="/" className=" fw-bold fs-2">
+      <div className="text-center py-1 my-3">
+        <Navbar.Brand as={Link} to="/">
           <img src={logo} alt="" className='logo'/>
         </Navbar.Brand>
       </div>
 
-      <Divider style={{width:"100%"}}/>
+      <Divider style={{width:"100%", padding:"1px 0", borderRadius:"0"}}/>
       <div className="text-center my-3">
-        <span><small>Welcome</small></span>
-        <p className="fs-5 fw-bold">{user.displayName}</p>
+        <p className="text-decoration-underline mb-1 fw-bold">Welcome To Dashboard</p>
+        <h5 className="fw-bold">{user.displayName}</h5>
       </div>
-      <Divider style={{width:"100%"}}/>
+      <Divider style={{width:"100%", padding:"1px 0", borderRadius:"0"}}/>
 
-
-
-      <ListGroup className="mt-3">
+      <ListGroup className="mt-1">
         <Link to="/dashboard" style={sideMenu}><ListGroup.Item > < DashboardIcon/> Dashboard</ListGroup.Item> </Link>
 
         <Accordion>
@@ -95,7 +94,7 @@ function Dashboard(props) {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion>
+      { admin && <Accordion>
         <AccordionSummary
           expandIcon={< AddIcon/>}
           aria-controls="panel1a-content"
@@ -111,6 +110,8 @@ function Dashboard(props) {
           <Link to={`/dashboard/manageCareer`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Career</ListGroup.Item> </Link>
         </AccordionDetails>
       </Accordion>
+      }
+
       <Accordion>
         <AccordionSummary
           expandIcon={< AddIcon/>}
@@ -126,13 +127,12 @@ function Dashboard(props) {
         </AccordionDetails>
       </Accordion>
 
-
+        <Link to={`/dashboard/makeAdmin`} style={sideMenu}><ListGroup.Item> <AddModeratorIcon /> Make Admin</ListGroup.Item> </Link>
         
-         <Link to={`/dashboard/addprogram`} style={sideMenu}><ListGroup.Item> < AddIcon/> Make Admin</ListGroup.Item> </Link>
-        <Link to={`/dashboard/donatonList`} style={sideMenu}><ListGroup.Item> < ListAltIcon/> Donation List</ListGroup.Item> </Link>
+        { admin &&
+        <Link to={`/dashboard/donatonList`} style={sideMenu}><ListGroup.Item> < ListAltIcon/> Donation List</ListGroup.Item></Link>
+        }
 
-
-        
         <Link to={`/home`} style={sideMenu}><ListGroup.Item onClick={logout}> < LogoutIcon/> Logout</ListGroup.Item> </Link>
     </ListGroup>
     </div>

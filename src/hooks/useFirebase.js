@@ -17,7 +17,7 @@ const useFirebase = () => {
 
   const [isLoding, setIsLoding] = useState(true);
   const [authError, setAuthError] = useState("");
-//   const [admin, setadmin] = useState(false);
+  const [admin, setadmin] = useState(false);
 
   const auth = getAuth();
 
@@ -31,7 +31,7 @@ const useFirebase = () => {
         setUser(newUser);
 
         // Save User Data to Database
-        // saveUser(email, name, 'POST');
+        saveUser(email, name, 'POST');
 
         const destination = location?.state?.from || "/";
         navigate(destination);
@@ -74,11 +74,11 @@ const useFirebase = () => {
     return () => unsubscribed;
   }, []);
 
-//   useEffect(() =>{
-//     fetch(`https://hidden-taiga-98154.herokuapp.com/users/${user.email}`)
-//     .then(res => res.json())
-//     .then(data => setadmin(data.admin))
-//   },[user.email])
+  useEffect(() =>{
+    fetch(`https://shrouded-retreat-25778.herokuapp.com/users/${user.email}`)
+    .then(res => res.json())
+    .then(data => setadmin(data.admin))
+  },[user.email])
 
   const logout = () => {
     signOut(auth)
@@ -87,21 +87,21 @@ const useFirebase = () => {
       .finally(() => setIsLoding(false));
   };
 
-//   const saveUser = (email, displayName, method) => {
-//     const user = { email, displayName };
-//     fetch('https://hidden-taiga-98154.herokuapp.com/users', {
-//         method: method,
-//         headers: {
-//             'content-type': 'application/json'
-//         },
-//         body: JSON.stringify(user)
-//     })
-//         .then()
-// }
+  const saveUser = (email, displayName, method) => {
+    const user = { email, displayName };
+    fetch('https://shrouded-retreat-25778.herokuapp.com/users', {
+        method: method,
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    })
+        .then()
+}
 
   return {
     user,
-    // admin,
+    admin,
     registerUser,
     loginUser,
     isLoding,

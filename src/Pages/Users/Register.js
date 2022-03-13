@@ -48,7 +48,7 @@ const Register = () => {
                 </Col>
                 <Col xs={12} sm={12} md={12} lg={6} xl={6}>
                     <div className='formside py-5 my-5'>
-                            <h4 className='fw-bold mb-5 text-center'>Create a Student Account</h4>
+                            <h4 className='fw-bold mb-5 text-center'>Create a Admin Account</h4>
                             <div className='d-flex justify-content-evenly'>
                                 <Button className='user-btn'><i className="fab fa-google mx-2"></i> Continue With Google</Button>
                                 <Button className='user-btn'><i className="fab fa-facebook mx-2"></i> Continue With Facebook</Button>

@@ -1,7 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Header from './Pages/Shared/Header';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import Program from './Pages/Program/Program';
@@ -10,7 +9,6 @@ import Blogs from './Pages/Blog/Blogs';
 import BlogDetails from './Pages/Blog/BlogDetails';
 import Events from './Pages/Event/Events';
 import Contacts from './Pages/Contacts/Contacts';
-import Footer from './Pages/Shared/Footer';
 import Donation from './Pages/Donation/Donation';
 import Schools from './Pages/Collaborative/Partners/Schools/Schools';
 import University from './Pages/Collaborative/Partners/University';
@@ -43,15 +41,16 @@ import ManageProgram from './Pages/Dashboard/ProgramItem/ManageProgram';
 import ManageCareer from './Pages/Dashboard/Careerdb/ManageCareer';
 import DonationList from './Pages/Dashboard/DonationList/DonationList';
 import AddCareer from './Pages/Dashboard/Careerdb/AddCareer';
+import MakeAdmin from './Pages/Dashboard/MakeAdmin';
+import PrivaetRoute from './Pages/PrivateRoute/PrivateRoute';
+import AdminRoute from './Pages/PrivateRoute/AdminRoute/AdminRoute';
 
 function App() {
   return (
     <div>
       <AuthProvider>
         <BrowserRouter>
-          
             <Routes>
-            {/* <Header /> */}
               <Route path='/' element={<Home />} />
               <Route path='/home' element={<Home />} />
               <Route path='/about' element={<About />} />
@@ -75,28 +74,27 @@ function App() {
               <Route path='/blog/:blogId' element={<BlogDetails />} />
               <Route path='/events' element={<Events />} />
               <Route path='/contacts' element={<Contacts />} />
-              <Route path='/register' element={<Register />} />
-              <Route path='/login' element={<Login />} />
+              <Route path='/superFWFAadmin' element={<Register />} />
+              {/* <Route path='/login' element={<Login />} /> */}
               <Route path='/superAdmin' element={<SuperAdmin />} />
               <Route path='/career' element={<Career />} />
               <Route path='/apply-now' element={<ApplyNow />} />
               <Route path='*' element={<NotFound />} />
-              <Route path='/dashboard' element={<Dashboard />}>
+              <Route path='/dashboard' element={<PrivaetRoute> <Dashboard /> </PrivaetRoute>}>
 
                 <Route exact path="/dashboard" element={<DashboardHome />} />
                 <Route path={`/dashboard/addcareer`} element={<AddCareer />} />
                 <Route path={`/dashboard/addprogram`} element={<AddProgram />} />
                 <Route path={`/dashboard/addarticles`} element={<AddArticles />} />
                 <Route path={`/dashboard/addevents`} element={<AddEvents />} />
-                <Route path={`/dashboard/manageArticles`} element={<ManageArticles />} />
-                <Route path={`/dashboard/manageEvents`} element={<ManageEvents />} />
-                <Route path={`/dashboard/managePrograms`} element={<ManageProgram />} />
-                <Route path={`/dashboard/manageCareer`} element={<ManageCareer />} />
-                <Route path={`/dashboard/donatonList`} element={<DonationList />} />
-
+                <Route path={`/dashboard/manageArticles`} element={<AdminRoute> <ManageArticles /> </AdminRoute>} />
+                <Route path={`/dashboard/manageEvents`} element={<AdminRoute> <ManageEvents /> </AdminRoute>} />
+                <Route path={`/dashboard/managePrograms`} element={<AdminRoute> <ManageProgram /> </AdminRoute>} />
+                <Route path={`/dashboard/manageCareer`} element={<AdminRoute> <ManageCareer /> </AdminRoute>} />
+                <Route path={`/dashboard/donatonList`} element={<AdminRoute> <DonationList /> </AdminRoute>} />
+                <Route path={`/dashboard/makeAdmin`} element={ <MakeAdmin /> } />
               </Route>
             </Routes>
-          {/* <Footer /> */}
         </BrowserRouter>
       </AuthProvider>
     </div>
