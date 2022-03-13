@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Table } from "react-bootstrap";
+import { Col, Container, Row, Table } from "react-bootstrap";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
@@ -44,51 +44,30 @@ function DashboardHome() {
 
 
   return ( 
-        <Table striped bordered hover variant="dark">
-          <thead>
-            <tr className="text-center">
-              <th>Name</th>
-              <th>Email</th>
-              <th>Address</th>
-              <th>Item Name</th>
-              <th>Category</th>
-              <th>Status</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          {/* {
-              itemOrder.map(pl => 
-                
-                <tbody key ={pl._id}>
-                <tr>
-                    <td>{pl.customerName}</td>
-                    <td>{pl.email}</td>
-                    <td>{pl.address}</td>
-                    <td>{pl.orderItem}</td>
-                    <td>{pl.itemCategory}</td>
-                    <td>Pending</td>
-                    <td className="text-center">
-                        < BorderColorIcon  className="m-2"/> 
-                        <button className="btn btn-danger" onClick={ () => handleDelete(pl._id)}><DeleteIcon className="m-2"/></button>
-                    </td>
-                </tr>
-            </tbody>
-              )
-            } */}
-            <ToastContainer
-                    position="top-right"
-                    autoClose={3000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable={false}
-                    pauseOnHover
-                />
-        </Table>
+    <Container className="py-5 my-5">
+    <Row>
+      <Col xl={4} lg={4} md={6} sm={12} xs={12} >
+        <div className="text-center">
+            <h2>Total Article</h2>
+            <p>See All</p>
+        </div>
+      </Col>
+      <Col xl={4} lg={4} md={6} sm={12} xs={12} >
+        <div className="text-center">
+            <h2>Total Events</h2>
+            <p>See All</p>
+        </div>
+      </Col>
+      <Col xl={4} lg={4} md={6} sm={12} xs={12} >
+        <div className="text-center">
+            <h2>Total Program</h2>
+            <p>See All</p>
+        </div>
+      </Col>
+    </Row>
+  </Container>
   );
-}
+};
 
 
 export default DashboardHome;

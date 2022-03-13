@@ -49,8 +49,9 @@ function App() {
     <div>
       <AuthProvider>
         <BrowserRouter>
-          <Header />
+          
             <Routes>
+            {/* <Header /> */}
               <Route path='/' element={<Home />} />
               <Route path='/home' element={<Home />} />
               <Route path='/about' element={<About />} />
@@ -95,7 +96,7 @@ function App() {
 
               </Route>
             </Routes>
-          <Footer />
+          {/* <Footer /> */}
         </BrowserRouter>
       </AuthProvider>
     </div>

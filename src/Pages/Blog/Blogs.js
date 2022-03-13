@@ -20,6 +20,8 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import Aos from 'aos';
 import { Typewriter } from 'react-simple-typewriter';
 import useAuth from '../../hooks/useAuth';
+import Header from '../Shared/Header';
+import Footer from '../Shared/Footer';
 
 const ariaLabel = { 'aria-label': 'description' };
 
@@ -44,6 +46,7 @@ const Blogs = () => {
 
     return (
         <>
+        <Header />
         <section className='green-bg mb-5'>
             <Container className='py-5'>
                 <Row className='banner-horizontal'>
@@ -246,6 +249,7 @@ const Blogs = () => {
             </Row>
         </Container>
         <GoToTop />
+        <Footer />
         </>
     );
 };

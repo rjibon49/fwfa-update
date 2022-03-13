@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import GoToTop from '../../GotoTop';
+import Footer from '../Shared/Footer';
+import Header from '../Shared/Header';
 
 const Donation = () => {
 
@@ -30,6 +32,8 @@ const Donation = () => {
     }
 
     return (
+        <>
+        <Header />
         <section className='green-bg'>
             <Container className='py-5'>
                 <div className='bg-green py-5 rounded'>
@@ -313,6 +317,8 @@ const Donation = () => {
             </Container>
             <GoToTop />
         </section>
+        <Footer />
+        </>
     );
 };
 

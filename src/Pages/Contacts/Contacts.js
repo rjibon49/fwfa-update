@@ -9,6 +9,8 @@ import emailjs from 'emailjs-com';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import GoToTop from '../../GotoTop';
+import Footer from '../Shared/Footer';
+import Header from '../Shared/Header';
 
 const Contacts = () => {
     const form = useRef();
@@ -40,6 +42,7 @@ const Contacts = () => {
 
     return (
         <>
+        <Header />
         <section className='green-bg mb-5 pbshadow'>
             <Container className='py-5'>
                 <Row className='banner-horizontal'>
@@ -116,6 +119,7 @@ const Contacts = () => {
             <Map></Map>
         </Container>
         <GoToTop />
+        <Footer />
         </>
     );
 };

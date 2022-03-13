@@ -17,6 +17,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import Header from '../Shared/Header';
+import Footer from '../Shared/Footer';
 
 const Events = () => {
 
@@ -27,6 +29,8 @@ const Events = () => {
     };
 
     return (
+        <>
+        <Header />
         <section className='my-5'>
             <Container>
                 <div className='text-center pb-5'>
@@ -182,6 +186,8 @@ const Events = () => {
             </Container>
             <GoToTop />
         </section>
+        <Footer />
+        </>
     );
 };
 

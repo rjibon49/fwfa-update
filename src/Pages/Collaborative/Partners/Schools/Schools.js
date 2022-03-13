@@ -5,6 +5,8 @@ import UseBlogs from '../../../../hooks/UseBlogs';
 import { Link } from 'react-router-dom';
 import { Input } from '@mui/material';
 import School from './School';
+import Header from '../../../Shared/Header';
+import Footer from '../../../Shared/Footer';
 
 const ariaLabel = { 'aria-label': 'description' };
 
@@ -19,6 +21,7 @@ const Schools = () => {
 
     return (
         <>
+        <Header />
         <section className='green-bg mb-5'>
             <Container className='py-5'>
                 <Row className='banner-horizontal'>
@@ -104,6 +107,7 @@ const Schools = () => {
                 </Col>
             </Row>
         </Container>
+        <Footer />
         </>
     );
 };

@@ -1,5 +1,7 @@
 import React from 'react';
 import GoToTop from '../../GotoTop';
+import Footer from '../Shared/Footer';
+import Header from '../Shared/Header';
 import AboutEvents from './AboutEvents';
 import Banner from './Banner';
 import Different from './Different';
@@ -12,6 +14,7 @@ import Slider from './Slider';
 const Home = () => {
     return (
         <>
+            <Header />
             <Slider />
             <Banner />
             <Ship />
@@ -21,6 +24,7 @@ const Home = () => {
             <OurBlog />
             <SigninBanner />
             <GoToTop />
+            <Footer />
         </>
     );
 };

@@ -8,6 +8,7 @@ const School = ({school}) => {
     const {id, title, images, category, details} = school;
 
     return (
+        <>
         <div className='pb-5 green-bg mb-5 pbshadow me-xl-5 me-lg-4 me-md-0 me-sm-0' >
             <div className=''>
                 <Image src={images} className='images'/>
@@ -26,6 +27,7 @@ const School = ({school}) => {
             </div>
             <GoToTop />
         </div>
+        </>
     );
 };
 

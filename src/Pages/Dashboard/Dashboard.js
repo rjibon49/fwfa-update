@@ -15,12 +15,17 @@ import {Link, Outlet} from "react-router-dom";
 import SegmentIcon from '@mui/icons-material/Segment';
 import useAuth from "../../hooks/useAuth";
 import logo from './../../images/logo/fwfa-logo.png'
-import MenuOpenIcon from '@mui/icons-material/MenuOpen';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
+
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ImageIcon from '@mui/icons-material/Image';
+import VideoCameraBackIcon from '@mui/icons-material/VideoCameraBack';
 
 
-  
+
+
 
 const drawerWidth = 220;
 
@@ -31,6 +36,8 @@ const sideMenu = {
   fontWeight: "700",
 }
 function Dashboard(props) {
+
+  
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
   const { user, logout } = useAuth();
@@ -39,17 +46,19 @@ function Dashboard(props) {
     setMobileOpen(!mobileOpen);
   };
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  // const [anchorEl, setAnchorEl] = React.useState(null);
+  // const open = Boolean(anchorEl);
+  // const handleClick = (event) => {
+  //   setAnchorEl(event.currentTarget);
+  // };
+  // const handleClose = () => {
+  //   setAnchorEl(null);
+  // };
 
   
   const drawer = (
+
+    
     <div>
       <div className="text-center py-1 mb-1">
         <Navbar.Brand as={Link} to="/" className=" fw-bold fs-2">
@@ -57,54 +66,72 @@ function Dashboard(props) {
         </Navbar.Brand>
       </div>
 
-      <Divider />
-      <div className="text-center mt-3">
+      <Divider style={{width:"100%"}}/>
+      <div className="text-center my-3">
         <span><small>Welcome</small></span>
         <p className="fs-5 fw-bold">{user.displayName}</p>
       </div>
-      <Divider />
+      <Divider style={{width:"100%"}}/>
+
+
+
       <ListGroup className="mt-3">
         <Link to="/dashboard" style={sideMenu}><ListGroup.Item > < DashboardIcon/> Dashboard</ListGroup.Item> </Link>
-        <Link to={`/dashboard/addarticles`} style={sideMenu}><ListGroup.Item> < AddIcon/> Add Article</ListGroup.Item> </Link>
-        <Link to={`/dashboard/addevents`} style={sideMenu}><ListGroup.Item> < AddIcon/> Add Events</ListGroup.Item> </Link>
-        <Link to={`/dashboard/addprogram`} style={sideMenu}><ListGroup.Item> < AddIcon/> Add Program</ListGroup.Item> </Link>
-        <Link to={`/dashboard/addcareer`} style={sideMenu}><ListGroup.Item> < AddIcon/> Add Career</ListGroup.Item> </Link>
-        <Link to={`/dashboard/manageArticles`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Articles</ListGroup.Item> </Link>
-        <Link to={`/dashboard/manageEvents`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Events</ListGroup.Item> </Link>
-        <Link to={`/dashboard/managePrograms`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Program</ListGroup.Item> </Link>
-        <Link to={`/dashboard/manageCareer`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Career</ListGroup.Item> </Link>
+
+        <Accordion>
+        <AccordionSummary
+          expandIcon={< AddIcon/>}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+          style={{padding:"0", margin:"0 15px"}}
+        >
+          <Typography style={sideMenu} className="ms-3">Add Item</Typography>
+        </AccordionSummary>
+        <AccordionDetails style={{padding:"0"}}>
+          <Link to={`/dashboard/addarticles`} style={sideMenu}><ListGroup.Item> < AddIcon/> Add Article</ListGroup.Item> </Link>
+          <Link to={`/dashboard/addevents`} style={sideMenu}><ListGroup.Item> < AddIcon/> Add Events</ListGroup.Item> </Link>
+          <Link to={`/dashboard/addprogram`} style={sideMenu}><ListGroup.Item> < AddIcon/> Add Program</ListGroup.Item> </Link>
+          <Link to={`/dashboard/addcareer`} style={sideMenu}><ListGroup.Item> < AddIcon/> Add Career</ListGroup.Item> </Link>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion>
+        <AccordionSummary
+          expandIcon={< AddIcon/>}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+          style={{padding:"0", margin:"0 15px"}}
+        >
+          <Typography style={sideMenu} className="ms-3">Manage Item</Typography>
+        </AccordionSummary>
+        <AccordionDetails style={{padding:"0"}}>
+          <Link to={`/dashboard/manageArticles`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Articles</ListGroup.Item> </Link>
+          <Link to={`/dashboard/manageEvents`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Events</ListGroup.Item> </Link>
+          <Link to={`/dashboard/managePrograms`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Program</ListGroup.Item> </Link>
+          <Link to={`/dashboard/manageCareer`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Career</ListGroup.Item> </Link>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={< AddIcon/>}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+          style={{padding:"0", margin:"0 15px"}}
+        >
+          <Typography style={sideMenu} className="ms-3">Media</Typography>
+        </AccordionSummary>
+        <AccordionDetails style={{padding:"0"}}>
+          <Link to={`/dashboard/manageArticles`} style={sideMenu}><ListGroup.Item> < ImageIcon/> Images </ListGroup.Item> </Link>
+          <Link to={`/dashboard/manageEvents`} style={sideMenu}><ListGroup.Item> < VideoCameraBackIcon/> Videos</ListGroup.Item> </Link>
+        </AccordionDetails>
+      </Accordion>
+
+
+        
+         <Link to={`/dashboard/addprogram`} style={sideMenu}><ListGroup.Item> < AddIcon/> Make Admin</ListGroup.Item> </Link>
         <Link to={`/dashboard/donatonList`} style={sideMenu}><ListGroup.Item> < ListAltIcon/> Donation List</ListGroup.Item> </Link>
 
 
-        <NavDropdown title="User" id="basic-nav-dropdown" className=''>
-            <NavDropdown.Item as={Link} to="/register">Register</NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/login">Login</NavDropdown.Item>
-        </NavDropdown>
-
-        <Button
-        id="basic-button"
-        aria-controls={open ? 'basic-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-      >
-        Dashboard
-      </Button>
-      <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          'aria-labelledby': 'basic-button',
-        }}
-      >
-        <NavDropdown.Item as={Link} to="/register">Register</NavDropdown.Item>
-        <NavDropdown.Item as={Link} to="/login">Login</NavDropdown.Item>
-      </Menu>
-       
-        
-        
         
         <Link to={`/home`} style={sideMenu}><ListGroup.Item onClick={logout}> < LogoutIcon/> Logout</ListGroup.Item> </Link>
     </ListGroup>
