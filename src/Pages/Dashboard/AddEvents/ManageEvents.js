@@ -6,10 +6,13 @@ import BorderColorIcon from '@mui/icons-material/BorderColor';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditEvents from './EditEvents';
 import parse from 'html-react-parser';
+import useAuth from "../../../hooks/useAuth";
 
 const ManageEvents = () => {
   const [dataDelete, setDataDelete] = useState([]);
   const {editdatainfo} = UseProgram();
+
+  const { admin } = useAuth() ;
 
   const [openOrder, setOpenOrder] = useState(false);
   const handleOrderOpen = () => setOpenOrder(true);
@@ -68,8 +71,14 @@ console.log(dataDelete);
                     <td><Image src={pg.eventImage}  className="dashboardImage"/></td>
                     <td>{parse(`${pg.undefined}`)}</td>
                     <td className="text-center">
-                    <button className="btn btn-danger p-1 m-1" onClick={handleOrderOpen}><BorderColorIcon className="m-1"/></button>
-                    <button className="btn btn-danger p-1 m-1" onClick={ () => handleDelete(pg._id)}><DeleteIcon className="m-1"/></button>
+                    {
+                      admin && 
+                      <button className="btn btn-danger p-1 m-1" onClick={handleOrderOpen}><BorderColorIcon className="m-1"/></button>
+                    }
+                    {
+                      admin && 
+                      <button className="btn btn-danger p-1 m-1" onClick={ () => handleDelete(pg._id)}><DeleteIcon className="m-1"/></button>
+                    }
                     </td>
                   </tr>)
               }

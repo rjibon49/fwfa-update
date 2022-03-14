@@ -29,7 +29,6 @@ import Article6 from './Pages/Blog/Articles/Article6';
 import NotFound from './Pages/NotFound/NotFound';
 import AuthProvider from './Context/AuthProvider';
 import Register from './Pages/Users/Register';
-import Login from './Pages/Users/Login';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import DashboardHome from './Pages/Dashboard/DashboardHome/DashboardHome';
 import AddArticles from './Pages/Dashboard/Articles/AddArticles';
@@ -83,16 +82,16 @@ function App() {
               <Route path='/dashboard' element={<PrivaetRoute> <Dashboard /> </PrivaetRoute>}>
 
                 <Route exact path="/dashboard" element={<DashboardHome />} />
-                <Route path={`/dashboard/addcareer`} element={<AddCareer />} />
-                <Route path={`/dashboard/addprogram`} element={<AddProgram />} />
-                <Route path={`/dashboard/addarticles`} element={<AddArticles />} />
-                <Route path={`/dashboard/addevents`} element={<AddEvents />} />
-                <Route path={`/dashboard/manageArticles`} element={<AdminRoute> <ManageArticles /> </AdminRoute>} />
-                <Route path={`/dashboard/manageEvents`} element={<AdminRoute> <ManageEvents /> </AdminRoute>} />
-                <Route path={`/dashboard/managePrograms`} element={<AdminRoute> <ManageProgram /> </AdminRoute>} />
-                <Route path={`/dashboard/manageCareer`} element={<AdminRoute> <ManageCareer /> </AdminRoute>} />
+                <Route path={`/dashboard/addcareer`} element={<AdminRoute> <AddCareer /> </AdminRoute>} />
+                <Route path={`/dashboard/addprogram`} element={<AdminRoute> <AddProgram /> </AdminRoute> } />
+                <Route path={`/dashboard/addarticles`} element={<AdminRoute> <AddArticles /> </AdminRoute>} />
+                <Route path={`/dashboard/addevents`} element={<AdminRoute> <AddEvents /> </AdminRoute>} />
+                <Route path={`/dashboard/manageArticles`} element={<PrivaetRoute> <ManageArticles /> </PrivaetRoute>} />
+                <Route path={`/dashboard/manageEvents`} element={<PrivaetRoute> <ManageEvents /> </PrivaetRoute>} />
+                <Route path={`/dashboard/managePrograms`} element={<PrivaetRoute> <ManageProgram /> </PrivaetRoute>} />
+                <Route path={`/dashboard/manageCareer`} element={<PrivaetRoute> <ManageCareer /> </PrivaetRoute>} />
                 <Route path={`/dashboard/donatonList`} element={<AdminRoute> <DonationList /> </AdminRoute>} />
-                <Route path={`/dashboard/makeAdmin`} element={ <MakeAdmin /> } />
+                <Route path={`/dashboard/makeAdmin`} element={<AdminRoute> <MakeAdmin /> </AdminRoute>} />
               </Route>
             </Routes>
         </BrowserRouter>

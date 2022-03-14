@@ -112,8 +112,6 @@ function Dashboard(props) {
           <Link to={`/dashboard/manageCareer`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Career</ListGroup.Item> </Link>
         </AccordionDetails>
       </Accordion>
-      
-
       {
         admin &&
         <Accordion>
