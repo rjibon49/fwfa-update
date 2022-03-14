@@ -77,7 +77,8 @@ function Dashboard(props) {
       <ListGroup className="mt-1">
         <Link to="/dashboard" style={sideMenu}><ListGroup.Item > < DashboardIcon/> Dashboard</ListGroup.Item> </Link>
 
-        <Accordion>
+        { admin && 
+          <Accordion>
         <AccordionSummary
           expandIcon={< AddIcon/>}
           aria-controls="panel1a-content"
@@ -93,8 +94,9 @@ function Dashboard(props) {
           <Link to={`/dashboard/addcareer`} style={sideMenu}><ListGroup.Item> < AddIcon/> Add Career</ListGroup.Item> </Link>
         </AccordionDetails>
       </Accordion>
+        }
 
-      { admin && <Accordion>
+      <Accordion>
         <AccordionSummary
           expandIcon={< AddIcon/>}
           aria-controls="panel1a-content"
@@ -110,9 +112,11 @@ function Dashboard(props) {
           <Link to={`/dashboard/manageCareer`} style={sideMenu}><ListGroup.Item> < SegmentIcon/> Manage Career</ListGroup.Item> </Link>
         </AccordionDetails>
       </Accordion>
-      }
+      
 
-      <Accordion>
+      {
+        admin &&
+        <Accordion>
         <AccordionSummary
           expandIcon={< AddIcon/>}
           aria-controls="panel1a-content"
@@ -126,8 +130,11 @@ function Dashboard(props) {
           <Link to={`/dashboard/manageEvents`} style={sideMenu}><ListGroup.Item> < VideoCameraBackIcon/> Videos</ListGroup.Item> </Link>
         </AccordionDetails>
       </Accordion>
+      }
 
+      { admin && 
         <Link to={`/dashboard/makeAdmin`} style={sideMenu}><ListGroup.Item> <AddModeratorIcon /> Make Admin</ListGroup.Item> </Link>
+      }
         
         { admin &&
         <Link to={`/dashboard/donatonList`} style={sideMenu}><ListGroup.Item> < ListAltIcon/> Donation List</ListGroup.Item></Link>
