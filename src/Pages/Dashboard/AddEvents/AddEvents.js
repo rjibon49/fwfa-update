@@ -29,7 +29,7 @@ const AddCarrer = () => {
         const eventAdd = {
             ...addEvent
         }
-        fetch('https://shrouded-retreat-25778.herokuapp.com/event', {
+        fetch('https://secret-peak-05523.herokuapp.com//event', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

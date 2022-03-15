@@ -19,7 +19,7 @@ const ManageEvents = () => {
   const handleOrderClose = () => setOpenOrder(false);
 
   useEffect(() => {
-    fetch ('https://shrouded-retreat-25778.herokuapp.com/event')
+    fetch ('https://secret-peak-05523.herokuapp.com//event')
     .then ( res => res.json())
     .then ( data => setDataDelete(data));
 }, []);
@@ -27,7 +27,7 @@ const ManageEvents = () => {
   const handleDelete = id => {
     const proceed = window.confirm("Are you sure, You want to delete? ");
     if(proceed) {
-      const url = `https://shrouded-retreat-25778.herokuapp.com/event/${id}`;
+      const url = `https://secret-peak-05523.herokuapp.com//event/${id}`;
     console.log(id);
     fetch(url, {
         method: 'DELETE'

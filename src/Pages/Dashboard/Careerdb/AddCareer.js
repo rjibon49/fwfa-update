@@ -29,7 +29,7 @@ const AddCareer = () => {
         const careerAdd = {
             ...addCareer
         }
-        fetch('https://shrouded-retreat-25778.herokuapp.com/career', {
+        fetch('https://secret-peak-05523.herokuapp.com//career', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
