@@ -26,15 +26,14 @@ const EditCareer = ({openOrder, handleOrderClose, dataDelete}) => {
     const editorRef = useRef(null);
 
 
-    const {careerName, position, vacancy, date, undefined } = dataDelete;
+    const {careerName, position, vacancy, date } = dataDelete;
 
 
         const initialInfo = {
             careerName: careerName,
             position: position,
             vacancy: vacancy,
-            date: date,
-            undefined: undefined
+            date: date
         };
       
         const [editCareer, setEditCareer] = useState(initialInfo);

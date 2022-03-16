@@ -1,8 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Col, Form, Row, Button, Container } from 'react-bootstrap';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Editor } from '@tinymce/tinymce-react';
 
 const AddProgram = () => {
 
@@ -21,7 +20,7 @@ const AddProgram = () => {
         const programAdd = {
             ...addProgram
         }
-        fetch('https://secret-peak-05523.herokuapp.com//program', {
+        fetch('https://secret-peak-05523.herokuapp.com/program', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -130,7 +130,7 @@ function Dashboard(props) {
       </Accordion>
       }
 
-      { admin && 
+      { admin &&
         <Link to={`/dashboard/makeAdmin`} style={sideMenu}><ListGroup.Item> <AddModeratorIcon /> Make Admin</ListGroup.Item> </Link>
       }
         

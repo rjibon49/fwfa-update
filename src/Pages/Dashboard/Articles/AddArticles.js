@@ -29,7 +29,7 @@ const AddArticles = () => {
         const articleAdd = {
             ...addArticle
         }
-        fetch('https://secret-peak-05523.herokuapp.com//article', {
+        fetch('https://secret-peak-05523.herokuapp.com/article', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

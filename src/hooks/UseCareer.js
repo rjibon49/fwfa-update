@@ -5,7 +5,7 @@ const UseCareer = () =>{
     const [career, setCareer] = useState([]);
 
     useEffect(() => {
-        fetch ('https://secret-peak-05523.herokuapp.com//career')
+        fetch ('https://secret-peak-05523.herokuapp.com/career')
         .then ( res => res.json())
         .then ( data => setCareer(data));
         

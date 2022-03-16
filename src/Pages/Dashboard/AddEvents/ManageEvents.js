@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { Image, Table } from 'react-bootstrap';
 import { toast } from 'react-toastify';
-import UseProgram from '../../../hooks/UseProgram';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditEvents from './EditEvents';
 import parse from 'html-react-parser';
-import useAuth from "../../../hooks/useAuth";
+import useAuth from '../../../hooks/useAuth';
 
 const ManageEvents = () => {
   const [dataDelete, setDataDelete] = useState([]);
-  const {editdatainfo} = UseProgram();
-
-  const { admin } = useAuth() ;
+  // const {editdatainfo} = UseProgram();
 
   const [openOrder, setOpenOrder] = useState(false);
   const handleOrderOpen = () => setOpenOrder(true);
   const handleOrderClose = () => setOpenOrder(false);
 
+  const { admin } = useAuth();
+
   useEffect(() => {
-    fetch ('https://secret-peak-05523.herokuapp.com//event')
+    fetch ('https://secret-peak-05523.herokuapp.com/event')
     .then ( res => res.json())
     .then ( data => setDataDelete(data));
 }, []);
@@ -27,7 +26,7 @@ const ManageEvents = () => {
   const handleDelete = id => {
     const proceed = window.confirm("Are you sure, You want to delete? ");
     if(proceed) {
-      const url = `https://secret-peak-05523.herokuapp.com//event/${id}`;
+      const url = `https://secret-peak-05523.herokuapp.com/event/${id}`;
     console.log(id);
     fetch(url, {
         method: 'DELETE'
@@ -71,14 +70,11 @@ console.log(dataDelete);
                     <td><Image src={pg.eventImage}  className="dashboardImage"/></td>
                     <td>{parse(`${pg.undefined}`)}</td>
                     <td className="text-center">
-                    {
-                      admin && 
+                    { admin && 
+                    <div>
                       <button className="btn btn-danger p-1 m-1" onClick={handleOrderOpen}><BorderColorIcon className="m-1"/></button>
-                    }
-                    {
-                      admin && 
                       <button className="btn btn-danger p-1 m-1" onClick={ () => handleDelete(pg._id)}><DeleteIcon className="m-1"/></button>
-                    }
+                    </div>}
                     </td>
                   </tr>)
               }

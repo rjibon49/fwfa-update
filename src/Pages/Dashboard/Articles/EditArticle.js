@@ -26,7 +26,7 @@ const EditArticle = ({openOrder, handleOrderClose, dataDelete}) => {
     const editorRef = useRef(null);
 
 
-    const {id, programName, image, ProgramDescription} = dataDelete;
+    const { programName, image, ProgramDescription} = dataDelete;
 
 
         const initialInfo = {

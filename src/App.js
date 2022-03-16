@@ -91,7 +91,7 @@ function App() {
                 <Route path={`/dashboard/managePrograms`} element={<PrivaetRoute> <ManageProgram /> </PrivaetRoute>} />
                 <Route path={`/dashboard/manageCareer`} element={<PrivaetRoute> <ManageCareer /> </PrivaetRoute>} />
                 <Route path={`/dashboard/donatonList`} element={<AdminRoute> <DonationList /> </AdminRoute>} />
-                <Route path={`/dashboard/makeAdmin`} element={<AdminRoute> <MakeAdmin /> </AdminRoute>} />
+                <Route path={`/dashboard/makeAdmin`} element={<AdminRoute> <MakeAdmin /> </AdminRoute> } />
               </Route>
             </Routes>
         </BrowserRouter>
