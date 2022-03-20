@@ -35,12 +35,12 @@ const AboutEvents = () => {
     return (
         <div className='green-bg pbshadow'>
             <Container className='pt-5'>
-                    <div className='text-center pt-5 mb-5'>
+                <Row className='abtevt'>
+                    <Col xs={12} sm={12} md={12} lg={7} xl={7}>
+                    <div className='text-center'>
                         <h1 className='page-title text-white'>To Know More</h1>
                         <h1 className='page-title text-white'>About Our Events</h1>
                     </div>
-                <Row className='abtevt'>
-                    <Col xs={12} sm={12} md={12} lg={7} xl={7}>
                         <Image src={calender} className='aboutevent-img'/> 
                     </Col>
                     <Col xs={12} sm={12} md={12} lg={5} xl={5} className='ae-form'>

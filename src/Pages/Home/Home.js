@@ -4,6 +4,7 @@ import Footer from '../Shared/Footer';
 import Header from '../Shared/Header';
 import AboutEvents from './AboutEvents';
 import Banner from './Banner';
+import Community from './Community';
 import Different from './Different';
 import HomeEvents from './HomeEvents';
 import OurBlog from './OurBlog';
@@ -15,14 +16,17 @@ const Home = () => {
     return (
         <>
             <Header />
-            <Slider />
-            <Banner />
-            <Ship />
-            <Different />
-            <HomeEvents />
-            <AboutEvents />
-            <OurBlog />
-            <SigninBanner />
+            <div className='greenBg'>
+                <Slider />
+                <Banner />
+                <Ship />
+                <Different />
+                <Community />
+                <HomeEvents />
+                <AboutEvents />
+                <OurBlog />
+                <SigninBanner />
+            </div>
             <GoToTop />
             <Footer />
         </>

@@ -11,8 +11,7 @@ const Banner = () => {
             <div>
                 <h2 className='section-title'>We are passionate about our mission and we strive for excellence</h2>
             </div>
-            <div className="green-bg py-2">
-                <Container className='my-5 '>
+                <Container className='my-5 green-bg py-2'>
                 
                 {/* <div style={{height:"400px",}} className='green-bg pbshadow'>
                     <div className='banner-img'>
@@ -22,14 +21,13 @@ const Banner = () => {
                 <ReactPlayer
                 className="react-pl"
                 width='100%'
-                // height='400px'
+                height='730px'
                 controls
                 url={FWFAExplainerVideo}
                 light={true}
                 // playIcon
                 />
             </Container>
-            </div>
         </div>
     );
 };

@@ -11,6 +11,10 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import useAuth from '../../hooks/useAuth';
+import Paper from '@mui/material/Paper';
+import InputBase from '@mui/material/InputBase';
+import IconButton from '@mui/material/IconButton';
+import SearchIcon from '@mui/icons-material/Search';
 
 const Header = () => {
     const { user, logout } = useAuth();
@@ -24,13 +28,28 @@ const Header = () => {
         <div className='top-head'>
             <Container className='mt-3'>
                 <Row className=''>
-                    <Col xs={6} sm={6} md={6} lg={6} xl={6}>
+                    <Col xs={6} sm={6} md={6} lg={4} xl={4}>
                         <div className='py-1'>
                             <p className='top-text'><i className="fas fa-phone-alt me-2"></i> (617) 371-7731 <span className='px-3'> | </span>  <i className="fas fa-location-arrow me-2"></i> Greater Palm Spring, CA-USA</p>
                             
                         </div>
                     </Col>
-                    <Col xs={6} sm={6} md={6} lg={6} xl={6}>
+                    <Col lg={4} xl={4}>
+                    <Paper
+      component="form"
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 250 , margin: '0 auto'}}
+    >
+      <InputBase
+        sx={{ ml: 1, flex: 1 }}
+        placeholder="Search Here"
+        inputProps={{ 'aria-label': 'search google maps' }}
+      />
+      <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
+        <SearchIcon />
+      </IconButton>
+    </Paper>
+                    </Col>
+                    <Col xs={6} sm={6} md={6} lg={4} xl={4}>
                         <div className="text-end py-1 top-text">
                             {/* <Link as={Link} to="fb"><i className="fab fa-twitter mx-2 fs-5 ico"></i></Link>
                             <Link as={Link} to="fb"><i className="fab fa-facebook mx-2 fs-5 ico"></i></Link>

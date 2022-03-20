@@ -3,7 +3,7 @@ import { Col, Container, Image, Row } from 'react-bootstrap';
 import awareness from './../../images/banner/awareness.png'
 import coaching from './../../images/banner/coaching1.png'
 import literacy from './../../images/banner/literacy1.png'
-import leadeship from './../../images/banner/leadership.png'
+import trainning from './../../images/banner/trainning.png'
 import useAos from '../../hooks/useAos';
 
 const Different = () => {
@@ -55,10 +55,10 @@ const Different = () => {
                     </Col>
                 </Row>
                 <div className='green-bg mt-5 pb-5 rounded'>
-                    <div className='text-center pt-5'>
-                        <Image src={leadeship} className='leader-image' />
+                    <div className='text-center pt-5'>                        
                         <h2 className='section-title2 text-white'>Training To Be a Coach</h2>
                         <p className='banner-details trainning-p' >Our graduate can participate in an extensive and comprehensive training to become a Coach to help us pay it forward by helping more people to learn about their personal finances and be on their way to financial wellness.</p>
+                        <Image src={trainning} className='leader-image' />
                     </div>
                     <Row className='mt-5'>
                         <Col xs={12} sm={12} md={6} lg={4} xl={4}>
