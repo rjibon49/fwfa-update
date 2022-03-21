@@ -11,23 +11,15 @@ const AboutDetails = () => {
             <div className=''>
                 <h2 className='section-title-b'>FWFA’s Mission Statement</h2>
             </div>
-            <div className='green-bg my-5'>
-                <Container className=''>
-                        <div className='py-5'>
-                            <p className='about-details py-5'>Financial Wellness for All provides Financial Education for people that are underserved by traditional financial services through our core teaching methodology of Awareness, Literacy, and Coaching.</p>
-                        </div>
+                <Container className='green-bg my-5'>
+                    <p className='about-details'>Financial Wellness for All provides Financial Education for people that are underserved by traditional financial services through our core teaching methodology of Awareness, Literacy, and Coaching.</p>
                 </Container>
-            </div>
             <div className=''>
                 <h2 className='section-title-b'>FWFA’s  Vision</h2>
             </div>
-            <div className='green-bg my-5'>
-                <Container className=''>
-                        <div className='py-5'>
-                            <p className='about-details py-5'>Financial Wellness for All vision is to raise the competency level in finance of those underserved by traditional financial services, so they can have more financial stability, reduce debt, and save for their future.</p>
-                        </div>
+                <Container className='green-bg my-5'>
+                    <p className='about-details py-5'>Financial Wellness for All vision is to raise the competency level in finance of those underserved by traditional financial services, so they can have more financial stability, reduce debt, and save for their future.</p>
                 </Container>
-            </div>
             <div className=''>
                 <h2 className='section-title-b'>The 3-tier method approach</h2>
             </div>

@@ -93,6 +93,9 @@ a {
 .fa-linkedin:hover{
     color: #0a66c2;
 }
+.linkedin {
+    color: #0a66c2
+}
 
 .top-text i {
     color: #000000b2;
@@ -197,7 +200,7 @@ a {
         font-weight: 700;
     }
     .card p {
-        font-size: 13px;
+        font-size: 14px;
         color: white;
         padding: 0 25px;
         text-align: center;
@@ -308,7 +311,7 @@ a {
     height: 740px;
 }
 .emp-biodata {
-    background-color: #505050;
+    background-color: #2D2D2D;
     display: grid;
     grid-template-columns: 1fr 5px 3fr;
     padding-bottom: 20px;
@@ -356,13 +359,13 @@ a {
 }
 
 .emp-social i {
-    color: white;
     font-size: 25px !important;
     margin: 10px;
 }
 .pf-info {
-    font-size: 12px;
+    font-size: 17px;
     margin: 30px 30px 0 0;
+    line-height: 25px;
 }
 
 /* ========================== PROGRAM STYLE  ======================*/
@@ -514,10 +517,16 @@ a {
 
 .banner-horizontal {
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     justify-items: center;
+}
+.banner-horizontal-right {
     height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 85px 0 -130px;
 }
 
 .horizontal {
@@ -526,6 +535,10 @@ a {
     align-items: center;
     justify-content: center;
     justify-items: center;
+}
+
+.bannerHeight {
+    height: 30vh;
 }
 
 /* ============================================================ */
@@ -655,7 +668,7 @@ a {
       font-weight: 700;
   }
   .banner-details {
-      font-size: 18px;
+    font-size: 17px;
   }
   .about-banner {
     position: absolute;
@@ -665,9 +678,13 @@ a {
 }
 
 .about-details {
+    display: flex;
+    justify-items: center;
     font-size: 22px;
     text-align: center;
     padding: 0 150px;
+    align-items: center;
+    height: 50vh;
 }
 .about-list {
     font-size: 22px;
@@ -883,6 +900,9 @@ hr{
 .about-member {
     height: 860px;
 }
+.banner-horizontal-right {
+    margin: 0 50PX 0 -75PX;
+}
 /* ============================================================ */
 /* ============================================================ */
 
@@ -942,6 +962,12 @@ hr{
     .emp-biodata {
         grid-template-columns: 1fr 5px 2fr;
         height: 360px;
+    }
+    .banner-horizontal-right {
+        margin: 0 0 0 -80PX;
+    }
+    .banner-horizontal-right P{
+        font-size: 12px;
     }
     /* Post Content CSS  */
 
@@ -1150,6 +1176,13 @@ hr{
         flex-direction: column-reverse;
         margin-bottom: 30px;
     }
+    .banner-horizontal {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .banner-horizontal-right {
+        margin: 0;
+    }
 
     /* Post Content CSS  */
     .post-title {
@@ -1287,6 +1320,11 @@ hr{
     }
     .other {
         width: 30% !important;
+    }
+
+    .banner-horizontal {
+        display: flex;
+        flex-direction: column-reverse;
     }
 }
 

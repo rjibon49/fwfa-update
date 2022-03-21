@@ -20,17 +20,14 @@ const AboutMembers = () => {
     const [pfl] = UseProfile();
     console.log(pfl);
     return (
-        <section className='my-5'>
+        <section className='mt-5 pb-5'>
             <div className=''>
                 <h2 className='section-title-b'>Our Executive Team</h2>
             </div>
-            <div className='green-bg'>
-                <Container className=''>
-                        <div className='py-5'>
-                            <p className='about-details py-5'>Financial Wellness for All’s executive team has combined knowledge and over 25 years experience from multiple fields related to financial wellness and financial literacy. .</p>
-                        </div>
+                <Container className='green-bg'>
+                    <p className='about-details'>Financial Wellness for All’s executive team has combined knowledge and over 25 years experience from multiple fields related to financial wellness and financial literacy. .</p>
                 </Container>
-            </div>
+
                 <Container className=''>
                     <Row>
                         {
@@ -48,7 +45,7 @@ const AboutMembers = () => {
                                                 {/* <i className="fab fa-twitter mx-2 fs-4 green"></i>
                                                 <i className="fab fa-instagram mx-2 fs-4 green"></i> */}
                                                 
-                                                <a href={pf.linkedin} target="_blank" rel="noreferrer"><i className="fab fa-linkedin mx-2 green"></i></a>
+                                                <a href={pf.linkedin} target="_blank" rel="noreferrer"><i className="fab fa-linkedin mx-2 linkedin"></i></a>
                                             </div>
                                     </div>
                                     <div className="vl"></div>

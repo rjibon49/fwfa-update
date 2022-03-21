@@ -16,14 +16,14 @@ const AboutBanner = () => {
         
     },[])
     return (
-        <section className='green-bg mb-5 py-5' >
-            <Container className='py-5'>
+        <section className='mb-5' >
+            <Container className='green-bg '>
                 <Row className='banner-horizontal'>
                     <Col xs={12} sm={12} md={6} lg={6} xl={6}>
                         <Image src={bannaertop} className='images' data-aos="zoom-in"/> 
                     </Col>
                     <Col xs={12} sm={12} md={6} lg={6} xl={6}>
-                        <div className='text-white' >
+                        <div className='text-white banner-horizontal-right' >
                             <h2 className='text-center banner-title mb-4'>
                             <Typewriter
                                     // cursor
@@ -34,7 +34,7 @@ const AboutBanner = () => {
                                     words={['About US']}
                                     />
                             </h2>
-                            <p className='banner-details' data-aos="slide-left">
+                            <p className='banner-details text-center' data-aos="slide-left">
                             Financial Wellness for All, Inc. (FWFA) was established in December 2019 as we see there is a need in financial awareness, financial literacy, and financial coaching to help those unserved by the traditional financial adviser.  Our non-profit seeks to help everyone. We are a non-profit 501c3 tax exempt organization.  To the extent of the law – your donation is tax deductible.   
                             </p>
                         </div> 

@@ -10,9 +10,11 @@ const About = () => {
     return (
         <>
             <Header />
-            <AboutBanner />
-            <AboutDetails />
-            <AboutMembers />
+            <div className='greenBg'>
+                <AboutBanner />
+                <AboutDetails />
+                <AboutMembers />
+            </div>
             <GoToTop />
             <Footer />
         </>
