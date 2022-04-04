@@ -23,7 +23,7 @@ const Slider = () => {
                     <Col xl={3} lg={2} md={1} sm={1} xs={1}></Col>
                     <Col xl={6} lg={8} md={10} sm={10} xs={10}>
                     <div className='text-center text-white'>
-                        <h2 className='banner-title'>
+                        <h2 className='banner-title mb-4'>
                         <Typewriter
                                     // cursor
                                     // cursorStyle="_"

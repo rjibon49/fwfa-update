@@ -27,18 +27,19 @@ const Header = () => {
 
     return (
     <>
-        <div className='top-head'>
+        <div className='top-head mb-3'>
             <Container className='my-2'>
                 <Row className=''>
-                    <Col xs={6} sm={6} md={6} lg={4} xl={4}>
-                        <div className='py-1'>
-                            <p className='top-text'><i className="fas fa-phone-alt me-2"></i> (617) 371-7731 <span className='px-3'> | </span>  <i className="fas fa-location-arrow me-2"></i> Greater Palm Spring, CA-USA</p>
+                    <Col xs={6} sm={6} md={6} lg={3} xl={3}>
+                        <div className='pt-3'>
+                            <p className='top-text mb-2'><i className="fas fa-phone-alt me-2"></i> (617) 371-7731</p>
+                            <p className='top-text'><i className="fas fa-location-arrow me-2"></i> Greater Palm Spring, CA-USA</p>
                         </div>
                     </Col>
                     <Col lg={4} xl={4}>
                     <Paper
       component="form"
-      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 250 , margin: '0 auto'}}
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 300 , margin: '25px auto 0'}}
     >
       <InputBase
         sx={{ ml: 1, flex: 1 }}
@@ -50,24 +51,24 @@ const Header = () => {
       </IconButton>
     </Paper>
                     </Col>
-                    <Col xs={6} sm={6} md={6} lg={4} xl={4}>
+                    <Col xs={6} sm={6} md={6} lg={5} xl={5}>
                         <div className="text-end py-1 top-text">
                             <p className='text-center'>English (US)</p>
-                            <a href="#" target="_blank" className='facebook'><Image src={facebook} alt="Facebook"/></a>
-                            <a href="https://www.tumblr.com/blog/fwfa" target="_blank" className='square'><Image src={tumblr} alt="tumblr"/></a>
-                            <a href="https://www.instagram.com/fwfa501c3/" target="_blank" className='square'><Image src={instagram} alt="instagram"/></a>
-                            <a href="https://www.linkedin.com/company/fwfa" target="_blank" className='square'><Image src={linkedin} alt="linkedin"/></a>
-                            <a href="https://www.pinterest.com/financialwellnessforall0129" target="_blank" className='square'><Image src={pinterest} alt="pinterest"/></a>
-                            <a href="https://www.quora.com/Financialwellnessforall" target="_blank" className='square'><Image src={quora} alt="quora"/></a>
-                            <a href="https://twitter.com/fwfa501c3" target="_blank" className='square'><Image src={twitter} alt="twitter"/></a>
-                            <a href="https://www.youtube.com/channel/UCWtwSa0mZBFxKkl5ukmQdMg" target="_blank" className='square'><Image src={youtube} alt="youtube"/></a>
+                            <a href="#" rel='noreferrer' target="_blank" className='facebook'><Image src={facebook} alt="Facebook"/></a>
+                            <a href="https://www.tumblr.com/blog/fwfa" rel='noreferrer' target="_blank" className='square'><Image src={tumblr} alt="tumblr"/></a>
+                            <a href="https://www.instagram.com/fwfa501c3/" rel='noreferrer' target="_blank" className='square'><Image src={instagram} alt="instagram"/></a>
+                            <a href="https://www.linkedin.com/company/fwfa" rel='noreferrer' target="_blank" className='square'><Image src={linkedin} alt="linkedin"/></a>
+                            <a href="https://www.pinterest.com/financialwellnessforall0129" rel='noreferrer' target="_blank" className='square'><Image src={pinterest} alt="pinterest"/></a>
+                            <a href="https://www.quora.com/Financialwellnessforall" rel='noreferrer' target="_blank" className='square'><Image src={quora} alt="quora"/></a>
+                            <a href="https://twitter.com/fwfa501c3" rel='noreferrer' target="_blank" className='square'><Image src={twitter} alt="twitter"/></a>
+                            <a href="https://www.youtube.com/channel/UCWtwSa0mZBFxKkl5ukmQdMg" rel='noreferrer' target="_blank" className='square'><Image src={youtube} alt="youtube"/></a>
                         </div>
                     </Col>
                 </Row>
             </Container>
         </div>
 
-        <Navbar collapseOnSelect expand="lg" bg="" variant="light" sticky="top" className=" mt-1 bg-white pbshadow">
+        <Navbar collapseOnSelect expand="lg" bg="" variant="light" sticky="top" className=" mt-1 bg-white pb-4">
             <Container>
                 <Navbar.Brand as={Link} to="/">
                     <img src={logo} alt="" className='logo'/>

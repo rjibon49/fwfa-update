@@ -64,11 +64,11 @@ h1, h2, h3, h4, h5 , h6 , p , ul, li{
 }
 
 .greenBg {
-    background-color: #EDF9F0;
+    background-color: #fff;
 }
 
 .green-rounded {
-    background-color: #EDF9F0;
+    background-color: #fff;
     border-radius: 20px;
 }
 .event-t{
@@ -169,7 +169,7 @@ a {
 /* ============================================================== */
 
 .slider-bg {
-    background-color: #272d33;
+    background-color: rgba(45, 45, 45, 1);
     height: 70vh;
 }
 

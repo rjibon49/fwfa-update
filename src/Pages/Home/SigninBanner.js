@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Container, Image} from 'react-bootstrap';
-import signinbanner from '../../images/banner/sign.png'
+import signinbanner from '../../images/banner/lms.png'
 
 const SigninBanner = () => {
     return (
