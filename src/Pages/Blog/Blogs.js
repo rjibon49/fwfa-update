@@ -80,7 +80,7 @@ const Blogs = () => {
                 <div className='green-bg text-center pbshadow py-4 mb-5 d-sm-block d-md-none'>
                     <Input placeholder="Search here..." inputProps={ariaLabel} className="w-75 search"/>
                 </div>
-                <div className='pb-5 green-bg mb-5 pbshadow me-xl-5 me-md-1' data-aos="zoom-in">
+                <div className='p-5 green-bg mb-5 pbshadow me-xl-5 me-md-1' data-aos="zoom-in">
                     <div className=''>
                         <ReactPlayer 
                             width='100%'
@@ -99,7 +99,7 @@ const Blogs = () => {
                         <p className='post-details'>When it comes to choosing the right financial professional for your particular needs, it might not take much time before you scratch your head wondering where to begin or what qualities and credentials are needed for you and your family.You can just check log onto the internet and you’ll see that there are lots of ways to learn more about financial education. However, going through all this information can leave someone to feel uncertain about how best to start. Having the correct information to start with will help you approach the financial industry with eyes wide open having both healthy skepticism that can protect you and confidence.. <Link as={Link} to={`/article1`} className='e-link'> Continue Reading</Link></p> 
                     </div>
                 </div>
-                <div className='pb-5 green-bg mb-5 pbshadow me-xl-5 me-md-1' data-aos="zoom-in">
+                <div className='p-5 green-bg mb-5 pbshadow me-xl-5 me-md-1' data-aos="zoom-in">
                     <div className=''>
                         <ReactPlayer 
                             width='100%'
@@ -118,7 +118,7 @@ const Blogs = () => {
                         <p className='post-details'>Change and control work side by side. Sometimes change is within your scope of control, while some remains outside it. However, there are times or situations where that you can’t control it and your financial health is one of them. People normally focus on the money aspects they cannot control such as returns or the market, instead of focusing on aspects they can control such as spending, investing, savings, goal-setting, and more..<Link as={Link} to={`/article2`} className='e-link'> Continue Reading</Link></p>
                     </div>
                 </div>
-                <div className='pb-5 green-bg mb-5 pbshadow me-xl-5 me-md-1' data-aos="zoom-in">
+                <div className='p-5 green-bg mb-5 pbshadow me-xl-5 me-md-1' data-aos="zoom-in">
                     <div className=''>
                         <ReactPlayer 
                             width='100%'
@@ -137,7 +137,7 @@ const Blogs = () => {
                         <p className='post-details'>Many people are suffering during this time. Some people lost their jobs, businesses are closed, and some continuously struggle to make ends meet with what they have. In short, saving money can are challenging these days..<Link as={Link} to={`/article3`} className='e-link'> Continue Reading</Link></p>
                     </div>
                 </div>
-                <div className='pb-5 green-bg mb-5 pbshadow me-xl-5 me-md-1' data-aos="zoom-in">
+                <div className='p-5 green-bg mb-5 pbshadow me-xl-5 me-md-1' data-aos="zoom-in">
                     <div className=''>
                         <ReactPlayer 
                             width='100%'
@@ -156,7 +156,7 @@ const Blogs = () => {
                         <p className='post-details'>When you are still in your 20’s, being carefree and unconcerned about the future is easy and simple. But financially, this can be a mistake. Getting into a good financial state while you are still young is worth it and planning long-term goals is essential..<Link as={Link} to={`/article4`} className='e-link'> Continue Reading</Link></p>
                     </div>
                 </div>
-                <div className='py-5 green-bg mb-5 pbshadow me-xl-5 me-md-1' data-aos="zoom-in">
+                <div className='p-5 green-bg mb-5 pbshadow me-xl-5 me-md-1' data-aos="zoom-in">
                     <div className=''>
                         <ReactPlayer 
                             width='100%'
@@ -175,7 +175,7 @@ const Blogs = () => {
                         <p className='post-details'>Leaving your job, working as a freelancer, or becoming self-employed for any reason does not mean you cannot get budget-friendly health insurance. Today, we will cover six tips that can help you find health insurance. This is so you and your family can get the coverage you need no matter what your employment situation and status are..<Link as={Link} to={`/article5`} className='e-link'> Continue Reading</Link></p>
                     </div>
                 </div>
-                <div className='pb-5 green-bg mb-5 pbshadow me-xl-5 me-md-1' data-aos="zoom-in">
+                <div className='p-5 green-bg mb-5 pbshadow me-xl-5 me-md-1' data-aos="zoom-in">
                     <div className=''>
                         <ReactPlayer 
                             width='100%'
@@ -210,7 +210,7 @@ const Blogs = () => {
                             <Link to={`/employee`}><p className='b-categoryItem'>Employee</p></Link>
                         </div>
                     </div>
-                    <div className='green-bg pbshadow d-none d-md-block d-lg-block d-xl-block'>
+                    {/* <div className='green-bg pbshadow d-none d-md-block d-lg-block d-xl-block'>
                         <div className='my-5 py-4'>
                             <div className='text-center pb-3 green'>
                                 <h5 className='py-3'>Follow</h5>
@@ -221,7 +221,7 @@ const Blogs = () => {
                                 <LinkedInIcon className='mx-2 ' onClick={hancleClickLinkedin}/>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className='green-bg pbshadow'>
                         <div className='my-5 py-4'>
