@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import GoToTop from '../../GotoTop';
 import Footer from '../Shared/Footer';
 import Header from '../Shared/Header';
+import DonationBanner from './DonationBanner';
 
 const Donation = () => {
 
@@ -34,12 +35,12 @@ const Donation = () => {
     return (
         <>
         <Header />
-        <section className='green-bg'>
-            <Container className='py-5'>
-                <div className='bg-green py-5 rounded'>
+            <Container className='pb-5 green-bg'>
+                <DonationBanner />
+                {/* <div className='bg-green py-5 rounded'>
                     <h1 className='text-center text-white mb-4'>Thank you for supporting FWFA</h1>
                     <h6 className='text-center text-white donate-detail'>Your generosity will go toward helping those struggling with their personal finances.  We will help them get to financial wellness in a holistic approach. Thank you again for your kind donation. Please reach out to us if you want to donate stocks or other special considerations.</h6>
-                </div>
+                </div> */}
                 <div className='p-5'>
                     <h3 className='fs-2 fw-bold'> Your Donation</h3>
                 </div>
@@ -316,7 +317,6 @@ const Donation = () => {
 
             </Container>
             <GoToTop />
-        </section>
         <Footer />
         </>
     );

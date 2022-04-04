@@ -13,6 +13,9 @@ h1, h2, h3, h4, h5 , h6 , p , ul, li{
     /* color: #256038; */
     color: #fff;
 }
+.green-title {
+    color: #238B43;
+}
 .images {
     width: 100%;
     height: auto;
@@ -30,6 +33,21 @@ h1, h2, h3, h4, h5 , h6 , p , ul, li{
     justify-content: center;
     flex-direction: column;
     height: 80vh;
+}
+
+.section-title-b {
+    font-size: 40px;
+    font-weight: 700;
+    color: #256038;
+    text-align: center;
+    padding: 20px 0;
+    margin: 50px 0;
+}
+
+.top-banner-left {
+    width: 100%;
+    height: auto;
+    margin: 0 0 -95px 0;
 }
 
 
@@ -77,7 +95,20 @@ a {
 
 
  /* ================ Social Media Hover Color ==================  */
-
+.facebook {
+    background-color: white;
+    box-shadow: 0 4px 3px 0 rgb(0 0 0 / 20%), 0 8px 9px 0 rgb(0 0 0 / 19%);
+    margin-right: 10px;
+    padding: 8px 14px;
+    border-radius: 5px;
+}
+.square {
+    background-color: white;
+    box-shadow: 0 4px 3px 0 rgb(0 0 0 / 20%), 0 8px 9px 0 rgb(0 0 0 / 19%);
+    margin-right: 10px;
+    padding: 8px 8px;
+    border-radius: 5px;
+}
  .fa-facebook:hover{
     color: #3b5998;
 }
@@ -125,6 +156,12 @@ a {
     color: #272d33;
 }
 
+.top-text p {
+    color: #505050;
+    font-size: 14px;
+    margin: 0 0 16px 0;
+    padding: 0;
+}
 /* ============================================================ */
 /* ============================================================ */
 
@@ -175,7 +212,7 @@ a {
         width: 80%;
     }
     .card {
-        background-color: #272d33;
+        background-color: rgba(45, 45, 45, 1);
         margin: 15px;
         display: flex;
         text-align: center;
@@ -298,17 +335,10 @@ a {
 /* ========================== ABOUT STYLE  ======================*/
 /* ============================================================== */
 
-.section-title-b {
-    font-size: 40px;
-    font-weight: 700;
-    color: #272d33;
-    text-align: center;
-    padding: 20px 0;
-    margin: 50px 0;
-  }
-  .ab-card-space {
+
+.ab-card-space {
     padding-top: 50px;
-    height: 740px;
+    height: 700px;
 }
 .emp-biodata {
     background-color: #2D2D2D;
@@ -363,7 +393,7 @@ a {
     margin: 10px;
 }
 .pf-info {
-    font-size: 17px;
+    font-size: 14px;
     margin: 30px 30px 0 0;
     line-height: 25px;
 }
@@ -441,7 +471,7 @@ a {
 .e-category-social {
     box-shadow:0 9px 8px 0 rgba(0, 0, 0, 0.2), 0 15px 13px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
-    background-color: #272d33;
+    background-color: rgba(45, 45, 45, 1);
     color:white;
 }
 .contact {
@@ -712,7 +742,7 @@ a {
 /* Program Style  */
 .program-details {
     /* color: #505050; */
-    font-size: 12px;
+    font-size: 16px;
     color: #fff;    
 }
 
@@ -903,6 +933,15 @@ hr{
 .banner-horizontal-right {
     margin: 0 50PX 0 -75PX;
 }
+
+.top-banner-left {
+    width: 100%;
+    height: auto;
+    margin: 0 0 -65px 0;
+}
+.banner-horizontal {
+    flex-direction: row;
+}
 /* ============================================================ */
 /* ============================================================ */
 
@@ -918,7 +957,7 @@ hr{
 /* ============================================================ */
 
 
-  @media all and (min-width: 768px) and (max-width: 1024px) {
+  @media all and (min-width: 768px) and (max-width: 1023px) {
     .top-text {
         font-size: 12px;
     }
@@ -964,11 +1003,11 @@ hr{
         height: 360px;
     }
     .banner-horizontal-right {
-        margin: 0 0 0 -80PX;
+        margin: 0;
+        padding: 0 50px;
+        height: 40vh;
     }
-    .banner-horizontal-right P{
-        font-size: 12px;
-    }
+    
     /* Post Content CSS  */
 
     .post-title {
@@ -1011,6 +1050,9 @@ hr{
     .donate-detail {
         max-width: 80%;
         margin: 0 auto;
+    }
+    .banner-horizontal {
+        flex-direction: column-reverse;
     }
 
     
@@ -1264,6 +1306,13 @@ hr{
     .donate-detail {
         max-width: 100%;
         margin: 0 auto;
+    }
+    .banner-horizontal-right {
+        padding: 0 20px;
+        height: 30vh;
+    }
+    .top-banner-left {
+        margin: 0px 0 -60px 0;
     }
 }
 

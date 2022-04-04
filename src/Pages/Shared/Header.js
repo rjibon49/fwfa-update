@@ -1,20 +1,22 @@
 import React from 'react';
-import { Col, Container, Nav, Navbar, NavDropdown, Row } from 'react-bootstrap';
+import { Col, Container, Image, Nav, Navbar, NavDropdown, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './../Style/Style.css'
 // import './../Style/StyleNew.css'
 import logo from './../../images/logo/fwfa-logo.png'
-// import FacebookIcon from '@mui/icons-material/Facebook';
-import Facebook from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 import useAuth from '../../hooks/useAuth';
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
+import facebook from '../../images/social/facebook.png'
+import tumblr from '../../images/social/fa-brands_tumblr-square.png'
+import instagram from '../../images/social/instagram.png'
+import linkedin from '../../images/social/linkedin.png'
+import pinterest from '../../images/social/pinterest.png'
+import quora from '../../images/social/quora.png'
+import twitter from '../../images/social/twitter-bird.png'
+import youtube from '../../images/social/youtube.png'
 
 const Header = () => {
     const { user, logout } = useAuth();
@@ -26,12 +28,11 @@ const Header = () => {
     return (
     <>
         <div className='top-head'>
-            <Container className='mt-3'>
+            <Container className='my-2'>
                 <Row className=''>
                     <Col xs={6} sm={6} md={6} lg={4} xl={4}>
                         <div className='py-1'>
                             <p className='top-text'><i className="fas fa-phone-alt me-2"></i> (617) 371-7731 <span className='px-3'> | </span>  <i className="fas fa-location-arrow me-2"></i> Greater Palm Spring, CA-USA</p>
-                            
                         </div>
                     </Col>
                     <Col lg={4} xl={4}>
@@ -51,17 +52,15 @@ const Header = () => {
                     </Col>
                     <Col xs={6} sm={6} md={6} lg={4} xl={4}>
                         <div className="text-end py-1 top-text">
-                            {/* <Link as={Link} to="fb"><i className="fab fa-twitter mx-2 fs-5 ico"></i></Link>
-                            <Link as={Link} to="fb"><i className="fab fa-facebook mx-2 fs-5 ico"></i></Link>
-                            <Link as={Link} to="fb"><i className="fab fa-instagram mx-2 fs-5 ico"></i></Link>
-                            <Link as={Link} to="fb"><i className="fab fa-youtube mx-2 fs-5 ico"></i></Link> */}
-                            <TwitterIcon className='mx-2 ico' />
-                            <Facebook  className='mx-2 ico'/>
-                            <InstagramIcon className='mx-2 ico'/>
-                            <YouTubeIcon className='mx-2 ico'/>
-                            <LinkedInIcon className='mx-2 ico' onClick={hancleClickLinkedin}/>
-                            {/* <i className="fab fa-linkedin ms-2 fs-5 ico" style={{cursor:"pointer"}} onClick={hancleClickLinkedin}></i> */}
-                            <span className='px-3 fw-bold'> English (US) </span>
+                            <p className='text-center'>English (US)</p>
+                            <a href="#" target="_blank" className='facebook'><Image src={facebook} alt="Facebook"/></a>
+                            <a href="https://www.tumblr.com/blog/fwfa" target="_blank" className='square'><Image src={tumblr} alt="tumblr"/></a>
+                            <a href="https://www.instagram.com/fwfa501c3/" target="_blank" className='square'><Image src={instagram} alt="instagram"/></a>
+                            <a href="https://www.linkedin.com/company/fwfa" target="_blank" className='square'><Image src={linkedin} alt="linkedin"/></a>
+                            <a href="https://www.pinterest.com/financialwellnessforall0129" target="_blank" className='square'><Image src={pinterest} alt="pinterest"/></a>
+                            <a href="https://www.quora.com/Financialwellnessforall" target="_blank" className='square'><Image src={quora} alt="quora"/></a>
+                            <a href="https://twitter.com/fwfa501c3" target="_blank" className='square'><Image src={twitter} alt="twitter"/></a>
+                            <a href="https://www.youtube.com/channel/UCWtwSa0mZBFxKkl5ukmQdMg" target="_blank" className='square'><Image src={youtube} alt="youtube"/></a>
                         </div>
                     </Col>
                 </Row>

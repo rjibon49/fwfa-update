@@ -2,9 +2,9 @@ import Aos from 'aos';
 import React, { useEffect } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import { Typewriter } from 'react-simple-typewriter';
-import pb from './../../images/program/pb.png';
+import donation from '../../images/banner/donation.png'
 
-const ProgramBanner = () => {
+const DonationBanner = () => {
     useEffect(() => {
         Aos.init({
             offset: 100,
@@ -14,12 +14,12 @@ const ProgramBanner = () => {
         
     },[])
     return (
-            <Container className='green-bg mb-5'>
+        <Container className='green-bg mb-5'>
                 <Row className="banner-horizontal">
-                    <Col xs={12} sm={12} md={12} lg={6} xl={6}>
-                        <Image src={pb} className='top-banner-left' data-aos="zoom-in"/>
+                    <Col xs={12} sm={12} md={12} lg={5} xl={5}>
+                        <Image src={donation} className='top-banner-left' data-aos="zoom-in"/>
                     </Col>
-                    <Col xs={12} sm={12} md={12} lg={6} xl={6}>
+                    <Col xs={12} sm={12} md={12} lg={7} xl={7}>
                         <div className='text-center green banner-horizontal-right'>
                             <h2 className=' banner-title mb-4' > 
                                 <Typewriter
@@ -28,11 +28,11 @@ const ProgramBanner = () => {
                                     typeSpeed={100}
                                     // deleteSpeed={50}
                                     delaySpeed={500}
-                                    words={['Program']}
+                                    words={['Thank you for supporting FWFA']}
                                     />
                             </h2>
                             <p className='banner-details' data-aos="slide-left">
-                            Our curriculum has been designed to engage students regardless of their ethnicity, race, family structure, or socio-economic status. It is also designed to be an interactive experience for all with the aid of visuals and extensive narratives where necessary.
+                            Your generosity will go toward helping those struggling with their personal finances. We will help them get to financial wellness in a holistic approach. Thank you again for your kind donation. Please reach out to us if you want to donate stocks or other special considerations.
                             </p>
                         </div>
                     </Col>
@@ -41,4 +41,4 @@ const ProgramBanner = () => {
     );
 };
 
-export default ProgramBanner;
+export default DonationBanner;

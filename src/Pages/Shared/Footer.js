@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Button, Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
+import { Button, Col, Container, Image, Nav, Navbar, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import emailjs from 'emailjs-com';
 import { toast, ToastContainer } from 'react-toastify';
@@ -12,6 +12,14 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import HomeIcon from '@mui/icons-material/Home';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
+import facebook from '../../images/social/facebook.png'
+import tumblr from '../../images/social/fa-brands_tumblr-square.png'
+import instagram from '../../images/social/instagram.png'
+import linkedin from '../../images/social/linkedin.png'
+import pinterest from '../../images/social/pinterest.png'
+import quora from '../../images/social/quora.png'
+import twitter from '../../images/social/twitter-bird.png'
+import youtube from '../../images/social/youtube.png'
 
 const Footer = () => {
 
@@ -58,16 +66,17 @@ const Footer = () => {
                         </div>
                         <div className='f-icon'>
                             <h4 className='pb-4'>Follow Us</h4>
-                            {/* <i className="fab fa-twitter me-2 fs-5" style={{color:"white"}}></i>
-                            <i className="fab fa-facebook mx-2 fs-5" style={{color:"white"}}></i>
-                            <i className="fab fa-instagram mx-2 fs-5" style={{color:"white"}}></i>
-                            <i className="fab fa-youtube mx-2 fs-5" style={{color:"white"}}></i>
-                            <i className="fab fa-linkedin mx-2 fs-5" style={{cursor:"pointer", color:"white"}} onClick={hancleClickLinkedin}></i> */}
-                            <TwitterIcon className='mx-2 ' />
-                            <Facebook  className='mx-2 '/>
-                            <InstagramIcon className='mx-2 '/>
-                            <YouTubeIcon className='mx-2 '/>
-                            <LinkedInIcon className='mx-2 ' onClick={hancleClickLinkedin}/>
+                            <div className="py-1 top-text">
+                            <a href="#" target="_blank" className='facebook'><Image src={facebook} alt="Facebook"/></a>
+                            <a href="https://www.tumblr.com/blog/fwfa" target="_blank" className='square'><Image src={tumblr} alt="tumblr"/></a>
+                            <a href="https://www.instagram.com/fwfa501c3/" target="_blank" className='square'><Image src={instagram} alt="instagram"/></a>
+                            <a href="https://www.linkedin.com/company/fwfa" target="_blank" className='square'><Image src={linkedin} alt="linkedin"/></a>
+                            <a href="https://www.pinterest.com/financialwellnessforall0129" target="_blank" className='square'><Image src={pinterest} alt="pinterest"/></a>
+                            <a href="https://www.quora.com/Financialwellnessforall" target="_blank" className='square'><Image src={quora} alt="quora"/></a>
+                            <a href="https://twitter.com/fwfa501c3" target="_blank" className='square'><Image src={twitter} alt="twitter"/></a>
+                            <a href="https://www.youtube.com/channel/UCWtwSa0mZBFxKkl5ukmQdMg" target="_blank" className='square'><Image src={youtube} alt="youtube"/></a>
+                            <p className='mt-3 text-white'>English (US)</p>
+                        </div>
                         </div>
                     </Col>
                     <Col xs={12} sm={12} md={7} lg={6} xl={6}>
@@ -79,7 +88,7 @@ const Footer = () => {
                             <Nav.Link as={Link} to="/career" className="btnt">Career</Nav.Link>
                         </Nav>
                         <div className='mb-3 f-subs'>
-                            <h3 className='ps-2 fw-bold text-white' >Subscribe to Our Newsletter</h3>
+                            <h3 className='green-title ps-2 mb-3' >Subscribe to Our Newsletter</h3>
                             <p className='ps-2 btnt'>Please subcribe to our newsletter to receive updates from the organization (programs, webinar, career opportunities, volunteers, events, courses, and much more)</p>
                             <form ref={form} onSubmit={sendEmail} className="card-content my-5"> 
                                 <div className="form-input text-center">
