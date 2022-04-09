@@ -186,6 +186,7 @@ const Events = () => {
             </Container>
             <GoToTop />
         </section>
+        
         <Footer />
         </>
     );

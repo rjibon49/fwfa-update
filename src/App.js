@@ -5,8 +5,6 @@ import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import Program from './Pages/Program/Program';
 import Collaborative from './Pages/Collaborative/Collaborative';
-import Blogs from './Pages/Blog/Blogs';
-import BlogDetails from './Pages/Blog/BlogDetails';
 import Events from './Pages/Event/Events';
 import Contacts from './Pages/Contacts/Contacts';
 import Donation from './Pages/Donation/Donation';
@@ -20,12 +18,6 @@ import SuperAdmin from './Pages/Users/SuperAdmin';
 import DonationBank from './Pages/Donation/DonationBank';
 import Career from './Pages/Career/Career';
 import ApplyNow from './Pages/Career/ApplyNow';
-import Article1 from './Pages/Blog/Articles/Article1';
-import Article2 from './Pages/Blog/Articles/Article2';
-import Article3 from './Pages/Blog/Articles/Article3';
-import Article4 from './Pages/Blog/Articles/Article4';
-import Article5 from './Pages/Blog/Articles/Article5';
-import Article6 from './Pages/Blog/Articles/Article6';
 import NotFound from './Pages/NotFound/NotFound';
 import AuthProvider from './Context/AuthProvider';
 import Register from './Pages/Users/Register';
@@ -43,6 +35,8 @@ import AddCareer from './Pages/Dashboard/Careerdb/AddCareer';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin';
 import PrivaetRoute from './Pages/PrivateRoute/PrivateRoute';
 import AdminRoute from './Pages/PrivateRoute/AdminRoute/AdminRoute';
+import ArticlesData from './Pages/Blog/ArticlesData';
+import ArticleDetails from './Pages/Blog/ArticleDetails';
 
 function App() {
   return (
@@ -63,14 +57,8 @@ function App() {
               <Route path='/business' element={<Business/>} />
               <Route path='/nonprofit' element={<NonProfit />} />
               <Route path='/employee' element={<Employee />} />
-              <Route path='/blog' element={<Blogs />} />
-              <Route path='/article1' element={<Article1 />} />
-              <Route path='/article2' element={<Article2 />} />
-              <Route path='/article3' element={<Article3 />} />
-              <Route path='/article4' element={<Article4 />} />
-              <Route path='/article5' element={<Article5 />} />
-              <Route path='/article6' element={<Article6 />} />
-              <Route path='/blog/:blogId' element={<BlogDetails />} />
+              <Route path='/articles' element={<ArticlesData />} />
+              <Route path='/article/:articleId' element={<ArticleDetails />} />
               <Route path='/events' element={<Events />} />
               <Route path='/contacts' element={<Contacts />} />
               <Route path='/superFWFAadmin' element={<Register />} />

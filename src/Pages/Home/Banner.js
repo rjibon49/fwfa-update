@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container} from 'react-bootstrap';
-import './../Style/Style.css'
 import ReactPlayer from 'react-player';
 import FWFAExplainerVideo from './../../videos/FWFAExplainerVideo.mp4';
 // import bannerImg from './../../../videos/banner.png';

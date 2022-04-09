@@ -72,7 +72,10 @@ const AddArticles = () => {
                 <Row className="mb-3">
                     <Form.Group as={Col}>
                         <Form.Control type="text" name="image" onBlur={handleOnBlur} placeholder="Image" required />
+                        <span style={{fontSize:"12px", color:"white"}}>EXAMPLE: https://fwfadatabasecenter.s3.amazonaws.com/videos/ File Name</span>
                     </Form.Group>
+                </Row>
+                <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridState">
                         <Form.Select aria-label="Default select example" name="category" value="category">
                             <option>Select Category</option>
@@ -132,7 +135,7 @@ const AddArticles = () => {
                         // initialValue="<p>This is the initial content of the editor.</p>"
                         name="ArticleDetails"
                         init={{
-                        height: 500,
+                        height: 400,
                         menubar: false,
                         plugins: [
                             'advlist autolink lists link image charmap print preview anchor',

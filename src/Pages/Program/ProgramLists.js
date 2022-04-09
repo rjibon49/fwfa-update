@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Button, Col, Container, Image, Row } from 'react-bootstrap';
-import './../Style/Style.css'
 import UseProgram from '../../hooks/UseProgram';
 import { Link } from 'react-router-dom';
 import Aos from 'aos';

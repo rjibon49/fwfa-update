@@ -1,33 +1,41 @@
 import { Input } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
+import ReactPlayer from 'react-player';
 import { Link, useParams } from 'react-router-dom';
 import GoToTop from '../../GotoTop';
 import UseBlogs from '../../hooks/UseBlogs';
 import blogi from './../../images/blog/blog.png'
 import BlogCommentData from './BlogCommentData';
+import parse from 'html-react-parser';
+import Header from '../Shared/Header';
+import Footer from '../Shared/Footer';
+import UseArticles from '../../hooks/UseArticles';
 
 const ariaLabel = { 'aria-label': 'description' };
 
-const BlogDetails = () => {
+const ArticleDetails = () => {
 
-    const {blogId} =useParams();
+    const {articleId} =useParams();
 
-    const [blogDetail, setBlogDetail] = useState({});
+    const [articleDetails, setArticleDetails] = useState({});
 
     useEffect(() => {
-        const url = `https://api.npoint.io/1eedb30fc7addb69b6d4/${blogId}`;
+        const url = `https://secret-peak-05523.herokuapp.com/article/${articleId}`;
         fetch(url)
         .then(res => res.json())
-        .then(data =>setBlogDetail(data))
-    },[blogId]);
+        .then(data =>setArticleDetails(data))
+    },[articleId]);
 
-    const {title, images, category, details} = blogDetail; 
+    const {ArticleName, undefined, image} = articleDetails; 
 
     const [bls] = UseBlogs();
 
+    const [articles] = UseArticles();
+
     return (
         <>
+        <Header />
         <section className='green-bg mb-5'>
             <Container className='py-5'>
                 <Row >
@@ -52,17 +60,22 @@ const BlogDetails = () => {
             <Row>
                 <Col xs={12} sm={12} md={7} lg={8} xl={8}>
                     <div className='p-5 green-bg mb-5 rounded pbshadow me-5'>
-                        <Image src={images} className='images'/>
+                    <ReactPlayer 
+                    width='100%'
+                    height='100%'
+                    controls
+                    url={image}
+                    />
                         <div className='text-center'>
                             <div className='py-2'>
-                                <i className="fas fa-user-circle mx-2 fs-5 green"></i>{category}
+                                {/* <i className="fas fa-user-circle mx-2 fs-5 green"></i>{category} */}
                                 <i className=" mx-2 fs-4 green">|</i>
                                 <i className="far fa-comment-dots mx-2 fs-5 green">03 Comments</i>
                             </div>
                         </div>
                         <div className='pb-5'>
-                            <h5 className='post-title'>{title}</h5>
-                            <p className='post-details'>{details}</p> 
+                            <h5 className='post-title'>{ArticleName}</h5>
+                            <p className='post-details'>{parse(`${undefined}`)}</p> 
                         </div>
 
                         <BlogCommentData />  
@@ -124,8 +137,9 @@ const BlogDetails = () => {
             </Row>
         </Container>
         <GoToTop />
+        <Footer />
         </>
     );
 };
 
-export default BlogDetails;
+export default ArticleDetails;

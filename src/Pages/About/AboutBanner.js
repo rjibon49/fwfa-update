@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
-import './../Style/Style.css';
 import bannaertop from './../../images/About/bannertop.png';
 import Aos from 'aos';
 import { Typewriter } from 'react-simple-typewriter';

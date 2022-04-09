@@ -5,6 +5,7 @@ import BorderColorIcon from '@mui/icons-material/BorderColor';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditArticle from './EditArticle';
 import useAuth from '../../../hooks/useAuth';
+import parse from 'html-react-parser';
 
 const ManageArticles = () => {
   const [dataDelete, setDataDelete] = useState([]);
@@ -61,10 +62,10 @@ console.log(dataDelete);
                 <th>Action</th>
               </tr>
               {
-                dataDelete.map(pg => <tr key={pg.programId}>
+                dataDelete.map(pg => <tr key={pg.ArticleName}>
                     <td>{pg.ArticleName}</td>
                     <td><Image src={pg.image}  className="dashboardImage"/></td>
-                    <td>{pg.undefined}</td>
+                    <td>{parse(`${pg.undefined.slice(0, 500)}`)}</td>
                     <td className="text-center">
                     { admin && 
                     <div>

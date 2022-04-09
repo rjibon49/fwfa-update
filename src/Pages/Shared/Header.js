@@ -83,7 +83,7 @@ const Header = () => {
                             <Nav.Link as={Link} to="/donation" className="">Donation</Nav.Link>
                             <Nav.Link as={Link} to="/collaborative" className="">Collaborative Partnership</Nav.Link>
                             <Nav.Link as={Link} to="/events" className="">Events</Nav.Link>
-                            <Nav.Link as={Link} to="/blog" className="">Blog</Nav.Link>
+                            <Nav.Link as={Link} to="/articles" className="">Blog</Nav.Link>
                             <Nav.Link as={Link} to="/contacts" className="">Contact Us</Nav.Link>
                             {user?.email && <Nav.Link as={Link} to="/dashboard" className="">Dashboard</Nav.Link>}
                             {
