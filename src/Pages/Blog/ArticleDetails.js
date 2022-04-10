@@ -11,6 +11,14 @@ import parse from 'html-react-parser';
 import Header from '../Shared/Header';
 import Footer from '../Shared/Footer';
 import UseArticles from '../../hooks/UseArticles';
+import facebook from '../../images/social/facebook.png'
+import tumblr from '../../images/social/fa-brands_tumblr-square.png'
+import instagram from '../../images/social/instagram.png'
+import linkedin from '../../images/social/linkedin.png'
+import pinterest from '../../images/social/pinterest.png'
+import quora from '../../images/social/quora.png'
+import twitter from '../../images/social/twitter-bird.png'
+import youtube from '../../images/social/youtube.png'
 
 const ariaLabel = { 'aria-label': 'description' };
 
@@ -87,9 +95,9 @@ const ArticleDetails = () => {
                     <div className='green-bg text-center pbshadow py-4 mb-5'>
                         <Input placeholder="Search here..." inputProps={ariaLabel} className="w-75"/>
                     </div>
-                    <div className='green-bg my-3 pbshadow'>
-                        <div className='p-5'>
-                            <h6 className='pb-3 fw-bold fs-4'>Category</h6>
+                    <div className='green-bg my-3 pbshadow text-center'>
+                        <div className='py-5'>
+                            <h6 className='pb-3 fw-bold fs-4 b-categoryItemT'>Category</h6>
 
                             <Link to={`/school`}><p className='b-categoryItem'>School</p></Link>
                             <Link to={`/university`}><p className='b-categoryItem'>University</p></Link>
@@ -102,11 +110,18 @@ const ArticleDetails = () => {
                         <div className='my-5 py-4'>
                             <div className='text-center pb-3 green'>
                                 <h5 className='py-3'>Follow</h5>
-                                <i className="fab fa-twitter mx-2 fs-3 "></i>
-                                <i className="fab fa-facebook mx-2 fs-3 "></i>
-                                <i className="fab fa-instagram mx-2 fs-3 "></i>
-                                <i className="fab fa-youtube mx-2 fs-3 "></i>
-                                <i className="fab fa-linkedin mx-2 fs-3 "></i>
+                                    <Col  className='pb-3'>
+                                        <a href="#" rel='noreferrer' target="_blank" className='facebook'><Image src={facebook} alt="Facebook"/></a>
+                                        <a href="https://twitter.com/fwfa501c3" rel='noreferrer' target="_blank" className='square'><Image src={twitter} alt="twitter"/></a>
+                                        <a href="https://www.instagram.com/fwfa501c3/" rel='noreferrer' target="_blank" className='square'><Image src={instagram} alt="instagram"/></a>
+                                        <a href="https://www.linkedin.com/company/fwfa" rel='noreferrer' target="_blank" className='square'><Image src={linkedin} alt="linkedin"/></a>
+                                    </Col>
+                                    <Col className='mt-3'> 
+                                        <a href="https://www.pinterest.com/financialwellnessforall0129" rel='noreferrer' target="_blank" className='square'><Image src={pinterest} alt="pinterest"/></a>
+                                        <a href="https://www.tumblr.com/blog/fwfa" rel='noreferrer' target="_blank" className='square'><Image src={tumblr} alt="tumblr"/></a>
+                                        <a href="https://www.quora.com/Financialwellnessforall" rel='noreferrer' target="_blank" className='square'><Image src={quora} alt="quora"/></a>
+                                        <a href="https://www.youtube.com/channel/UCWtwSa0mZBFxKkl5ukmQdMg" rel='noreferrer' target="_blank" className='square'><Image src={youtube} alt="youtube"/></a>
+                                    </Col>
                             </div>
                         </div>
                     </div>
