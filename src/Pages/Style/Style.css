@@ -570,11 +570,11 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 85px 0 -130px;
+    margin: 0 65px 0 -130px;
 }
 
 .horizontal {
-    height: 35vh;
+    height: 40vh;
 }
 
 .bannerHeight {
@@ -947,7 +947,7 @@ hr{
 .top-banner-left {
     width: 100%;
     height: auto;
-    margin: 0 0 -65px 0;
+    margin: 0 0 -80px 0;
 }
 .banner-horizontal {
     flex-direction: row;

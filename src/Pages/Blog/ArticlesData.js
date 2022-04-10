@@ -42,13 +42,12 @@ const ArticlesData = () => {
     return (
         <>
         <Header />
-        <section className='green-bg mb-5'>
-            <Container className='py-5'>
+            <Container className='py-5 green-bg mb-5'>
                 <Row className='banner-horizontal'>
-                    <Col xs={12} sm={12} md={6} lg={6} xl={6}>
+                    <Col xs={12} sm={12} md={6} lg={5} xl={5}>
                         <Image src={blogi} className='images' data-aos="zoom-in"/>
                     </Col>
-                    <Col xs={12} sm={12} md={6} lg={6} xl={6}>
+                    <Col xs={12} sm={12} md={6} lg={7} xl={7}>
                         <div className='text-center green horizontal'>
                             <h2 className='banner-title mb-4'>
                             <Typewriter
@@ -67,7 +66,6 @@ const ArticlesData = () => {
                     </Col>
                 </Row>
              </Container>
-        </section>
 
         <Container>
             <Row>
