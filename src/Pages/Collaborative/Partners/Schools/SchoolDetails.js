@@ -33,10 +33,6 @@ const SchoolDetails = () => {
 
     const [bls] = UseBlogs();
 
-    const hancleClickLinkedin = () => {
-        window.open("https://www.linkedin.com/company/71980528/");
-    };
-
     return (
         <>
         <section className='green-bg mb-5'>
