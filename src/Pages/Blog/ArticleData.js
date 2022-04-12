@@ -5,7 +5,7 @@ import Aos from 'aos';
 import parse from 'html-react-parser';
 
 const ArticleData = ({article}) => {
-    const {_id, ArticleName, undefined, image} = article;
+    const {_id, ArticleName, undefined, image, createdAt} = article;
 
     useEffect(() => {
         Aos.init({
@@ -31,7 +31,7 @@ const ArticleData = ({article}) => {
             <div>
                 <Link as={Link} to={`/article/${_id}`} className=''> <h5 className='post-title'>{ArticleName}</h5></Link>
                 <div className='pb-4 ps-4'>
-                                <span className='pe-5' style={{fontSize:"10px"}}>Sunday, June-06</span>
+                                <span className='pe-5' style={{fontSize:"10px"}}>Sunday, June-06 {createdAt}</span>
                                 <span className='ps-5' style={{fontSize:"10px"}}>11:30 - 3:00</span>
                             </div>
                 <p className='post-details'>{parse(`${undefined.slice(0, 400)}`)}<Link as={Link} to={`/article/${_id}`} className='e-link'> Continue Reading</Link></p> 

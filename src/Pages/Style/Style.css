@@ -49,6 +49,11 @@ h1, h2, h3, h4, h5 , h6 , p , ul, li{
     height: auto;
     margin: 0 0 -95px 0;
 }
+.donation-banner-left {
+    width: 75%;
+    height: auto;
+    margin: 0 0 -95px 0;
+}
 
 
 /* ========================== COLOR  ======================*/
@@ -464,7 +469,7 @@ a {
     padding: 50px 0;
 }
 .b-comment-form {
-    background-color: #D1ECD8;
+    background-color: white;
     border-radius: 5px;
 }
 .form-control:focus {
@@ -567,6 +572,13 @@ a {
 }
 .banner-horizontal-right {
     height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 65px 0 -130px;
+}
+.donation-horizontal-right {
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

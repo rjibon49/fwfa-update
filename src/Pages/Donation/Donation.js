@@ -10,7 +10,7 @@ const Donation = () => {
     const [isToggle, setIsToggle] = useState (false);
 
     const radioButtonTop = {
-        backgroundColor:"#d1ecd8",
+        backgroundColor:"white",
         padding: "15px 40px",
         borderRadius: "5px",
         color: "black",
@@ -19,7 +19,7 @@ const Donation = () => {
         margin: " 10px 10px"
     }
     const switchbtn = {
-        backgroundColor:"#d1ecd8",
+        backgroundColor:"white",
         padding: "10px 50px",
         borderRadius: "5px",
         color: "black",
@@ -42,7 +42,7 @@ const Donation = () => {
                     <h6 className='text-center text-white donate-detail'>Your generosity will go toward helping those struggling with their personal finances.  We will help them get to financial wellness in a holistic approach. Thank you again for your kind donation. Please reach out to us if you want to donate stocks or other special considerations.</h6>
                 </div> */}
                 <div className='p-5'>
-                    <h3 className='fs-2 fw-bold'> Your Donation</h3>
+                    <h3 className='fs-2 fw-bold ps-5'> Your Donation</h3>
                 </div>
                 <div className='d-flex mb-5'>
                     <div className="form-check form-check-inline" style={radioButtonTop}>

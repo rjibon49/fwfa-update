@@ -17,10 +17,10 @@ const DonationBanner = () => {
         <Container className='green-bg mb-5'>
                 <Row className="banner-horizontal">
                     <Col xs={12} sm={12} md={12} lg={5} xl={5}>
-                        <Image src={donation} className='top-banner-left' data-aos="zoom-in"/>
+                        <Image src={donation} className='donation-banner-left' data-aos="zoom-in"/>
                     </Col>
                     <Col xs={12} sm={12} md={12} lg={7} xl={7}>
-                        <div className='text-center green banner-horizontal-right'>
+                        <div className='text-center green donation-horizontal-right'>
                             <h2 className=' banner-title mb-4' > 
                                 <Typewriter
                                     // cursor
