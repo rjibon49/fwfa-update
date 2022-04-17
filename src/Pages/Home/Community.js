@@ -19,7 +19,7 @@ const Community = () => {
                             <div className='my-5 py-5'>
                                 <Image src={user} alt="User" className='d-flex mx-auto'/>
                                 <div className='text-center'>
-                                    <h4 className='my-2'>1001+</h4>
+                                    <h4 className='my-2'>10+</h4>
                                     <p>People Served</p>
                                 </div>
                             </div>
@@ -28,7 +28,7 @@ const Community = () => {
                             <div className='my-5 py-5'>
                                 <Image src={task} alt="Task" className='d-flex mx-auto'/>
                                 <div className='text-center'>
-                                    <h4 className='my-2'>50+</h4>
+                                    <h4 className='my-2'>5</h4>
                                     <p>Programs Available</p>
                                 </div>
                             </div>
@@ -37,8 +37,10 @@ const Community = () => {
                             <div className='my-5 py-5'>
                                 <Image src={money} alt="Money" className='d-flex mx-auto'/>
                                 <div className='text-center'>
-                                    <h4 className='my-2'>$20k+</h4>
+                                    <h4 className='my-2'>10000</h4>
+                                    <span style={{fontSize:"10px"}}>( by end of December 2022 )</span>
                                     <p>Reduce Debt Amount</p>
+                                    
                                 </div>
                             </div>
                         </Col>
@@ -52,7 +54,7 @@ const Community = () => {
                             <div className='my-5 py-5'>
                                 <Image src={graduate} alt="graduate" className='d-flex mx-auto'/>
                                 <div className='text-center'>
-                                    <h4 className='my-2'>5k+</h4>
+                                    <h4 className='my-2'>20</h4>
                                     <p>Current Students Enrolled</p>
                                 </div>
                             </div>
@@ -61,7 +63,7 @@ const Community = () => {
                             <div className='my-5 py-5'>
                                 <Image src={userGraduate} alt="userGraduate" className='d-flex mx-auto'/>
                                 <div className='text-center'>
-                                    <h4 className='my-2'>600+</h4>
+                                    <h4 className='my-2'>0</h4>
                                     <p>Graduate</p>
                                 </div>
                             </div>
@@ -70,7 +72,7 @@ const Community = () => {
                             <div className='my-5 py-5'>
                                 <Image src={board} alt="Board" className='d-flex mx-auto'/>
                                 <div className='text-center'>
-                                    <h4 className='my-2'>150+</h4>
+                                    <h4 className='my-2'>0</h4>
                                     <p>Leadership Training - Coaches</p>
                                 </div>
                             </div>
@@ -85,7 +87,7 @@ const Community = () => {
                             <div className='my-5 py-5'>
                                 <Image src={donation} alt="Donation" className='d-flex mx-auto'/>
                                 <div className='text-center'>
-                                    <h4 className='my-2'>200+</h4>
+                                    <h4 className='my-2'>10+</h4>
                                     <p>Volunteers</p>
                                 </div>
                             </div>
@@ -94,8 +96,9 @@ const Community = () => {
                             <div className='my-5 py-5'>
                                 <Image src={userGroup} alt="userGroup" className='d-flex mx-auto'/>
                                 <div className='text-center'>
-                                    <h4 className='my-2'>20+</h4>
+                                    <h4 className='my-2'>0</h4>
                                     <p>Employees</p>
+                                    <span style={{fontSize:"10px"}}>currently fully operated by volunteers.</span>
                                 </div>
                             </div>
                         </Col>

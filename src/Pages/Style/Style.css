@@ -98,6 +98,14 @@ a {
     text-decoration: none;
 }
 
+.eventbtn {
+    background-color: #ED7E2A;
+    padding: 15px 30px;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 50px;
+}
 
  /* ================ Social Media Hover Color ==================  */
 .facebook {
@@ -179,7 +187,7 @@ a {
 
 .slider-bg {
     background-color: rgba(45, 45, 45, 1);
-    height: 70vh;
+    height: 50vh;
 }
 
 .sb-form {
@@ -567,6 +575,12 @@ a {
 .banner-horizontal {
     display: flex;
     align-items: end;
+    justify-content: center;
+    justify-items: center;
+}
+.banner-horizontal-center {
+    display: flex;
+    align-items: center;
     justify-content: center;
     justify-items: center;
 }
