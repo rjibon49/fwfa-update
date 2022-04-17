@@ -9,7 +9,6 @@ import Aos from 'aos';
 import { Typewriter } from 'react-simple-typewriter';
 import Header from '../Shared/Header';
 import Footer from '../Shared/Footer';
-import UseArticles from '../../hooks/UseArticles';
 import facebook from '../../images/social/facebook.png'
 import tumblr from '../../images/social/fa-brands_tumblr-square.png'
 import instagram from '../../images/social/instagram.png'
@@ -19,6 +18,7 @@ import quora from '../../images/social/quora.png'
 import twitter from '../../images/social/twitter-bird.png'
 import youtube from '../../images/social/youtube.png'
 import EventData from './EventData';
+import UseEvents from '../../hooks/UseEvents';
 
 const ariaLabel = { 'aria-label': 'description' };
 
@@ -36,7 +36,7 @@ const Events = () => {
     const [bls] = UseBlogs();
     console.log(bls);
 
-    const [articles] = UseArticles();
+    const [events] = UseEvents();
 
     return (
         <>
@@ -84,7 +84,7 @@ const Events = () => {
                     <Input placeholder="Search here..." inputProps={ariaLabel} className="w-75 search"/>
                 </div>
                 {
-                    articles.map (article => <EventData key={article._id} article = {article}>
+                    events.map (event => <EventData key={event._id} event = {event}>
                         
                     </EventData> )
                 }

@@ -1,4 +1,4 @@
-import './App.css';
+import '../src/Pages/Style/MinifyStyle.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';

@@ -1,11 +1,15 @@
 import React from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import ReactPlayer from 'react-player';
+import parse from 'html-react-parser';
 import UseBlogs from '../../hooks/UseBlogs';
+import UseEvents from '../../hooks/UseEvents';
 
 const HomeEvents = () => {
 
     const[evnt] = UseBlogs();
+    const [events] = UseEvents();
 
     return (
         <>
@@ -16,18 +20,22 @@ const HomeEvents = () => {
             <Row className=''>
                 <Col xs={12} sm={12} md={6} lg={6} xl={6}>
                     <div className='mb-5 mx-2'>
-                        <h3 className='pb-3'>Todays Events</h3>
+                        <h3 className='pb-3'>Upcomming Events</h3>
                         {
-                            evnt.map(evn => <div className='green-bg' key={evn.id}>
-                                <Image src={evn.images} className='images' />
+                            events.map(event => <div className='green-bg' key={event.id}>
+                                <ReactPlayer 
+                                    width='100%'
+                                    height='100%'
+                                    controls
+                                    url={event.eventImage}
+                                    />
                                 <div className=''>
-                                    <Link as={Link} to={`/article1`} className=''> <h3 className='black-title'>{evn.title}</h3> </Link>
+                                    <Link as={Link} to={`/events`} className=''> <h5 className='black-title'>{event.eventName}</h5> </Link>
                                         <div className='pb-3'>
-                                             <p className='black-details'>{evn.details.slice(0,350)}..<Link as={Link} to={`/article1`} className='e-link'> Continue Reading</Link></p>
+                                             <p className='black-details'>{parse(`${event.undefined.slice(0,348)} ..`)}<Link as={Link} to={`/events`} className='e-link'> Continue Reading</Link></p>
                                         </div>
                                         <div className='pb-4 ps-4'>
-                                            <span className='pe-2' style={{fontSize:"10px"}}>Sunday, June-06</span>
-                                            <span className='ps-2' style={{fontSize:"10px"}}>3:00 pm</span>
+                                            <span className='pe-2' style={{fontSize:"10px"}}>Last Date of Registration: {event.eventDate}</span>
                                         </div>
                                 </div>
                             </div>).slice(0,1)

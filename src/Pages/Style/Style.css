@@ -842,6 +842,17 @@ hr{
     font-size: 14px;
     padding: 0 20px 20px;
 }
+.event-post-title {
+    color: #ED7E2A;
+    font-size: 28px;
+    padding: 0 20px;
+    margin: 40px 0px 20px 0;
+}
+.event-post-details {
+    color: white;
+    font-size: 16px;
+    padding: 0 20px 20px;
+}
 
 
 /* =================== Blog CSS Style ===================== */
