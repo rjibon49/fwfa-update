@@ -23,12 +23,14 @@ const HomeEvents = () => {
                         <h3 className='pb-3'>Upcomming Events</h3>
                         {
                             events.map(event => <div className='green-bg' key={event.id}>
-                                <ReactPlayer 
+                                <Link as={Link} to={`/events`}>
+                                    <ReactPlayer 
                                     width='100%'
                                     height='100%'
-                                    controls
+                                    
                                     url={event.eventImage}
                                     />
+                                </Link>
                                 <div className=''>
                                     <Link as={Link} to={`/events`} className=''> <h5 className='black-title'>{event.eventName}</h5> </Link>
                                         <div className='pb-3'>
