@@ -106,6 +106,9 @@ a {
     font-weight: 700;
     border-radius: 50px;
 }
+.eventbtn:hover {
+    color: white;
+}
 
  /* ================ Social Media Hover Color ==================  */
 .facebook {
@@ -507,6 +510,9 @@ a {
 .search {
     color: white !important;
     border-bottom: 1px solid white !important; 
+}
+.search::placeholder {
+    color: white !important;
 }
 .b-categoryItem {
     color: white;
