@@ -192,6 +192,9 @@ a {
     background-color: rgba(45, 45, 45, 1);
     height: 50vh;
 }
+.home-banner-details {
+    font-size: 25px;
+  }
 
 .sb-form {
     display: flex;
@@ -323,7 +326,7 @@ a {
         flex-direction: column;
       }
       .aboutevent-img {
-          width: 60%;
+          width: 75%;
           height: auto;
           display: block;
           margin: 50px auto 0;
@@ -337,14 +340,7 @@ a {
           color: white;
           border: 0;
       }
-      /* .bbimg {
-        background-image: url("../../images/banner/sign.png");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        height: 100vh;
-        margin: 3px auto 0;
-        position: relative;
-    } */
+
     .trainning-p {
         padding: 0 150px;
     }
@@ -503,7 +499,14 @@ a {
 .e-link {
     color: rgb(38, 231, 97);
 }
-
+.eventBannerBottom {
+    background-color:#3C3C3B;
+    width:50%;
+    text-align:center;
+    margin:0 auto;
+    padding:10px 20px;
+    border-radius:50px;
+}
 /* ========================== BLOGS STYLE  ======================*/
 /* ============================================================== */
 
@@ -605,9 +608,9 @@ a {
     margin: 0 65px 0 -130px;
 }
 
-.horizontal {
+/* .horizontal {
     height: 40vh;
-}
+} */
 
 .bannerHeight {
     height: 30vh;
@@ -934,7 +937,11 @@ hr{
 /* ============================================================ */
 
 
-
+.poserImage {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
     
 
 /* ===================== ============== ====================== */
@@ -974,6 +981,7 @@ hr{
     width: 55%;
     height: auto;
 }
+
 .about-details{
     font-size: 20px;
 }
@@ -995,6 +1003,15 @@ hr{
 .banner-horizontal {
     flex-direction: row;
 }
+.square {
+    margin-right: 5px;
+    padding: 8px 8px;
+}
+.eventBannerBottom {
+    width:75%;
+}
+
+
 /* ============================================================ */
 /* ============================================================ */
 
@@ -1010,9 +1027,9 @@ hr{
 /* ============================================================ */
 
 
-  @media all and (min-width: 768px) and (max-width: 1023px) {
+  @media all and (min-width: 768px) and (max-width: 1024px) {
     .top-text {
-        font-size: 12px;
+        font-size: 11px;
     }
     .ico {
         font-size: 16px !important;
@@ -1027,6 +1044,9 @@ hr{
     
     .aboutbanner {
         height: 330px;
+    }
+    .banner-images {
+        width: 100%;
     }
     
     .about-image {
@@ -1071,9 +1091,6 @@ hr{
         font-size: 15px;
         padding: 0 30px;
     }
-    .bbimg {
-        height: 80vh;
-    }
     .ab-card-space {
         height: 800px;
     }
@@ -1104,8 +1121,17 @@ hr{
         max-width: 80%;
         margin: 0 auto;
     }
-    .banner-horizontal {
+    /* .banner-horizontal {
         flex-direction: column-reverse;
+    } */
+    .eventBannerBottom {
+        width:90%;
+    }
+    .b-categoryItemT {
+        margin: 20px 50px;
+    }
+    .b-categoryItem {
+        margin: 10px 70px;
     }
 
     
@@ -1171,9 +1197,6 @@ hr{
         font-size: 15px;
         padding: 15px 30px;
     }
-    .bbimg {
-        height: 80vh;
-    }
     .emp-biodata {
         grid-template-columns: auto;
         margin: 60px 0px 30px 5px;
@@ -1218,6 +1241,15 @@ hr{
         max-width: 90%;
         margin: 0 auto;
     }
+    .square img {
+        margin: 10px 0;
+    }
+    .b-categoryItemT {
+        margin: 20px 50px;
+    }
+    .b-categoryItem {
+        margin: 10px 70px;
+    }
   
 }
 /* ============================================================ */
@@ -1236,6 +1268,9 @@ hr{
     }
     .aboutbanner {
         height: 365px;
+    }
+    .home-banner-details{
+        font-size: 16px;
     }
     
     .about-image {
@@ -1288,9 +1323,6 @@ hr{
         padding: 0 15px;
         font-size: 15px;
         line-height: 25px;
-    }
-    .bbimg {
-        height: 70vh;
     }
     .ae-btn {
         font-size: 12px;
@@ -1367,6 +1399,9 @@ hr{
     .top-banner-left {
         margin: 0px 0 -60px 0;
     }
+    .eventBannerBottom {
+        width:90%;
+    }
 }
 
 
@@ -1427,6 +1462,12 @@ hr{
     .banner-horizontal {
         display: flex;
         flex-direction: column-reverse;
+    }
+    .square img {
+        margin: 10px 0;
+    }
+    .eventBannerBottom {
+        width:95%;
     }
 }
 
@@ -1490,9 +1531,9 @@ hr{
     }
   }
 
-  .react-pl {
-      background-image: url(./../../videos/banner.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
+.react-pl {
+    background-image: url(./../../videos/banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

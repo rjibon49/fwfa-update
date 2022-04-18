@@ -32,7 +32,7 @@ const Slider = () => {
                                     delaySpeed={500}
                                     words={['Welcome']}
                                     /></h2>
-                        <p className='banner-details' style={{fontSize:"25px"}} data-aos="fade-down">
+                        <p className='home-banner-details' data-aos="fade-down">
                         Do you want financial stability and understand where you are at with your finances? Contact us and explore some of our programs. We are a non-profit organization that helps provide financial coaching with our experts.
                         </p>
                     </div>

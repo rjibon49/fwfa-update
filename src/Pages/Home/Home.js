@@ -6,6 +6,7 @@ import AboutEvents from './AboutEvents';
 import Banner from './Banner';
 import Community from './Community';
 import Different from './Different';
+import EventPoster from './EventPoster';
 import HomeEvents from './HomeEvents';
 import OurBlog from './OurBlog';
 import Ship from './Ship';
@@ -18,6 +19,7 @@ const Home = () => {
             <Header />
             <div className='greenBg'>
                 <Slider />
+                <EventPoster />
                 <Banner />
                 <Ship />
                 <Different />

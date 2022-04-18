@@ -2,7 +2,6 @@ import React from 'react';
 import { Col, Container, Image, Nav, Navbar, NavDropdown, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './../Style/Style.css'
-// import './../Style/StyleNew.css'
 import logo from './../../images/logo/fwfa-logo.png'
 import useAuth from '../../hooks/useAuth';
 import Paper from '@mui/material/Paper';
@@ -31,7 +30,7 @@ const Header = () => {
             <Container className='my-2'>
                 <Row className=''>
                     <Col xs={6} sm={6} md={6} lg={3} xl={3}>
-                        <div className='pt-3'>
+                        <div className='pt-3 pt-lg-4'>
                             <p className='top-text mb-2'><i className="fas fa-phone-alt me-2"></i> (617) 371-7731 (Text Only)</p>
                             <p className='top-text'><i className="fas fa-location-arrow me-2"></i> Greater Palm Spring, CA-USA</p>
                         </div>
@@ -54,7 +53,7 @@ const Header = () => {
                     <Col xs={6} sm={6} md={6} lg={5} xl={5}>
                         <div className="text-end py-1 top-text">
                             <p className='text-center'>English (US)</p>
-                            <a href="#" rel='noreferrer' target="_blank" className='facebook'><Image src={facebook} alt="Facebook"/></a>
+                            <a href="#" rel='noreferrer' target="_blank" className='square'><Image src={facebook} alt="Facebook"/></a>
                             <a href="https://www.tumblr.com/blog/fwfa" rel='noreferrer' target="_blank" className='square'><Image src={tumblr} alt="tumblr"/></a>
                             <a href="https://www.instagram.com/fwfa501c3/" rel='noreferrer' target="_blank" className='square'><Image src={instagram} alt="instagram"/></a>
                             <a href="https://www.linkedin.com/company/fwfa" rel='noreferrer' target="_blank" className='square'><Image src={linkedin} alt="linkedin"/></a>

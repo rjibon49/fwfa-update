@@ -18,7 +18,7 @@ const EventData = ({event}) => {
 
 
     return (
-        <div className='p-5 green-bg mb-5 pbshadow me-xl-5 me-md-1' data-aos="zoom-in">
+        <div className='p-xl-5 p-lg-4 p-md-2 p-sm-0 p-xs-0 green-bg mb-5 pbshadow me-xl-5 me-md-1' data-aos="zoom-in">
             <div className=''>
                 <ReactPlayer 
                     width='100%'

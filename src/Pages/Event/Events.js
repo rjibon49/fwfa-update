@@ -58,7 +58,7 @@ const Events = () => {
                                     words={['Upcomming Events']}
                                     />
                             </h2>
-                            <p className='px-5' data-aos="slide-left" style={{fontSize:"13px"}}>
+                            <p className='eventBannerText' data-aos="slide-left">
                             <p>Prospective and interested students can enroll by visiting FWFACourse.com</p>
                             <p>Financial Wellness for All is excited to announce its upcoming financial literacy course. Thanks to a few generous donors, Financial Wellness for All can offer a 12-week financial literacy course without cost to the first 50 students.</p>
                             <p>The 12-week course covers basic and advanced financial and legal topics with the goal of raising the financial literacy level of low- and middle-income families.</p><br />
@@ -73,7 +73,7 @@ const Events = () => {
                 </Row>
                 <div className='text-center mt-5'>
                     <p className='mb-5'>The courses are offered online via live webinar, the first class is scheduled for <span style={{color:"#ED7E2A", fontWeight:"700"}}>Saturday, April 23rd, 6:00 PM PST. 2022</span> </p>
-                    <p style={{backgroundColor:"#3C3C3B", display:"inline", padding:"10px 50px", borderRadius:"50px"}}>Prospective and interested students can enroll by visiting <a href="https://us02web.zoom.us/webinar/register/WN_WBaFNPNmS2eBhqguQJdZOA" rel='noreferrer' target="_blank" style={{color:"#ED7E2A", fontWeight:"700"}}>FWFACourse.com</a> </p>
+                    <p className='eventBannerBottom'>Prospective and interested students can enroll by visiting <a href="https://us02web.zoom.us/webinar/register/WN_WBaFNPNmS2eBhqguQJdZOA" rel='noreferrer' target="_blank" style={{color:"#ED7E2A", fontWeight:"700"}}>FWFACourse.com</a> </p>
                 </div>
              </Container>
 

@@ -1,14 +1,9 @@
 import React, { useRef } from 'react';
-import { Button, Col, Container, Image, Nav, Navbar, Row } from 'react-bootstrap';
+import { Button, Col, Container, Image, Nav, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import emailjs from 'emailjs-com';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Facebook from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 import HomeIcon from '@mui/icons-material/Home';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
@@ -23,9 +18,9 @@ import youtube from '../../images/social/youtube.png'
 
 const Footer = () => {
 
-    const hancleClickLinkedin = () => {
-        window.open("https://www.linkedin.com/company/71980528/");
-    };
+    // const hancleClickLinkedin = () => {
+    //     window.open("https://www.linkedin.com/company/71980528/");
+    // };
 
     const form = useRef();
 
@@ -67,14 +62,14 @@ const Footer = () => {
                         <div className='f-icon'>
                             <h4 className='pb-4'>Follow Us</h4>
                             <div className="py-1 top-text">
-                            <a href="#" target="_blank" className='facebook'><Image src={facebook} alt="Facebook"/></a>
-                            <a href="https://www.tumblr.com/blog/fwfa" target="_blank" className='square'><Image src={tumblr} alt="tumblr"/></a>
-                            <a href="https://www.instagram.com/fwfa501c3/" target="_blank" className='square'><Image src={instagram} alt="instagram"/></a>
-                            <a href="https://www.linkedin.com/company/fwfa" target="_blank" className='square'><Image src={linkedin} alt="linkedin"/></a>
-                            <a href="https://www.pinterest.com/financialwellnessforall0129" target="_blank" className='square'><Image src={pinterest} alt="pinterest"/></a>
-                            <a href="https://www.quora.com/Financialwellnessforall" target="_blank" className='square'><Image src={quora} alt="quora"/></a>
-                            <a href="https://twitter.com/fwfa501c3" target="_blank" className='square'><Image src={twitter} alt="twitter"/></a>
-                            <a href="https://www.youtube.com/channel/UCWtwSa0mZBFxKkl5ukmQdMg" target="_blank" className='square'><Image src={youtube} alt="youtube"/></a>
+                            <a href="#" target="_blank" rel='noreferrer' className='square'><Image src={facebook} alt="Facebook"/></a>
+                            <a href="https://www.tumblr.com/blog/fwfa" target="_blank" rel='noreferrer' className='square'><Image src={tumblr} alt="tumblr"/></a>
+                            <a href="https://www.instagram.com/fwfa501c3/" target="_blank" rel='noreferrer' className='square'><Image src={instagram} alt="instagram"/></a>
+                            <a href="https://www.linkedin.com/company/fwfa" target="_blank" rel='noreferrer' className='square'><Image src={linkedin} alt="linkedin"/></a>
+                            <a href="https://www.pinterest.com/financialwellnessforall0129" target="_blank" rel='noreferrer' className='square'><Image src={pinterest} alt="pinterest"/></a>
+                            <a href="https://www.quora.com/Financialwellnessforall" target="_blank" rel='noreferrer' className='square'><Image src={quora} alt="quora"/></a>
+                            <a href="https://twitter.com/fwfa501c3" target="_blank" rel='noreferrer' className='square'><Image src={twitter} alt="twitter"/></a>
+                            <a href="https://www.youtube.com/channel/UCWtwSa0mZBFxKkl5ukmQdMg" target="_blank" rel='noreferrer' className='square'><Image src={youtube} alt="youtube"/></a>
                             <p className='mt-3 text-white'>English (US)</p>
                         </div>
                         </div>
