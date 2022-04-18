@@ -37,14 +37,7 @@ import PrivaetRoute from './Pages/PrivateRoute/PrivateRoute';
 import AdminRoute from './Pages/PrivateRoute/AdminRoute/AdminRoute';
 import ArticlesData from './Pages/Blog/ArticlesData';
 import ArticleDetails from './Pages/Blog/ArticleDetails';
-import ReactGA from "react-ga";
-import AppConfig from "App.config";
 
-ReactGA.initialize(AppConfig.Google.GA_TRACKING_CODE);
-
-useEffect(() => {
-  ReactGA.pageview(window.location.pathname + window.location.search);
-});
 
 function App() {
   return (

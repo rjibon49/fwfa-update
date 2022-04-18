@@ -32,7 +32,7 @@ const Header = () => {
                 <Row className=''>
                     <Col xs={6} sm={6} md={6} lg={3} xl={3}>
                         <div className='pt-3'>
-                            <p className='top-text mb-2'><i className="fas fa-phone-alt me-2"></i> (617) 371-7731</p>
+                            <p className='top-text mb-2'><i className="fas fa-phone-alt me-2"></i> (617) 371-7731 (Text Only)</p>
                             <p className='top-text'><i className="fas fa-location-arrow me-2"></i> Greater Palm Spring, CA-USA</p>
                         </div>
                     </Col>
