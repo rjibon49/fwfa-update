@@ -61,7 +61,7 @@ const Footer = () => {
                         <div className='mb-3 f-contact'>
                             <h4 className='pb-4'>Contact Us</h4>
                             <p className='pb-2'><HomeIcon className="me-3"/> Greater Palm Spring, CA-USA</p>
-                            <p className='pb-2'><LocalPhoneIcon className="me-3"/>(617) 371-7731</p>
+                            <p className='pb-2'><LocalPhoneIcon className="me-3"/>(617) 371-7731 (Text Only)</p>
                             <p className='pb-2'><EmailIcon className="me-3"/>info@financialwellnessforall.org</p>
                         </div>
                         <div className='f-icon'>
