@@ -5,9 +5,6 @@ import donate from './../../images/banner/donate.png';
 const Ship = () => {
     return (
         <>
-            <div >
-                <h2 className='section-title'>Stewardship</h2>
-            </div>
             <div className='green-bg sb-form'>
                 <Container className='my-5'>
                     <Row>
