@@ -938,9 +938,8 @@ hr{
 
 
 .poserImage {
-    width: 90%;
-    display: block;
-    margin: 0 auto;
+    width: 50%;
+    height: 600px;
 }
     
 
@@ -1250,6 +1249,9 @@ hr{
     .b-categoryItem {
         margin: 10px 70px;
     }
+    .poserImage {
+        width: 75%;
+    }
   
 }
 /* ============================================================ */
@@ -1402,6 +1404,9 @@ hr{
     .eventBannerBottom {
         width:90%;
     }
+    .poserImage {
+        width: 100%;
+    }
 }
 
 
@@ -1468,6 +1473,9 @@ hr{
     }
     .eventBannerBottom {
         width:95%;
+    }
+    .poserImage {
+        width: 100%;
     }
 }
 

@@ -1,57 +1,76 @@
 import React from 'react';
 import { Container, Image } from 'react-bootstrap';
-import { Autoplay, Navigation, Pagination } from 'swiper';
+import { Autoplay, Navigation, Pagination, EffectCube } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import eventPoster1 from '../../images/Event/Event-poster-1.jpg'
 import eventPoster2 from '../../images/Event/Event-poster-2.jpg'
 import eventPoster3 from '../../images/Event/Event-poster-3.jpg'
 import eventPoster4 from '../../images/Event/Event-poster-4.jpg'
 import eventPoster5 from '../../images/Event/Event-poster-5.jpg'
+import "swiper/css";
+import "swiper/css/effect-cube";
+import "swiper/css/pagination";
 
 const EventPoster = () => {
     return (
         <Container>
                 <Swiper
-                        slidesPerView={1}
-                        spaceBetween={30}
-                        loop={true}
-                        autoplay={{
-                            delay: 4000,
-                            disableOnInteraction: false,
+                        // slidesPerView={1}
+                        // spaceBetween={30}
+                        // loop={true}
+                        // autoplay={{
+                        //     delay: 4000,
+                        //     disableOnInteraction: false,
+                        //     }}
+                        // pagination={{
+                        // clickable: true,
+                        // }}
+                        // breakpoints={{
+                        //     640: {
+                        //         slidesPerView: 1,
+                        //         spaceBetween: 20,
+                        //     },
+                        //     768: {
+                        //         slidesPerView: 1,
+                        //         spaceBetween: 40,
+                        //     },
+                        //     1024: {
+                        //         slidesPerView: 1,
+                        //         spaceBetween: 20,
+                        //     },
+                        //     }}
+
+                        effect={"cube"}
+                            grabCursor={true}
+                            cubeEffect={{
+                            shadow: true,
+                            slideShadows: true,
+                            shadowOffset: 20,
+                            shadowScale: 0.75,
                             }}
-                        pagination={{
-                        clickable: true,
-                        }}
-                        breakpoints={{
-                            640: {
-                                slidesPerView: 1,
-                                spaceBetween: 20,
-                            },
-                            768: {
-                                slidesPerView: 2,
-                                spaceBetween: 40,
-                            },
-                            1024: {
-                                slidesPerView: 2,
-                                spaceBetween: 20,
-                            },
-                            }}
-                        modules={[ Autoplay, Pagination, Navigation]} 
+                            pagination={true}
+                            loop={true}
+                            autoplay={{
+                                delay: 5000,
+                                disableOnInteraction: false,
+                                }}
+
+                        modules={[ Autoplay, Pagination, Navigation, EffectCube]} 
                         className="mySwiper py-5"
                     >
-                        <SwiperSlide> 
+                        <SwiperSlide className='text-center'> 
                              <Image src={eventPoster1} alt="Event-Poster-1" className="poserImage" />    
-                        </SwiperSlide>  
-                        <SwiperSlide> 
+                        </SwiperSlide>   
+                        <SwiperSlide className='text-center'> 
                              <Image src={eventPoster2} alt="Event-Poster-1" className="poserImage" />    
                         </SwiperSlide>  
-                        <SwiperSlide> 
+                        <SwiperSlide className='text-center'> 
                              <Image src={eventPoster3} alt="Event-Poster-1" className="poserImage" />    
                         </SwiperSlide>  
-                        <SwiperSlide> 
+                        <SwiperSlide className='text-center'> 
                              <Image src={eventPoster4} alt="Event-Poster-1" className="poserImage" />    
                         </SwiperSlide>  
-                        <SwiperSlide> 
+                        <SwiperSlide className='text-center'> 
                              <Image src={eventPoster5} alt="Event-Poster-1" className="poserImage" />    
                         </SwiperSlide>  
                             
