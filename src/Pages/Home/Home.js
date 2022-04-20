@@ -23,7 +23,7 @@ const Home = () => {
     useEffect(() => {
         setTimeout (() => {
             setTimedPopup(true)
-        }, 3000);
+        }, 5000);
     }, []);
 
     return (
