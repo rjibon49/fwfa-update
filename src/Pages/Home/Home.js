@@ -13,11 +13,8 @@ import OurBlog from './OurBlog';
 import Ship from './Ship';
 import SigninBanner from './SigninBanner';
 import Slider from './Slider';
-import event1 from '../../images/Event/Event-poster-1.jpg'
-import { Image } from 'react-bootstrap';
 
 const Home = () => {
-    const [buttonOnPopup, setButtonPopup] = useState(false)
     const [timedPopup, setTimedPopup] = useState(false)
 
     useEffect(() => {
@@ -30,9 +27,7 @@ const Home = () => {
         <>
             <Header />
             <div className='greenBg'>
-                {/* <button onClick={() => setButtonPopup(true)}>popup</button> */}
                 <Popup trigger={timedPopup} setTrigger={setTimedPopup} >
-                    {/* <Image src={event1} alt="EventPoster"  style={{width:"75%"}} /> */}
                 </Popup>
                 <Slider />
                 <EventPoster />
