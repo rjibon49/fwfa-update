@@ -938,8 +938,7 @@ hr{
 
 
 .poserImage {
-    width: 50%;
-    height: 600px;
+    width: 60%;
 }
     
 
@@ -991,6 +990,14 @@ hr{
   background-color: #ff701a;
   padding: 6px 18px;
   font-weight: 700;
+}
+.enroll {
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 65px;
+    left: 21%;
+    color: white;
 }
 
 
@@ -1484,6 +1491,10 @@ hr{
     font-size: 7px;
     padding: 3px 12px;
   }
+  .enroll {
+    font-size: 7px;
+    bottom: 35px;
+} 
 }
 
 
@@ -1565,7 +1576,10 @@ hr{
         font-size: 7px;
         padding: 2px 2px;
     }
-        
+    .enroll {
+        font-size: 7px;
+        bottom: 30px;
+    } 
 }
 
 /* ============================================================ */

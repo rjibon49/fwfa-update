@@ -11,6 +11,7 @@ function Popup(props) {
                 { props.children}
 
                 <Image src={event1} alt="EventPoster" className='posterImg'/>
+                <p className='enroll'>Enroll Here</p>
                 <a href="http://fwfacourse.com/" target="_blank" rel='noreferrer' className='webLink'>FWFACourse.com</a>
             </div>
         </div>
