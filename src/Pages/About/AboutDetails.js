@@ -3,11 +3,22 @@ import { Col, Container, Image, Row } from 'react-bootstrap';
 import awareness from './../../images/banner/awareness.png'
 import literacy from './../../images/banner/literacy1.png'
 import coaching from './../../images/banner/coaching1.png'
+import ReactPlayer from 'react-player';
 
 
 const AboutDetails = () => {
     return (
         <section className='my-5'>
+            <Container className='my-5 green-bg'>
+                <ReactPlayer
+                        className="react-ab"
+                        width='100%'
+                        height='600px'
+                        controls
+                        url={`https://fwfadatabasecenter.s3.amazonaws.com/videos/FWFA-InrtroductionVideo.mp4`}
+                        light={true}
+                    />
+            </Container>
             <div className=''>
                 <h2 className='section-title-b'>FWFA’s Mission Statement</h2>
             </div>

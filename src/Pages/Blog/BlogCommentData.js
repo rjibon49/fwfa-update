@@ -35,7 +35,7 @@ const BlogCommentData = () => {
                         <Row className="mb-3">
                             <Form.Group className="mb-3">
                                 {/* <Form.Label>What topic do you want to discus?</Form.Label> */}
-                                <Form.Control as="textarea" className='b-comment-form' rows={8} placeholder='Type here...' />
+                                <Form.Control as="textarea" className='b-comment-form' rows={8} placeholder='Type here. . .' />
                             </Form.Group>
                             <Form.Group as={Col} className="mb-3">
                                 {/* <Form.Label>Email</Form.Label> */}

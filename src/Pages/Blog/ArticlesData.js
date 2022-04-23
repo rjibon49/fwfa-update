@@ -10,7 +10,6 @@ import { Typewriter } from 'react-simple-typewriter';
 import Header from '../Shared/Header';
 import Footer from '../Shared/Footer';
 import UseArticles from '../../hooks/UseArticles';
-import { ArticleSharp } from '@mui/icons-material';
 import ArticleData from './ArticleData';
 import facebook from '../../images/social/facebook.png'
 import tumblr from '../../images/social/fa-brands_tumblr-square.png'
@@ -35,7 +34,6 @@ const ArticlesData = () => {
     },[])
 
     const [bls] = UseBlogs();
-    console.log(bls);
 
     const [articles] = UseArticles();
 
@@ -71,7 +69,7 @@ const ArticlesData = () => {
             <Row>
                 <Col xs={12} sm={12} md={7} lg={8} xl={8}>
                 <div className='green-bg text-center pbshadow py-4 mb-5 d-sm-block d-md-none'>
-                    <Input placeholder="Search here..." inputProps={ariaLabel} className="w-75 search"/>
+                    <Input placeholder="Search here . ." inputProps={ariaLabel} className="w-75 search"/>
                 </div>
                 {
                     articles.map (article => <ArticleData key={article._id} article = {article}>
@@ -83,7 +81,7 @@ const ArticlesData = () => {
                 </Col>
                 <Col xs={12} sm={12} md={5} lg={4} xl={4}>
                     <div className='green-bg text-center pbshadow py-4 mb-5 d-none d-md-block d-lg-block d-xl-block '>
-                    <Input placeholder="Search here..." inputProps={ariaLabel} className="w-75 search"/>
+                    <Input placeholder="Search here . ." inputProps={ariaLabel} className="w-75 search"/>
                     </div>
                     <div className='green-bg my-3 pbshadow text-center'>
                         <div className='py-5'>

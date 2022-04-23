@@ -1647,3 +1647,9 @@ hr{
     background-repeat: no-repeat;
     background-size: contain;
 }
+.react-ab {
+    background-image: url(./../../images/aboutVideo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

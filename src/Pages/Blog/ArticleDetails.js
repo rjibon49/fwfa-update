@@ -74,26 +74,26 @@ const ArticleDetails = () => {
                     controls
                     url={image}
                     />
-                        <div className='text-center'>
+                        {/* <div className='text-center'>
                             <div className='py-2'>
-                                {/* <i className="fas fa-user-circle mx-2 fs-5 green"></i>{category} */}
+                                <i className="fas fa-user-circle mx-2 fs-5 green"></i>{category}
                                 <i className=" mx-2 fs-4 green">|</i>
                                 <i className="far fa-comment-dots mx-2 fs-5 green">03 Comments</i>
                             </div>
-                        </div>
+                        </div> */}
                         <div className='pb-5'>
                             <h5 className='post-title'>{ArticleName}</h5>
                             <p className='post-details'>{parse(`${undefined}`)}</p> 
                         </div>
 
-                        <BlogCommentData />  
+                        {/* <BlogCommentData />   */}
 
                     </div>
                     
                 </Col>
                 <Col xs={12} sm={12} md={5} lg={4} xl={4}>
                     <div className='green-bg text-center pbshadow py-4 mb-5'>
-                        <Input placeholder="Search here..." inputProps={ariaLabel} className="w-75"/>
+                        <Input placeholder="Search here . . ." inputProps={ariaLabel} className="w-75"/>
                     </div>
                     <div className='green-bg my-3 pbshadow text-center'>
                         <div className='py-5'>

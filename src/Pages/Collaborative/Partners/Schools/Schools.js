@@ -53,7 +53,7 @@ const Schools = () => {
         <Row>
                 <Col xs={12} sm={12} md={7} lg={8} xl={8}>
                 <div className='green-bg text-center pbshadow py-4 mb-5 d-sm-block d-md-none'>
-                    <Input placeholder="Search here..." inputProps={ariaLabel} className="w-75 search"/>
+                    <Input placeholder="Search here . ." inputProps={ariaLabel} className="w-75 search"/>
                 </div>
                     {
                         schools.map (school => <School
@@ -64,7 +64,7 @@ const Schools = () => {
                 </Col>
                 <Col xs={12} sm={12} md={5} lg={4} xl={4}>
                 <div className='green-bg text-center pbshadow py-4 mb-5 d-none d-md-block d-lg-block d-xl-block '>
-                    <Input placeholder="Search here..." inputProps={ariaLabel} className="w-75 search"/>
+                    <Input placeholder="Search here . ." inputProps={ariaLabel} className="w-75 search"/>
                     </div>
                     <div className='green-bg my-3 pbshadow text-center'>
                         <div className='py-5'>
