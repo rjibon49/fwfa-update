@@ -111,7 +111,7 @@ const ArticleDetails = () => {
                             <div className='text-center pb-3 green'>
                                 <h5 className='py-3'>Follow</h5>
                                     <Col  className='pb-3'>
-                                        <a href="#" rel='noreferrer' target="_blank" className='facebook'><Image src={facebook} alt="Facebook"/></a>
+                                        <a href="https://fb.me/FWFA.501c3" rel='noreferrer' target="_blank" className='facebook'><Image src={facebook} alt="Facebook"/></a>
                                         <a href="https://twitter.com/fwfa501c3" rel='noreferrer' target="_blank" className='square'><Image src={twitter} alt="twitter"/></a>
                                         <a href="https://www.instagram.com/fwfa501c3/" rel='noreferrer' target="_blank" className='square'><Image src={instagram} alt="instagram"/></a>
                                         <a href="https://www.linkedin.com/company/fwfa" rel='noreferrer' target="_blank" className='square'><Image src={linkedin} alt="linkedin"/></a>

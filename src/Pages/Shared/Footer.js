@@ -62,7 +62,7 @@ const Footer = () => {
                         <div className='f-icon'>
                             <h4 className='pb-4'>Follow Us</h4>
                             <div className="py-1 top-text">
-                            <a href="#" target="_blank" rel='noreferrer' className='square'><Image src={facebook} alt="Facebook"/></a>
+                            <a href="https://fb.me/FWFA.501c3" target="_blank" rel='noreferrer' className='square'><Image src={facebook} alt="Facebook"/></a>
                             <a href="https://www.tumblr.com/blog/fwfa" target="_blank" rel='noreferrer' className='square'><Image src={tumblr} alt="tumblr"/></a>
                             <a href="https://www.instagram.com/fwfa501c3/" target="_blank" rel='noreferrer' className='square'><Image src={instagram} alt="instagram"/></a>
                             <a href="https://www.linkedin.com/company/fwfa" target="_blank" rel='noreferrer' className='square'><Image src={linkedin} alt="linkedin"/></a>
