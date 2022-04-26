@@ -53,7 +53,7 @@ const Header = () => {
                     <Col xs={6} sm={6} md={6} lg={5} xl={5}>
                         <div className="text-end py-1 top-text">
                             <p className='text-center'>English (US)</p>
-                            <a href="https://fb.me/FWFA.501c3" rel='noreferrer' target="_blank" className='square'><Image src={facebook} alt="Facebook"/></a>
+                            <a href="https://fb.me/FWFA.501c3" rel='noreferrer' target="_blank" className='square px-3'><Image src={facebook} alt="Facebook"/></a>
                             <a href="https://www.tumblr.com/blog/fwfa" rel='noreferrer' target="_blank" className='square'><Image src={tumblr} alt="tumblr"/></a>
                             <a href="https://www.instagram.com/fwfa501c3/" rel='noreferrer' target="_blank" className='square'><Image src={instagram} alt="instagram"/></a>
                             <a href="https://www.linkedin.com/company/fwfa" rel='noreferrer' target="_blank" className='square'><Image src={linkedin} alt="linkedin"/></a>
@@ -66,9 +66,9 @@ const Header = () => {
                 </Row>
             </Container>
         </div>
-
+        <Container>
         <Navbar collapseOnSelect expand="lg" bg="" variant="light" sticky="top" className=" mt-1 bg-white pb-4">
-            <Container>
+            
                 <Navbar.Brand as={Link} to="/">
                     <img src={logo} alt="" className='logo'/>
                 </Navbar.Brand>
@@ -79,7 +79,7 @@ const Header = () => {
                             <Nav.Link as={Link} to="/home" className="">Home</Nav.Link>
                             <Nav.Link as={Link} to="/about" className="">About Us</Nav.Link>
                             <Nav.Link as={Link} to="/program" className="">Program</Nav.Link>
-                            <Nav.Link as={Link} to="/donation" className="">Donation</Nav.Link>
+                            {/* <Nav.Link as={Link} to="/donation" className="">Donation</Nav.Link> */}
                             <Nav.Link as={Link} to="/collaborative" className="">Collaborative Partnership</Nav.Link>
                             <Nav.Link as={Link} to="/events" className="">Events</Nav.Link>
                             <Nav.Link as={Link} to="/articles" className="">Blog</Nav.Link>
@@ -95,7 +95,9 @@ const Header = () => {
                                             <NavDropdown.Item as={Link} to="/home" onClick={logout}>Logout</NavDropdown.Item>
                                         </Nav>
                                     </NavDropdown>
-                            }  
+                            }
+
+                            <a href="https://www.paypal.com/donate/?hosted_button_id=PWEN8NYUJZKS6" rel='noreferrer' target="_top" className='donation'>Donation</a> 
                                 {/*  :
                                 <NavDropdown title="User" id="basic-nav-dropdown" className=''>
                                     <NavDropdown.Item as={Link} to="/register">Register</NavDropdown.Item>
@@ -115,8 +117,10 @@ const Header = () => {
                             </NavDropdown> */}
                         </Nav>
                     </Navbar.Collapse>
-            </Container>
+                     
+            
       </Navbar>
+      </Container>
     </>
     );
 };

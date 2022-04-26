@@ -62,7 +62,7 @@ const Footer = () => {
                         <div className='f-icon'>
                             <h4 className='pb-4'>Follow Us</h4>
                             <div className="py-1 top-text">
-                            <a href="https://fb.me/FWFA.501c3" target="_blank" rel='noreferrer' className='square'><Image src={facebook} alt="Facebook"/></a>
+                            <a href="https://fb.me/FWFA.501c3" target="_blank" rel='noreferrer' className='square px-3'><Image src={facebook} alt="Facebook"/></a>
                             <a href="https://www.tumblr.com/blog/fwfa" target="_blank" rel='noreferrer' className='square'><Image src={tumblr} alt="tumblr"/></a>
                             <a href="https://www.instagram.com/fwfa501c3/" target="_blank" rel='noreferrer' className='square'><Image src={instagram} alt="instagram"/></a>
                             <a href="https://www.linkedin.com/company/fwfa" target="_blank" rel='noreferrer' className='square'><Image src={linkedin} alt="linkedin"/></a>
@@ -78,9 +78,9 @@ const Footer = () => {
                         <Nav className="mx-auto fw-bold pb-3 text-white">
                             <Nav.Link as={Link} to="/home" className="btnt">Home</Nav.Link>
                             <Nav.Link as={Link} to="/events" className="btnt">Events</Nav.Link>
-                            <Nav.Link as={Link} to="/blog" className="btnt">Blog</Nav.Link>
-                            <Nav.Link as={Link} to="/donation" className="btnt">Donation</Nav.Link>
+                            <Nav.Link as={Link} to="/articles" className="btnt">Blog</Nav.Link>
                             <Nav.Link as={Link} to="/career" className="btnt">Career</Nav.Link>
+                            <a href="https://www.paypal.com/donate/?hosted_button_id=PWEN8NYUJZKS6" rel='noreferrer' target="_top" className='donation'>Donation</a> 
                         </Nav>
                         <div className='mb-3 f-subs'>
                             <h3 className='green-title ps-2 mb-3' >Subscribe to Our Newsletter</h3>

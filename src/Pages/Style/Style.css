@@ -1653,3 +1653,13 @@ hr{
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+.donation {
+    background-color: #ed7e2a;
+    color: white;
+    margin: 0px 0 20px 0;
+    padding: 5px 15px 5px 15px;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: 700;
+}

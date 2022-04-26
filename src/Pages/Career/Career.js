@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Col, Container, Image, Row, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import GoToTop from '../../GotoTop';
+import Footer from '../Shared/Footer';
 import  career from './../../images/banner/career.png'
 
 const Career = () => {
@@ -88,6 +89,7 @@ const Career = () => {
                     </Col> */}
                 </Row>
              </Container>
+             <Footer />
              <GoToTop />
         </>
     );

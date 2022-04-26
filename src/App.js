@@ -7,7 +7,7 @@ import Program from './Pages/Program/Program';
 import Collaborative from './Pages/Collaborative/Collaborative';
 import Events from './Pages/Event/Events';
 import Contacts from './Pages/Contacts/Contacts';
-import Donation from './Pages/Donation/Donation';
+// import Donation from './Pages/Donation/Donation';
 import Schools from './Pages/Collaborative/Partners/Schools/Schools';
 import University from './Pages/Collaborative/Partners/University';
 import Business from './Pages/Collaborative/Partners/Business';
@@ -15,7 +15,7 @@ import NonProfit from './Pages/Collaborative/Partners/NonProfit';
 import Employee from './Pages/Collaborative/Partners/Employee';
 import SchoolDetails from './Pages/Collaborative/Partners/Schools/SchoolDetails';
 import SuperAdmin from './Pages/Users/SuperAdmin';
-import DonationBank from './Pages/Donation/DonationBank';
+// import DonationBank from './Pages/Donation/DonationBank';
 import Career from './Pages/Career/Career';
 import ApplyNow from './Pages/Career/ApplyNow';
 import NotFound from './Pages/NotFound/NotFound';
@@ -49,8 +49,8 @@ function App() {
               <Route path='/home' element={<Home />} />
               <Route path='/about' element={<About />} />
               <Route path='/program' element={<Program />} />
-              <Route path='/donation' element={<Donation />} />
-              <Route path='/donationbank' element={<DonationBank />} />
+              {/* <Route path='/donation' element={<Donation />} /> */}
+              {/* <Route path='/donationbank' element={<DonationBank />} /> */}
               <Route path='/collaborative' element={<Collaborative />} />
               <Route path='/school' element={<Schools />} />
               <Route path='/school/:schoolId' element={<SchoolDetails />} />
