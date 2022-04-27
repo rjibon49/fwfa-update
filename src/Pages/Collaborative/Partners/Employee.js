@@ -59,7 +59,7 @@ const Employee = () => {
                         
                         <div>
                             <Link to={`/blog/${school.id}`} className=''> <h5 className='post-title'>{school.title}</h5></Link>
-                            <p className='post-details'>{school.details} <Link to={`/school/${school.id}`} style={{color:"#F37559"}}> ...Keep Reading</Link></p> 
+                            <p className='post-details'>{school.details} <Link to={`/school/${school.id}`} style={{color:"#F37559"}}> ..Keep Reading</Link></p> 
                         </div>
                         <div className='text-center'>
                             <div className='py-2'>

@@ -67,7 +67,7 @@ const Header = () => {
             </Container>
         </div>
         <Container>
-        <Navbar collapseOnSelect expand="lg" bg="" variant="light" sticky="top" className=" mt-1 bg-white pb-4">
+        <Navbar collapseOnSelect expand="lg" bg="" variant="light" sticky="top" className=" mt-1 bg-white pb-4" style={{zIndex:"10"}}>
             
                 <Navbar.Brand as={Link} to="/">
                     <img src={logo} alt="" className='logo'/>
@@ -75,7 +75,7 @@ const Header = () => {
 
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="ms-auto menu">
+                        <Nav className="ms-auto menu" >
                             <Nav.Link as={Link} to="/home" className="">Home</Nav.Link>
                             <Nav.Link as={Link} to="/about" className="">About Us</Nav.Link>
                             <Nav.Link as={Link} to="/program" className="">Program</Nav.Link>

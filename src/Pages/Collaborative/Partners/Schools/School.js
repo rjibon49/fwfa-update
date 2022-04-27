@@ -16,7 +16,7 @@ const School = ({school}) => {
             
             <div>
                 <Link to={`/blog/${school.id}`} className=''> <h5 className='post-title'>{title}</h5></Link>
-                <p className='post-details'>{details} <Link to={`/school/${id}`} style={{color:"#F37559"}}> ...Keep Reading</Link></p>
+                <p className='post-details'>{details} <Link to={`/school/${id}`} style={{color:"#F37559"}}> ..Keep Reading</Link></p>
             </div>
             <div className='text-center'>
                 <div className='py-2'>

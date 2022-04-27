@@ -22,7 +22,7 @@ const HomeEvents = () => {
                     <div className='mb-5 mx-2'>
                         <h3 className='pb-3'>Upcomming Events</h3>
                         {
-                            events.map(event => <div className='green-bg' key={event.id}>
+                            events.map(event => <div className='green-bg' key={event._id}>
                                 <Link as={Link} to={`/events`}>
                                     <ReactPlayer 
                                     width='100%'
@@ -49,7 +49,7 @@ const HomeEvents = () => {
                         <h3 className='pb-4 ms-5'>See All Events</h3>
                         <div className='green-bg py-4 mx-3'>
                         {
-                            evnt.map(evn => <div className='p-3 ms-2' key={evn.id}>
+                            evnt.map(evn => <div className='p-3 ms-2' key={evn._id}>
                                 <Row >
                                     <Col xl={4}> 
                                         <Image src={evn.images} className='images mb-4' />

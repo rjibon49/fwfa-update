@@ -982,15 +982,16 @@ hr{
 }
 
 .webLink {
-  position: absolute;
-  bottom: 28px;
-  right: 57%;
-  font-size: 12px;
-  color: white;
-  background-color: #ff701a;
-  padding: 6px 18px;
-  font-weight: 700;
+    position: absolute;
+    bottom: 15px;
+    right: 81%;
+    font-size: 8px;
+    color: white;
+    background-color: #ff701a;
+    padding: 4px 16px;
+    font-weight: 700;
 }
+
 .enroll {
     font-size: 12px;
     font-weight: bold;
@@ -1486,9 +1487,9 @@ hr{
   }
   
   .webLink {
-    bottom: 17px;
-    left: 67px;
-    font-size: 7px;
+    bottom: 8px;
+    left: 7px;
+    font-size: 5px;
     padding: 3px 12px;
   }
   .enroll {
@@ -1571,10 +1572,7 @@ hr{
         font-size: 10px;
     }
     .webLink {
-        bottom: 12px;
-        left: 51px;
-        font-size: 7px;
-        padding: 2px 2px;
+        padding: 1px 2px;
     }
     .enroll {
         font-size: 7px;
