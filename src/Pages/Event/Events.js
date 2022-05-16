@@ -72,7 +72,7 @@ const Events = () => {
                     </Col>
                 </Row>
                 <div className='text-center mt-5'>
-                    <p className='mb-5'>The courses are offered online via live webinar, the Second class is scheduled for <span style={{color:"#ED7E2A", fontWeight:"700"}}>Saturday, May-7-2022, 6:00 PM PST. </span> </p>
+                    <p className='mb-5'>The courses are offered online via live webinar, the Second class is scheduled for <span style={{color:"#ED7E2A", fontWeight:"700"}}>June 4, 2022, 6:00 PM PST. </span> </p>
                     <p className='eventBannerBottom'>Prospective and interested students can enroll by visiting <a href="https://us02web.zoom.us/webinar/register/WN_WBaFNPNmS2eBhqguQJdZOA" rel='noreferrer' target="_blank" style={{color:"#ED7E2A", fontWeight:"700"}}>FWFACourse.com</a> </p>
                 </div>
              </Container>

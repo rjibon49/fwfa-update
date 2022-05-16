@@ -2,11 +2,11 @@ import React from 'react';
 import { Container, Image } from 'react-bootstrap';
 import { Autoplay, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import eventPoster1 from '../../images/Event/eventPoster0.1.jpg'
-import eventPoster2 from '../../images/Event/eventPoster0.2.jpg'
-import eventPoster3 from '../../images/Event/eventPoster0.3.jpg'
-import eventPoster4 from '../../images/Event/eventPoster0.4.jpg'
-import eventPoster5 from '../../images/Event/eventPoster0.5.jpg'
+import eventPoster1 from '../../images/Event/eventposter1.1.jpg'
+import eventPoster2 from '../../images/Event/eventposter1.2.jpg'
+import eventPoster3 from '../../images/Event/eventposter1.3.jpg'
+import eventPoster4 from '../../images/Event/eventposter1.4.jpg'
+import eventPoster5 from '../../images/Event/eventposter1.5.jpg'
 import "swiper/css";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
