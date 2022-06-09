@@ -15,20 +15,20 @@ import SigninBanner from './SigninBanner';
 import Slider from './Slider';
 
 const Home = () => {
-    const [timedPopup, setTimedPopup] = useState(false)
+    // const [timedPopup, setTimedPopup] = useState(false)
 
-    useEffect(() => {
-        setTimeout (() => {
-            setTimedPopup(true)
-        }, 5000);
-    }, []);
+    // useEffect(() => {
+    //     setTimeout (() => {
+    //         setTimedPopup(true)
+    //     }, 5000);
+    // }, []);
 
     return (
         <>
             <Header />
             <div className='greenBg'>
-                <Popup trigger={timedPopup} setTrigger={setTimedPopup} >
-                </Popup>
+                {/* <Popup trigger={timedPopup} setTrigger={setTimedPopup} >
+                </Popup> */}
                 <Slider />
                 <EventPoster />
                 <Banner />
